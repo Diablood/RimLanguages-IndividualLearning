@@ -6,6 +6,8 @@ Publication 1.0.0 demandée par l'utilisateur le 2026-10-11. Gameplay identique 
 
 package.ps1 exécuté le 2026-10-11 : reconstruction 1.0.0, 277 assertions hors jeu, XML, correspondance FR/EN, versions About/DLL et exclusion des DLL tierces réussis. Neuf fichiers du ZIP vérifiés par SHA256 ; preview incluse et poids contrôlé. Diff Source/Languages vide depuis la 0.17.0 ; aucune modification du comportement ou de l'état persistant. Aucun déploiement local, aucune exécution du moteur.
 
+Publication GitHub vérifiée le 2026-10-11 : tag annoté v1.0.0 et commit ecf60dd envoyés ; release non brouillon et non prerelease. Asset ZIP de 906 137 octets, digest API sha256:743fb9e27f7b92da97f15559ecc7003030f0c5d7653872330a72ff801882280e. ZIP téléchargé à nouveau et comparé au paquet local par SHA256, identique. Aucun résultat moteur supplémentaire revendiqué.
+
 ## Lot actuel : affichage individuel
 
 Compilation 0.17.0 et 277 assertions hors jeu réussies. XML, clés FR/EN, versions et exclusion des DLL tierces vérifiés. Huit nouveaux contrôles portent sur les deux appels d'affichage collectif et la signature réelle de la ligne de faction. Utilisateur « Tests OK » le 2026-10-11 pour le parcours principal de liste des factions et conversation avec un prisonnier. Validation générale rapportée, variantes facultatives non détaillées séparément ; aucun moteur exécuté par l'agent. Ne pas redemander ce parcours sans nouvelle anomalie ou changement pertinent.
@@ -29,7 +31,7 @@ Préparation locale d'archive — 2026-10-11 : package.ps1 exécuté, reconstruc
 
 Les tests automatisés sont exécutés hors jeu. Ils couvrent le modèle de connaissances, les calculs et des transformations Harmony sur les instructions des assemblies installées, via Mono.Cecil. Ils ne prouvent pas l'exécution des patchs dans le moteur.
 
-La compilation actuelle 0.17.0 a réussi avec **277 assertions hors jeu**, contrôles XML, correspondance FR/EN et versions About/DLL. Le déploiement local a vérifié les SHA256 des cinq fichiers copiés. Les tests utilisent KnowledgeTests.dll dans un processus PowerShell court ; KnowledgeTests.exe n'est plus produit ni exécuté.
+La compilation historique 0.17.0 a réussi avec **277 assertions hors jeu**, contrôles XML, correspondance FR/EN et versions About/DLL. Le déploiement local a vérifié les SHA256 des cinq fichiers copiés. Les tests utilisent KnowledgeTests.dll dans un processus PowerShell court ; KnowledgeTests.exe n'est plus produit ni exécuté.
 
 **Aucun moteur exécuté par l'agent.** Les validations en jeu ci-dessous sont rapportées par l'utilisateur. Un retour « Tests OK » valide globalement le parcours proposé, sans confirmer séparément toutes les variantes facultatives.
 

@@ -5,7 +5,7 @@
 - Passage à la version stable demandé par l'utilisateur, sans changement des comportements de la 0.17.0 ni du schéma de sauvegarde 1.
 - Preview originale style RimWorld avec yeux, livre, bulles linguistiques et bandeau 1.6 ; incluse dans le paquet installable.
 - Difficulté et calculs de Cybranian conservés. Parcours principaux, événements naturels et interruption d'un soin ou jeu avec bébé validés par l'utilisateur pendant le développement.
-- Tag GitHub v1.0.0 et paquet installable prévus pour cette publication ; Workshop traité séparément, étape par étape. Preuves de reconstruction et de publication dans docs/TESTING.md et docs/PROJECT_STATE.md.
+- Tag GitHub v1.0.0 et release stable publiés avec le ZIP installable ; téléchargement de contrôle identique par SHA256. Workshop traité séparément, étape par étape. Preuves de reconstruction et de publication dans docs/TESTING.md et docs/PROJECT_STATE.md.
 
 ## 0.17.0 — 2026-10-11 — affichage individuel
 

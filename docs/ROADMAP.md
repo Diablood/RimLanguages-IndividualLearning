@@ -18,13 +18,13 @@ Parcours principaux jusqu'à 0.17.0 validés par l'utilisateur ; portée et vari
 
 ## Prochaine étape
 
-Première version finale 1.0.0 et tag GitHub demandés par l'utilisateur le 2026-10-11. Preview créée avant le changement de version : About/Preview.png, style RimWorld avec yeux et bandeau 1.6, PNG 640 × 640 de 862 346 octets. Workshop à traiter ensuite étape par étape ; aucune publication Workshop autorisée par cette préparation.
+Première version stable 1.0.0 publiée sur GitHub le 2026-10-11, tag v1.0.0 et ZIP installable vérifiés. Preview créée avant le changement de version : About/Preview.png, style RimWorld avec yeux et bandeau 1.6, PNG 640 × 640 de 862 346 octets. Suite : préparation Workshop étape par étape, description et patchnotes restant à réaliser ; aucun envoi Workshop effectué.
 
-Liste des factions sans niveaux collectifs et conversations sans textes d'XP collective : parcours principal acquis, ne pas le redemander. Aucun retrait de la XP globale avant audit des replis ; voir [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md). Suite : choisir le prochain lot ou préparer les vérifications ciblées d'une première release lorsqu'elle sera demandée.
+Liste des factions sans niveaux collectifs et conversations sans textes d'XP collective : parcours principal acquis, ne pas le redemander. Aucun retrait de la XP globale avant audit des replis ; voir [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md).
 
-Le dépôt public [RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning) a été créé par l'utilisateur, sous MIT. Le premier envoi du projet conserve son commit initial de licence. Procédure et exclusions dans [GITHUB_SETUP.md](GITHUB_SETUP.md). Suite : préparer les vérifications ciblées d'une première release lorsqu'elle sera demandée.
+Le dépôt public [RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning) a été créé par l'utilisateur, sous MIT. Le premier envoi du projet conserve son commit initial de licence. Procédure et exclusions dans [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
-## Avant une première publication
+## Vérifications de publication et maintenance
 
 - Vérifier les variantes utiles encore non confirmées, en ciblant les systèmes qui auront changé ; ne pas refaire systématiquement tous les parcours acquis.
 - Arrivées naturelles de quêtes et marchands et interruption d'un soin ou jeu avec bébé : validées par l'utilisateur le 2026-10-11, ne pas redemander sans changement pertinent.

@@ -28,6 +28,8 @@ Préparation 0.17.0 exécutée le 2026-10-11 : 277 assertions hors jeu et huit c
 
 ## Publication externe
 
+[Release GitHub 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0) publiée le 2026-10-11, tag annoté v1.0.0 sur ecf60dd. ZIP installable téléchargé après publication et comparé par SHA256 au paquet local, identique ; état stable confirmé par API. Workshop non publié et aucun PublishedFileId défini.
+
 La première version stable 1.0.0 est demandée par l'utilisateur. Parcours principaux jusqu'à 0.17.0 confirmés par utilisateur, y compris arrivées naturelles de marchands/quêtes et interruption de soin ou jeu avec bébé ; comportements inchangés en 1.0.0, variantes et limites dans [TESTING.md](TESTING.md). Cette publication n'annonce pas une compatibilité exhaustive avec d'autres mods.
 
 La création d'un dépôt est distincte d'une release. Nom retenu : RimLanguages-IndividualLearning, visibilité publique, licence MIT pour le code et la documentation originaux. Avant une publication explicitement demandée : vérifier attributions et provenance des assets, examiner les fichiers suivis, reconstruire, effectuer les contrôles et tests nécessaires au périmètre annoncé, puis vérifier le paquet final et les références distantes.
