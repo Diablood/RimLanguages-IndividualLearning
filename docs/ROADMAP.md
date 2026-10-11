@@ -1,4 +1,4 @@
-# Roadmap — 0.17.0
+# Roadmap — 1.0.0
 
 ## Réalisé
 
@@ -14,9 +14,11 @@
 - Paquet installable local et notice FR/EN : reconstruction, tests et vérification SHA256 du ZIP automatisés par package.ps1, sans publication.
 - Métadonnées About actualisées et sources 0.17.0 envoyées sur GitHub le 2026-10-11 ; commit 758c2a9 vérifié sur main, sans release, tag ou Workshop.
 
-Parcours principaux jusqu'à 0.17.0 validés par l'utilisateur ; portée et variantes dans [TESTING.md](TESTING.md). Version de développement actuelle : 0.17.0. Parcours d'affichage individuel confirmé le 2026-10-11 ; aucun moteur exécuté par l'agent.
+Parcours principaux jusqu'à 0.17.0 validés par l'utilisateur ; portée et variantes dans [TESTING.md](TESTING.md). Première version stable : 1.0.0, mêmes comportements et schéma 1. Aucun moteur exécuté par l'agent.
 
 ## Prochaine étape
+
+Première version finale 1.0.0 et tag GitHub demandés par l'utilisateur le 2026-10-11. Preview créée avant le changement de version : About/Preview.png, style RimWorld avec yeux et bandeau 1.6, PNG 640 × 640 de 862 346 octets. Workshop à traiter ensuite étape par étape ; aucune publication Workshop autorisée par cette préparation.
 
 Liste des factions sans niveaux collectifs et conversations sans textes d'XP collective : parcours principal acquis, ne pas le redemander. Aucun retrait de la XP globale avant audit des replis ; voir [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md). Suite : choisir le prochain lot ou préparer les vérifications ciblées d'une première release lorsqu'elle sera demandée.
 

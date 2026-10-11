@@ -1,5 +1,12 @@
 # Historique des versions
 
+## 1.0.0 — 2026-10-11 — première version stable
+
+- Passage à la version stable demandé par l'utilisateur, sans changement des comportements de la 0.17.0 ni du schéma de sauvegarde 1.
+- Preview originale style RimWorld avec yeux, livre, bulles linguistiques et bandeau 1.6 ; incluse dans le paquet installable.
+- Difficulté et calculs de Cybranian conservés. Parcours principaux, événements naturels et interruption d'un soin ou jeu avec bébé validés par l'utilisateur pendant le développement.
+- Tag GitHub v1.0.0 et paquet installable prévus pour cette publication ; Workshop traité séparément, étape par étape. Preuves de reconstruction et de publication dans docs/TESTING.md et docs/PROJECT_STATE.md.
+
 ## 0.17.0 — 2026-10-11 — affichage individuel
 
 - Liste des factions : noms de langue/dialecte conservés, progression collective et accès au diagramme par cette ligne retirés ; infobulle renvoyant à Langues du pion.
@@ -10,6 +17,8 @@
 Les vérifications ci-dessous sont datées de chaque lot. Les attentes initiales sont remplacées par les confirmations ultérieures ; l'état actuel des validations est centralisé dans [docs/TESTING.md](docs/TESTING.md).
 
 ## Documentation — 2026-10-11
+
+- Preview originale ajoutée dans About/Preview.png : pions stylisés RimWorld, livre et bulles linguistiques, bandeau 1.6. Incluse dans les futurs paquets ; version 0.17.0 conservée pendant la préparation précédant la version finale demandée.
 
 - Métadonnées About actualisées et URL GitHub ajoutée ; version 0.17.0 et DLL inchangées. Nouveau paquet local contrôlé : 277 assertions hors jeu et huit contenus d'archive vérifiés.
 - Arrivées naturelles de marchands/quêtes et interruption d'un soin ou jeu avec bébé validées par l'utilisateur. Conservation des calculs de difficulté de Cybranian confirmée ; mise à jour GitHub des sources demandée, sans tag, release ou Workshop.

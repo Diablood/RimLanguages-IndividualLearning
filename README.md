@@ -1,6 +1,6 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6**. Version de développement locale : **0.17.0**.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6**. Version stable : **1.0.0**.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 
@@ -21,7 +21,7 @@ Dans la liste des factions, seuls les noms de langue et dialecte sont affichés,
 
 RimWorld 1.6, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim.
 
-Installer le complément dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning). Cette version reste une livraison de développement, sans release ni Workshop.
+Télécharger le ZIP installable de la [release 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0), extraire le dossier dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning). La publication Workshop est préparée séparément.
 
 Pour construire depuis les sources, voir [Compilation et dépendances](docs/BUILDING.md). La DLL du complément doit être compilée ; les DLL du jeu et des dépendances ne sont pas fournies.
 
@@ -35,7 +35,7 @@ L'ajout à une partie ayant déjà Cybranian est pris en charge. Pour un pion sa
 
 ## État et limites
 
-Les parcours principaux jusqu'à 0.17.0 ont été validés en jeu par l'utilisateur, notamment persistance, recrutement, caravane, transmission, enfants et affichage sans progression collective. La compilation 0.17.0 a passé **277 assertions hors jeu**. L'agent n'a pas exécuté le moteur ; ces résultats ne constituent pas une validation exhaustive de publication. Voir [Vérifications et cas facultatifs](docs/TESTING.md).
+Les parcours principaux jusqu'à 0.17.0 ont été validés en jeu par l'utilisateur, notamment persistance, recrutement, caravane, transmission, enfants et affichage sans progression collective. La 1.0.0 conserve ces comportements ; sa reconstruction a passé **277 assertions hors jeu** et le contrôle des neuf fichiers du paquet. L'agent n'a pas exécuté le moteur ; les variantes facultatives et la compatibilité avec d'autres mods ne sont pas exhaustivement validées. Voir [Vérifications et cas facultatifs](docs/TESTING.md).
 
 Les chemins sans données individuelles exploitables utilisent encore des replis collectifs. Les arrivées naturelles de quêtes et marchands et l'interruption d'un soin ou jeu avec bébé ont été validées par l'utilisateur. Les moments d'interruption n'ont pas été détaillés séparément ; certains replis et la compatibilité avec d'autres mods restent à vérifier. Les interprètes sont reportés à une éventuelle mise à jour.
 

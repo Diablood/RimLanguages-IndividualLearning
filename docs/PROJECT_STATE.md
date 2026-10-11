@@ -2,7 +2,9 @@
 
 ## Version actuelle
 
-**0.17.0**, DLL **0.17.0.0**, schéma individuel **1**. Dernier lot : affichage des factions sans progression collective et retrait des textes d'XP collective des conversations. Compilation et **277 assertions hors jeu** réussies. Utilisateur « Tests OK » le 2026-10-11 pour le parcours principal proposé : liste des factions et conversation avec un prisonnier. Variantes facultatives non confirmées séparément ; aucun moteur exécuté par l'agent. Détails dans [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md).
+**1.0.0**, DLL **1.0.0.0**, schéma individuel **1**. Première version stable demandée par l'utilisateur, avec tag GitHub v1.0.0. Aucun changement du gameplay depuis la 0.17.0 validée : version et preview uniquement. Reconstruction et 277 assertions hors jeu réussies ; neuf contenus du paquet contrôlés, preuves dans [TESTING.md](TESTING.md). Aucun moteur exécuté par l'agent.
+
+Paquet 1.0.0 : RimLanguages-IndividualLearning-1.0.0-20261011-164334-dbea0a60.zip, 906 137 octets, SHA256 743FB9E27F7B92DA97F15559ECC7003030F0C5D7653872330A72FF801882280E. DLL SHA256 27C9C3F5803D4FBD1A418ECFC4B4E3012F780E35C0FFF56FAECF1E1F051B175D. Aucun déploiement local de la 1.0.0 effectué ; copie de test installée encore en 0.17.0. Notes de release FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md).
 
 Installée jeu fermé le 2026-10-11 : cinq fichiers vérifiés par SHA256, sauvegarde précédente sous work/runtime-before-0.17.0-20261011-161011-896. DLL livrée : 72BCBFEB77F71A0877768CBB2FACC96C2FDEF67FA4AA0F92B22B4CEABB331BCB. Aucun test en jeu exécuté.
 
@@ -12,7 +14,7 @@ Sources 0.17.0, métadonnées et empaquetage envoyés sur GitHub le 2026-10-11 �
 
 Dernière consolidation du 2026-10-11 : ajout de package.ps1 et d'une notice INSTALLATION.md FR/EN, préparation d'une archive locale installable 0.17.0. Reconstruction et 277 assertions hors jeu réussies ; huit fichiers du ZIP vérifiés par SHA256. DLL inchangée par rapport à l'installation validée. Version 0.17.0 conservée, aucun nouveau déploiement ni test en jeu. Archive et staging sous artifacts/packages, exclus de Git ; aucune release distante.
 
-Archive locale actuelle après actualisation des métadonnées : RimLanguages-IndividualLearning-0.17.0-20261011-162953-7eb54b98.zip (43 460 octets). SHA256 : B70C6234E36673F124E89063486004ED36D6215C24ECF26FEDD4194A7384C6CC. Reconstruction et 277 assertions hors jeu réussies ; huit contenus d'archive vérifiés, DLL inchangée. Aucun nouveau déploiement.
+Archive historique 0.17.0 après actualisation des métadonnées : RimLanguages-IndividualLearning-0.17.0-20261011-162953-7eb54b98.zip (43 460 octets). SHA256 : B70C6234E36673F124E89063486004ED36D6215C24ECF26FEDD4194A7384C6CC. Reconstruction et 277 assertions hors jeu réussies ; huit contenus d'archive vérifiés, DLL inchangée. Aucun nouveau déploiement.
 
 ## Fonctionnalités intégrées
 
@@ -42,6 +44,8 @@ La synthèse des confirmations utilisateur et des vérifications hors jeu se tro
 Le 2026-10-11, l'utilisateur a validé les arrivées naturelles de marchands et quêtes ainsi que l'interruption d'un soin ou jeu avec bébé. Cette confirmation ne détaille pas séparément chaque moment d'interruption ni le rechargement au milieu de l'activité. Certains replis et les interactions avec d'autres mods restent distincts. Les capsules de transport ont été explicitement écartées du parcours actuel : non testées et non bloquantes.
 
 ## Décisions et suite
+
+Demande du 2026-10-11 : version finale 1.0.0 avec tag GitHub, après création de la preview. Visuel dans About/Preview.png : pions stylisés avec yeux, apprentissage autour d'un livre et bandeau 1.6 dans le coin supérieur droit. Génération originale avec l'outil image_gen, sans reprise d'image du parent. Export PNG 640 × 640, 862 346 octets, SHA256 EE119A13E8110018804FE2F58510E0A2343F81AB14512888439842C7E91DA46F ; original conservé sous artifacts/preview, exclu de Git. package.ps1 inclut la preview dans sa liste autorisée de neuf fichiers et contrôle son poids inférieur à 1 000 000 octets. Workshop à préparer étape par étape, sans envoi à cette étape.
 
 Le 2026-10-11, l'utilisateur confirme la conservation de la difficulté et des calculs de Cybranian, y compris la différence entre lecture et conversation. Métadonnées About actualisées : fonctionnalités actuelles, DLC facultatifs, migration et URL GitHub. Version 0.17.0 conservée : aucune modification du code, des traductions ou des données persistantes dans cette consolidation.
 

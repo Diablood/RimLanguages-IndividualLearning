@@ -1,4 +1,10 @@
-# Vérifications — version 0.17.0
+# Vérifications — version 1.0.0
+
+## Première version stable
+
+Publication 1.0.0 demandée par l'utilisateur le 2026-10-11. Gameplay identique à la 0.17.0 validée ; schéma 1 et données persistantes inchangés. Preview contrôlée visuellement après restauration des yeux et ajout du bandeau 1.6 : PNG 640 × 640, 862 346 octets, inférieur au plafond prudent de 1 000 000 octets. Aucun nouveau parcours moteur exécuté par l'agent.
+
+package.ps1 exécuté le 2026-10-11 : reconstruction 1.0.0, 277 assertions hors jeu, XML, correspondance FR/EN, versions About/DLL et exclusion des DLL tierces réussis. Neuf fichiers du ZIP vérifiés par SHA256 ; preview incluse et poids contrôlé. Diff Source/Languages vide depuis la 0.17.0 ; aucune modification du comportement ou de l'état persistant. Aucun déploiement local, aucune exécution du moteur.
 
 ## Lot actuel : affichage individuel
 

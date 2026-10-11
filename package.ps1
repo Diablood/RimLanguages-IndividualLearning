@@ -22,9 +22,14 @@ $version = [string]$metadata.ModMetaData.modVersion
 if ($metadata.ModMetaData.packageId -ne 'Diablood.RimLanguages.IndividualLearning' -or
     $version -notmatch '^\d+\.\d+\.\d+$') { throw 'Unexpected package identity or version.' }
 $modName = 'RimLanguages-IndividualLearning'
+$previewPath = Join-Path $PSScriptRoot 'About/Preview.png'
+if (-not (Test-Path -LiteralPath $previewPath) -or (Get-Item -LiteralPath $previewPath).Length -ge 1000000) {
+    throw 'Preview.png must exist and be smaller than 1,000,000 bytes.'
+}
 $packageFiles = @(
     'About/About.xml',
     'About/ModIcon.png',
+    'About/Preview.png',
     'LoadFolders.xml',
     '1.6/Assemblies/RimLanguages.IndividualLearning.dll',
     'Languages/English/Keyed/IndividualLearning.xml',
