@@ -4,6 +4,8 @@
 
 Dépôt public créé par utilisateur : [Diablood/RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning). Dépôt local initialisé, origin configuré, branche main fondée sur le commit distant 09f6b13. Premier envoi des sources du complément ; aucun tag, release ou Workshop publié.
 
+Premier envoi vérifié le 2026-10-11 : commit 89eeb0c, 59 fichiers, référence distante identique. Visibilité publique et branche main confirmées par l'API GitHub. Les mises à jour documentaires suivantes restent séparées des releases du mod.
+
 Choix du 2026-10-11 : dépôt **RimLanguages-IndividualLearning**, nom accepté par utilisateur, visibilité **publique**, licence **MIT** choisie selon la délégation utilisateur et ajoutée dans LICENSE. Le packageId du mod est conservé.
 
 ## Contenu à suivre

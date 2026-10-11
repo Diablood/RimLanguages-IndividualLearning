@@ -6,7 +6,7 @@
 
 Le parcours principal 0.16.0 a reçu « Tests OK » utilisateur : gain après jeu, transmission désactivée et sauvegarde/rechargement. Les variantes facultatives ne sont pas confirmées séparément. Aucun moteur exécuté par l'agent.
 
-Dernier lot : rattachement au dépôt GitHub fourni par l'utilisateur et préparation du premier envoi des sources. Reconstruction 0.16.0 et 269 assertions hors jeu réussies le 2026-10-11 ; XML, FR/EN et versions cohérents. Aucun changement de code, numéro, réglage ou installation ; aucun nouveau test en jeu.
+Dernier lot : rattachement au dépôt GitHub fourni par l'utilisateur et premier envoi des sources terminé. Reconstruction 0.16.0 et 269 assertions hors jeu réussies le 2026-10-11 ; XML, FR/EN et versions cohérents. Aucun changement de code, numéro, réglage ou installation ; aucun nouveau test en jeu.
 
 ## Fonctionnalités intégrées
 
@@ -40,6 +40,8 @@ Les diagnostics sociaux et de génération ne prouvent pas l'exécution de tous 
 Les interprètes sont reportés à une éventuelle mise à jour ; leur proposition n'a pas été retenue pour implémentation. Une API publique pour GateRim est facultative et doit être cadrée séparément, sans dépendance en sens inverse.
 
 Dépôt public fourni par utilisateur : [Diablood/RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning). Dépôt local initialisé, origin configuré et branche main rattachée au commit initial distant 09f6b13. Licence MIT distante conservée, y compris sa notice de copyright. Premier envoi du projet ; aucune release, aucun tag ou Workshop.
+
+Envoi des sources confirmé le 2026-10-11 : commit 89eeb0c57d8681fb9372a62afef06bd9864af8a6 sur main, référence distante identique. 59 fichiers présents ; anciens fichiers de reprise et DLL absents. L'API GitHub confirme visibility=public, private=false et default_branch=main.
 
 Les fichiers CONTINUER_SUR_CODEX.md et CODEX_START.md sont retirés à la demande utilisateur : doublons de reprise. AGENTS.md, l'état courant et la roadmap restent les points d'entrée du développement.
 

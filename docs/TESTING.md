@@ -16,6 +16,8 @@ Complément documentaire du 2026-10-11 : licence MIT ajoutée et choix GitHub co
 
 Premier envoi GitHub — 2026-10-11 : reconstruction complète 0.16.0 et 269 assertions hors jeu réussies, XML, FR/EN, versions et exclusion des DLL tierces vérifiés. 59 fichiers suivis et 73 liens locaux contrôlés, sans DLL, archive, sauvegarde ou chemin personnel. Aucun nouveau test en jeu ni déploiement. Deux fichiers de reprise redondants retirés ; consignes et état courant conservés.
 
+Envoi confirmé : commit sources 89eeb0c identique sur GitHub/main et local ; 59 fichiers dans l'arbre distant. API GitHub : dépôt public, branche principale main. Commit initial de licence conservé et aucune divergence après envoi.
+
 - Socle : onglet Langues, initialisation en nouvelle partie, indépendance des niveaux et sauvegarde/rechargement.
 - Livres : progression du lecteur et conservation des données.
 - Prisonniers : gains du gardien, passage de la langue au dialecte, persistance, arrêt des nouveaux travaux à langue et dialecte 100 %, reprise après baisse. Un geôlier complet suffit à vérifier la fin ; ne pas demander au second de terminer.
