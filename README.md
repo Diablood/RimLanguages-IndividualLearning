@@ -1,6 +1,6 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6**. Version de développement locale : **0.16.0**.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6**. Version de développement locale : **0.17.0**.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 
@@ -15,6 +15,8 @@ Chaque pion possède ses propres connaissances linguistiques, conservées après
 
 Les livres, langues, dialectes, configuration initiale, facteurs et préceptes du parent sont réutilisés. Le collectif continue de progresser pour la compatibilité ; ses acquis ne sont pas copiés sur tous les pions.
 
+Dans la liste des factions, seuls les noms de langue et dialecte sont affichés, sans niveau collectif. Les textes d'XP collective des conversations sont masqués ; les niveaux restent consultables dans Langues du pion. Voir [Affichage individuel](docs/COLLECTIVE_DISPLAY.md).
+
 ## Installation
 
 RimWorld 1.6, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim.
@@ -22,6 +24,8 @@ RimWorld 1.6, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony 
 Installer le complément dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning). Cette version reste une livraison de développement, sans release ni Workshop.
 
 Pour construire depuis les sources, voir [Compilation et dépendances](docs/BUILDING.md). La DLL du complément doit être compilée ; les DLL du jeu et des dépendances ne sont pas fournies.
+
+Une archive locale installable se prépare avec ./package.ps1 : reconstruction, tests et contrôle du contenu inclus. Elle n'est pas publiée automatiquement. Voir [Notice d'installation FR/EN](INSTALLATION.md).
 
 ## Options et sauvegardes
 
@@ -31,9 +35,9 @@ L'ajout à une partie ayant déjà Cybranian est pris en charge. Pour un pion sa
 
 ## État et limites
 
-Les parcours principaux ont été validés en jeu par l'utilisateur, notamment persistance, recrutement, caravane, transmission et enfants. La dernière compilation a passé **269 assertions hors jeu**. L'agent n'a pas exécuté le moteur ; ces résultats ne constituent pas une validation exhaustive de publication. Voir [Vérifications et cas facultatifs](docs/TESTING.md).
+Les parcours principaux jusqu'à 0.17.0 ont été validés en jeu par l'utilisateur, notamment persistance, recrutement, caravane, transmission, enfants et affichage sans progression collective. La compilation 0.17.0 a passé **277 assertions hors jeu**. L'agent n'a pas exécuté le moteur ; ces résultats ne constituent pas une validation exhaustive de publication. Voir [Vérifications et cas facultatifs](docs/TESTING.md).
 
-Les chemins sans données individuelles exploitables utilisent encore des replis collectifs. Les arrivées naturelles de quêtes et marchands, certaines interruptions de soins et la compatibilité avec d'autres mods restent à vérifier séparément. Les interprètes sont reportés à une éventuelle mise à jour.
+Les chemins sans données individuelles exploitables utilisent encore des replis collectifs. Les arrivées naturelles de quêtes et marchands et l'interruption d'un soin ou jeu avec bébé ont été validées par l'utilisateur. Les moments d'interruption n'ont pas été détaillés séparément ; certains replis et la compatibilité avec d'autres mods restent à vérifier. Les interprètes sont reportés à une éventuelle mise à jour.
 
 ## Licence
 

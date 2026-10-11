@@ -46,11 +46,11 @@ La fréquence des interactions n'a pas été modifiée. Le rythme a été jugé 
 
 Les conversations admissibles peuvent transmettre au prisonnier la langue du gardien pendant le recrutement, en parallèle de la réduction de résistance. Après recrutement, le nouveau colon garde son registre et peut continuer à apprendre ; sa nouvelle faction ne complète pas automatiquement la langue.
 
-Les textes d'XP du parent décrivent des points collectifs et peuvent apparaître sur le pion non contrôlé. Ils ne représentent pas le pourcentage personnel du prisonnier. La fiche Langues est la référence. Apprentissage après recrutement et sauvegarde/rechargement confirmés par utilisateur.
+Les anciens textes d'XP du parent décrivaient des points collectifs, parfois affichés sur le pion non contrôlé ; ils sont masqués depuis 0.17.0, sans suppression des gains collectifs. La fiche Langues reste la référence. Apprentissage après recrutement et sauvegarde/rechargement confirmés par utilisateur. Voir [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md).
 
 ## Présentation
 
-Après un gain automatique réel dans une conversation, le symbole de sa bulle sociale existante est teinté en cyan. Même bulle, forme et durée, sans seconde bulle, texte chiffré ou infobulle de survol ajoutée. La teinte signale un gain, pas sa langue ou son sens. Sans bulle exploitable, affichage habituel ; les textes collectifs du parent restent.
+Après un gain automatique réel dans une conversation, le symbole de sa bulle sociale existante est teinté en cyan. Même bulle, forme et durée, sans seconde bulle, texte chiffré ou infobulle de survol ajoutée. La teinte signale un gain, pas sa langue ou son sens. Sans bulle exploitable, affichage habituel ; les textes de conversation collectifs du parent sont masqués depuis 0.17.0.
 
 Un Prefix ouvre le contexte de la paire TryInteractWith, le Postfix MakeInteractionBubble capture la bulle/symbole, puis le gain déclenche le marquage. Finalizer nettoie même après exception ; contextes imbriqués isolés, aucun champ sauvegardé.
 

@@ -61,6 +61,7 @@ internal static class KnowledgeTests
         MigrationTests.Run(Check);
         TransmissionTests.Run(Check);
         ChildLearningTests.Run(Check);
+        CollectivePresentationTests.Run(Check);
     }
 
     private static void DeveloperEditScenarios()

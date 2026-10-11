@@ -1,8 +1,20 @@
 # Historique des versions
 
+## 0.17.0 — 2026-10-11 — affichage individuel
+
+- Liste des factions : noms de langue/dialecte conservés, progression collective et accès au diagramme par cette ligne retirés ; infobulle renvoyant à Langues du pion.
+- Deux appels de texte d'XP collective des conversations masqués ; calculs et gains collectifs, textes vanilla et bulle de transmission personnelle conservés.
+- Aucun changement du schéma 1, des niveaux, livres, configuration initiale ou réglages. Diagramme parent conservé pour ses autres chemins.
+- Compilation et 277 assertions hors jeu réussies, XML/FR/EN/versions vérifiés. Utilisateur « Tests OK » le 2026-10-11 pour le parcours principal proposé ; variantes facultatives non détaillées séparément. Aucun moteur exécuté par l'agent.
+
 Les vérifications ci-dessous sont datées de chaque lot. Les attentes initiales sont remplacées par les confirmations ultérieures ; l'état actuel des validations est centralisé dans [docs/TESTING.md](docs/TESTING.md).
 
 ## Documentation — 2026-10-11
+
+- Métadonnées About actualisées et URL GitHub ajoutée ; version 0.17.0 et DLL inchangées. Nouveau paquet local contrôlé : 277 assertions hors jeu et huit contenus d'archive vérifiés.
+- Arrivées naturelles de marchands/quêtes et interruption d'un soin ou jeu avec bébé validées par l'utilisateur. Conservation des calculs de difficulté de Cybranian confirmée ; mise à jour GitHub des sources demandée, sans tag, release ou Workshop.
+
+- Préparation locale d'un ZIP installable par package.ps1 et notice FR/EN. Reconstruction 0.17.0, 277 assertions hors jeu et huit fichiers d'archive vérifiés par SHA256. Runtime et version inchangés, aucune release publiée.
 
 - Rattachement au dépôt public fourni par utilisateur, conservation du commit initial et de sa licence MIT. Premier envoi des sources en 0.16.0 ; reconstruction et 269 assertions hors jeu réussies, sans release ou tag.
 - Retrait de CONTINUER_SUR_CODEX.md et CODEX_START.md, redondants avec les consignes et l'état courant.

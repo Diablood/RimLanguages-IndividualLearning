@@ -1,5 +1,9 @@
 # Audit local de Cybranian — 2026-10-10
 
+## Affichage collectif — inspection du 2026-10-11, lot 0.17.0
+
+DLL Cybranian revérifiée, empreinte inchangée. FactionUIUtility_DrawFactionRow_FactionLanguagesPatch.Postfix(Faction, ref float, Rect, ref float) appelle DrawUtility.DrawFactionTabRow, qui ajoute 30 pixels et affiche noms, XP/statuts collectifs et accès au diagramme. Le moteur DrawFactionRow renvoie 80 pixels. Le Postfix de conversation du parent contient deux ThrowText(Vector3, Map, string, float) liés aux gains collectifs. Remplacement ciblé de la présentation décrit dans [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md) ; calculs, sauvegardes et configuration initiale conservés. Compilation et 277 assertions hors jeu réussies, aucun moteur exécuté par l'agent.
+
 Ce document conserve les inspections datées des assemblies installées et les décisions de chaque lot. Les états de livraison et limites décrits pour une ancienne version sont historiques. Pour le comportement et les validations actuels en 0.16.0, lire [PROJECT_STATE.md](PROJECT_STATE.md), [TESTING.md](TESTING.md) et les documents des sous-systèmes.
 
 ## Audit du cycle de vie — 2026-10-11, version 0.13.0 conservée

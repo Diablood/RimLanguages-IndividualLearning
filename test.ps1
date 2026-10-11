@@ -36,6 +36,8 @@ $arguments += Join-Path $PSScriptRoot 'tests\GenerationPatchTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\MigrationTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\TransmissionTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\ChildLearningTests.cs'
+$arguments += Join-Path $PSScriptRoot 'tests\CollectivePresentationTests.cs'
+$arguments += "/reference:$managed\UnityEngine.CoreModule.dll"
 & dotnet @arguments
 if ($LASTEXITCODE -ne 0) { throw 'Test compilation failed.' }
 $shellName = if ($PSEdition -eq 'Core') { 'pwsh.exe' } else { 'powershell.exe' }

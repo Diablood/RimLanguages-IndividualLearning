@@ -2,11 +2,17 @@
 
 ## Version actuelle
 
-**0.16.0**, DLL **0.16.0.0**, schéma individuel **1**. Dernier lot fonctionnel : transmission pendant les jeux vanilla avec bébé. Installé localement, cinq fichiers contrôlés par SHA256 ; dernière compilation et **269 assertions hors jeu** réussies.
+**0.17.0**, DLL **0.17.0.0**, schéma individuel **1**. Dernier lot : affichage des factions sans progression collective et retrait des textes d'XP collective des conversations. Compilation et **277 assertions hors jeu** réussies. Utilisateur « Tests OK » le 2026-10-11 pour le parcours principal proposé : liste des factions et conversation avec un prisonnier. Variantes facultatives non confirmées séparément ; aucun moteur exécuté par l'agent. Détails dans [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md).
+
+Installée jeu fermé le 2026-10-11 : cinq fichiers vérifiés par SHA256, sauvegarde précédente sous work/runtime-before-0.17.0-20261011-161011-896. DLL livrée : 72BCBFEB77F71A0877768CBB2FACC96C2FDEF67FA4AA0F92B22B4CEABB331BCB. Aucun test en jeu exécuté.
 
 Le parcours principal 0.16.0 a reçu « Tests OK » utilisateur : gain après jeu, transmission désactivée et sauvegarde/rechargement. Les variantes facultatives ne sont pas confirmées séparément. Aucun moteur exécuté par l'agent.
 
-Dernier lot : rattachement au dépôt GitHub fourni par l'utilisateur et premier envoi des sources terminé. Reconstruction 0.16.0 et 269 assertions hors jeu réussies le 2026-10-11 ; XML, FR/EN et versions cohérents. Aucun changement de code, numéro, réglage ou installation ; aucun nouveau test en jeu.
+Le premier envoi GitHub de 0.16.0 est acquis. L'utilisateur a demandé la mise à jour GitHub des sources 0.17.0 et des métadonnées ; aucun tag, release ou Workshop demandé. Aucun moteur exécuté par l'agent.
+
+Dernière consolidation du 2026-10-11 : ajout de package.ps1 et d'une notice INSTALLATION.md FR/EN, préparation d'une archive locale installable 0.17.0. Reconstruction et 277 assertions hors jeu réussies ; huit fichiers du ZIP vérifiés par SHA256. DLL inchangée par rapport à l'installation validée. Version 0.17.0 conservée, aucun nouveau déploiement ni test en jeu. Archive et staging sous artifacts/packages, exclus de Git ; aucune release distante.
+
+Archive locale actuelle après actualisation des métadonnées : RimLanguages-IndividualLearning-0.17.0-20261011-162953-7eb54b98.zip (43 460 octets). SHA256 : B70C6234E36673F124E89063486004ED36D6215C24ECF26FEDD4194A7384C6CC. Reconstruction et 277 assertions hors jeu réussies ; huit contenus d'archive vérifiés, DLL inchangée. Aucun nouveau déploiement.
 
 ## Fonctionnalités intégrées
 
@@ -23,7 +29,7 @@ Dernier lot : rattachement au dépôt GitHub fourni par l'utilisateur et premier
 
 ## Conservé du parent et encore collectif
 
-Livres, Defs, langues/dialectes, écran initial, paramètres, facteurs et préceptes réutilisés. La XP collective, le diagramme de faction et les utilitaires du parent restent actifs pour la compatibilité et les replis. L'option autoLearnRecruiteeLanguage garde son effet collectif ; elle ne distribue aucun savoir personnel.
+Livres, Defs, langues/dialectes, écran initial, paramètres, facteurs et préceptes réutilisés. La XP collective et les utilitaires du parent restent actifs pour la compatibilité et les replis. Le diagramme n'est pas supprimé, mais son accès par la ligne de faction et les niveaux affichés dans cette ligne sont retirés en 0.17.0. L'option autoLearnRecruiteeLanguage garde son effet collectif ; elle ne distribue aucun savoir personnel.
 
 Les contrôles individuels utilisent le comportement original si le pion, le registre ou la langue cible ne sont pas exploitables. Les menus sans acteur reportent le contrôle lorsqu'une langue valide est résolue ; les restrictions vanilla restent appliquées.
 
@@ -33,9 +39,11 @@ La lecture réutilise le calcul du parent, dont la difficulté intervient diffé
 
 La synthèse des confirmations utilisateur et des vérifications hors jeu se trouve dans [TESTING.md](TESTING.md). Ne pas remettre les parcours acquis en attente : socle, livres, progression prisonnier et dialecte, fin/reprise des leçons, interface, ajout développeur, contrôles individuels, migration, transmission, recrutement/rechargement, caravane et parcours principal enfants.
 
-Les diagnostics sociaux et de génération ne prouvent pas l'exécution de tous les événements naturels. Les variantes d'interruption, certains replis et les interactions avec d'autres mods restent distincts. Les capsules de transport ont été explicitement écartées du parcours actuel : non testées et non bloquantes.
+Le 2026-10-11, l'utilisateur a validé les arrivées naturelles de marchands et quêtes ainsi que l'interruption d'un soin ou jeu avec bébé. Cette confirmation ne détaille pas séparément chaque moment d'interruption ni le rechargement au milieu de l'activité. Certains replis et les interactions avec d'autres mods restent distincts. Les capsules de transport ont été explicitement écartées du parcours actuel : non testées et non bloquantes.
 
 ## Décisions et suite
+
+Le 2026-10-11, l'utilisateur confirme la conservation de la difficulté et des calculs de Cybranian, y compris la différence entre lecture et conversation. Métadonnées About actualisées : fonctionnalités actuelles, DLC facultatifs, migration et URL GitHub. Version 0.17.0 conservée : aucune modification du code, des traductions ou des données persistantes dans cette consolidation.
 
 Les interprètes sont reportés à une éventuelle mise à jour ; leur proposition n'a pas été retenue pour implémentation. Une API publique pour GateRim est facultative et doit être cadrée séparément, sans dépendance en sens inverse.
 

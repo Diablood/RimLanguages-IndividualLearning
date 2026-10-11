@@ -17,3 +17,11 @@ Exemple PowerShell, avec chemins à remplacer sur son poste :
 Sans paramètre, deploy.ps1 utilise Mods sous le jeu détecté. Il exige un dossier Mods existant et le jeu fermé. Il crée le complément pour une première installation ou vérifie son packageId avant remplacement. Il refuse un dossier existant sans métadonnées valides, vérifie la version et les chemins de destination, sauvegarde les anciens fichiers sous work puis compare les SHA256 des cinq fichiers copiés. Aucun autre mod modifié et aucune publication.
 
 Sources et documents utilisent des chemins relatifs ou des placeholders ; les chemins réellement détectés ne sont affichés qu'à l'exécution. work et artifacts sont exclus du suivi Git.
+
+## Préparer une archive installable
+
+Exécuter ./package.ps1. Les paramètres RimWorldDir, CybranianDir, HarmonyAssembly, Compiler et CecilAssembly sont les mêmes que pour build/test ; détection automatique par défaut.
+
+Le script reconstruit systématiquement puis exécute test.ps1. Il copie seulement huit fichiers autorisés, crée un ZIP sous artifacts/packages avec un dossier RimLanguages-IndividualLearning à sa racine, puis vérifie la liste exacte et chaque contenu décompressé par SHA256. Un fichier absent, un échec de compilation/test ou une différence de contenu interrompt la préparation.
+
+Chaque exécution crée un chemin unique, sans écraser un paquet précédent. Les dossiers de staging restent sous artifacts/packages, exclus de Git. Aucun déploiement, tag, release ou envoi distant. Installation du ZIP : [INSTALLATION.md](../INSTALLATION.md).
