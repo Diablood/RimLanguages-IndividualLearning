@@ -18,6 +18,12 @@ Les vérifications ci-dessous sont datées de chaque lot. Les attentes initiales
 
 ## Documentation — 2026-10-11
 
+- Présence du projet sur le Workshop vérifiée manuellement par l'utilisateur ; confirmation consignée avant l'envoi GitHub demandé des dernières modifications. Version et release 1.0.0 conservées.
+
+- Identifiant Workshop 3817893569 fourni par l'utilisateur, conservé dans About/PublishedFileId.txt et liens Steam ajoutés aux documents. Page non accessible à l'outil web ; visibilité et contenu non confirmés. Aucun changement runtime, version, archive GitHub ou publication par l'agent.
+
+- Préparation de la copie 1.0.0 dans Mods pour publication Workshop par l'utilisateur : neuf fichiers identiques au ZIP GitHub, preview incluse, backup précédent. deploy.ps1 copie désormais le paquet complet ; descriptions FR/EN et patchnotes fournies. Aucun changement runtime, version ou test moteur, aucun envoi Steam par l'agent.
+
 - Preview originale ajoutée dans About/Preview.png : pions stylisés RimWorld, livre et bulles linguistiques, bandeau 1.6. Incluse dans les futurs paquets ; version 0.17.0 conservée pendant la préparation précédant la version finale demandée.
 
 - Métadonnées About actualisées et URL GitHub ajoutée ; version 0.17.0 et DLL inchangées. Nouveau paquet local contrôlé : 277 assertions hors jeu et huit contenus d'archive vérifiés.

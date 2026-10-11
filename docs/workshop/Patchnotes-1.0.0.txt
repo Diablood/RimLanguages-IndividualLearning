@@ -1,0 +1,19 @@
+1.0.0 — Première version publique
+
+- Langues et dialectes individuels persistants, avec onglet Langues par pion.
+- Apprentissage par livres, leçons auprès des prisonniers et conversations ordinaires.
+- Contrôles linguistiques selon les pions concernés ; outils développeur individuels.
+- Apprentissage des bébés avec Biotech, sans bloquer l'éducation vanilla.
+- Événements personnels avec les préceptes linguistiques de Cybranian et Ideology.
+- Prise en charge de l'ajout à une sauvegarde utilisant déjà Cybranian.
+- Configuration initiale, contenus et difficulté de Cybranian conservés.
+
+1.0.0 — Initial public release
+
+- Persistent individual languages and dialects, with a per-pawn Languages tab.
+- Learning through books, prisoner lessons and ordinary conversations.
+- Pawn-based language checks and individual developer tools.
+- Biotech infant learning without blocking vanilla education.
+- Personal learning events with Cybranian's language-learning precepts and Ideology.
+- Support for adding the addon to existing Cybranian saves.
+- Preserves Cybranian's initial configuration, content and difficulty setting.

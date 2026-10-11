@@ -13,14 +13,14 @@ RimSort affiche la version d'About ; sa détection automatique a été confirmé
 1. Relire l'état, les consignes et les vérifications du sous-système modifié.
 2. Mettre à jour la version pour le lot testable et le changelog ; préserver les clés de sauvegarde ou documenter la migration.
 3. Exécuter build.ps1 puis test.ps1 ; vérifier XML, traductions et versions.
-4. Fermer RimWorld, puis exécuter deploy.ps1 : sauvegarde des cinq fichiers précédents sous work, contrôle d'identité, copie et comparaison SHA256.
+4. Fermer RimWorld, puis exécuter deploy.ps1 : sauvegarde des neuf fichiers précédents lorsqu'ils existent sous work, contrôle d'identité, copie et comparaison SHA256. Conserver l'éventuel PublishedFileId.txt.
 5. Redémarrer le jeu ; vérifier le parcours modifié et la persistance, puis consigner précisément les résultats.
 
 Voir [BUILDING.md](BUILDING.md). Build et tests ne déploient pas ; le déploiement local ne publie rien. Les anciens scripts sous work sont historiques.
 
 ## Paquet local préparé
 
-Paquet 1.0.0 reconstruit le 2026-10-11 : 277 assertions hors jeu et neuf fichiers d'archive vérifiés, preview incluse et sous 1 000 000 octets. Code et traductions inchangés depuis la 0.17.0, version DLL 1.0.0.0. Notes FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md). Aucun déploiement local de cette version.
+Paquet 1.0.0 reconstruit le 2026-10-11 : 277 assertions hors jeu et neuf fichiers d'archive vérifiés, preview incluse et sous 1 000 000 octets. Code et traductions inchangés depuis la 0.17.0, version DLL 1.0.0.0. Notes FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md). Version ensuite déployée dans Mods à la demande utilisateur pour son envoi Workshop depuis le jeu ; neuf fichiers identiques au ZIP GitHub. Textes dans [WORKSHOP.md](WORKSHOP.md).
 
 ./package.ps1 reconstruit, exécute les tests et crée une archive installable contrôlée sous artifacts/packages. Contenu autorisé : About/About.xml, About/ModIcon.png, About/Preview.png, LoadFolders.xml, la DLL propre du complément, les deux traductions, LICENSE et INSTALLATION.md. Chaque fichier du ZIP est comparé par SHA256 à sa source ; aucun MANIFEST ajouté. Les archives précédant l'ajout de la preview contenaient huit fichiers ; les nouveaux paquets en contiennent neuf.
 
@@ -28,7 +28,7 @@ Préparation 0.17.0 exécutée le 2026-10-11 : 277 assertions hors jeu et huit c
 
 ## Publication externe
 
-[Release GitHub 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0) publiée le 2026-10-11, tag annoté v1.0.0 sur ecf60dd. ZIP installable téléchargé après publication et comparé par SHA256 au paquet local, identique ; état stable confirmé par API. Workshop non publié et aucun PublishedFileId défini.
+[Release GitHub 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0) publiée le 2026-10-11, tag annoté v1.0.0 sur ecf60dd. ZIP installable téléchargé après publication et comparé par SHA256 au paquet local, identique ; état stable confirmé par API. Identifiant Workshop ensuite fourni par l'utilisateur : 3817893569, conservé dans About/PublishedFileId.txt du projet ; page non vérifiée à distance. Le ZIP GitHub déjà publié reste inchangé et ne contient pas cet identifiant.
 
 La première version stable 1.0.0 est demandée par l'utilisateur. Parcours principaux jusqu'à 0.17.0 confirmés par utilisateur, y compris arrivées naturelles de marchands/quêtes et interruption de soin ou jeu avec bébé ; comportements inchangés en 1.0.0, variantes et limites dans [TESTING.md](TESTING.md). Cette publication n'annonce pas une compatibilité exhaustive avec d'autres mods.
 
@@ -36,7 +36,7 @@ La création d'un dépôt est distincte d'une release. Nom retenu : RimLanguages
 
 Distribuer uniquement About, LoadFolders.xml, Languages et la DLL propre au complément dans 1.6/Assemblies. Ne pas redistribuer les DLL du jeu, Harmony ou Cybranian, ni références de compilation, sauvegardes, journaux, archives locales ou fichiers *_MANIFEST.txt.
 
-Aucun PublishedFileId défini. Aucun tag, release GitHub ou Workshop à créer sans instruction explicite. Préparation du dépôt : [GITHUB_SETUP.md](GITHUB_SETUP.md).
+PublishedFileId actuel : **3817893569**. Présence du projet sur le Workshop vérifiée manuellement par l'utilisateur le 2026-10-11. deploy.ps1 conserve celui de la copie installée ; package.ps1 n'inclut pas ce fichier dans le ZIP installable. Aucun nouveau tag, release GitHub ou envoi Workshop sans instruction explicite. Préparation du dépôt : [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 Une mise à jour des sources GitHub est un commit suivi d'un push. Une publication technique est une étape distincte : créer un tag et une release GitHub avec le ZIP installable, ou créer/envoyer l'article Steam Workshop et enregistrer son PublishedFileId. La demande du 2026-10-11 autorise les métadonnées et la mise à jour des sources GitHub, sans demander ces publications.
 

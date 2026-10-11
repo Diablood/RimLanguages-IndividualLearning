@@ -1,0 +1,46 @@
+[h1]Des langues propres à chaque pion[/h1]
+Rim Languages — Individual Learning est un complément de Cybranian — Rim Languages pour RimWorld 1.6.
+
+Chaque pion possède ses propres connaissances en langues et dialectes. Un colon qui apprend une langue progresse individuellement : ses acquis ne sont pas automatiquement partagés avec toute sa faction.
+
+[h2]Fonctionnalités[/h2]
+[list]
+[*]Un onglet Langues par pion : langues connues, dialectes, niveaux et origine maternelle.
+[*]Apprentissage individuel grâce aux livres de Cybranian et aux leçons auprès des prisonniers.
+[*]Transmission automatique pendant les conversations ordinaires. Un pion peut transmettre une connaissance maîtrisée à 100 %, sans ordre manuel ni priorité sur les autres interactions sociales.
+[*]Progression influencée par les aptitudes sociales. Le réglage de difficulté de Cybranian est conservé, sans second curseur.
+[*]Recrutement, résistance, conversion, commerce et communications selon les connaissances du pion qui agit. Les facteurs sociaux tiennent compte des langues et dialectes maîtrisés en commun.
+[*]Connaissances conservées après sauvegarde, recrutement et déplacement en caravane.
+[*]Outils développeur pour ajouter une langue ou un dialecte à un pion et ajuster précisément ses niveaux.
+[/list]
+
+[h2]Fonctionnalités avec DLC[/h2]
+[b]Biotech :[/b] les nouveaux bébés issus du parcours de naissance pris en charge commencent leur langue et dialecte maternels à 0 %, puis apprennent pendant le nourrissage et les jeux. L'éducation, les compétences, la croissance et les passions vanilla restent indépendantes de cette progression.
+
+[b]Ideology :[/b] les événements et pensées d'apprentissage suivent la progression personnelle lorsqu'un précepte linguistique de Cybranian est présent.
+
+[b]Aucun DLC n'est obligatoire.[/b]
+
+[h2]Ce qui est conservé de Cybranian[/h2]
+Les langues, dialectes, livres, configuration initiale et difficulté du mod parent sont réutilisés. La liste des factions affiche leur identité linguistique sans niveaux collectifs ; les textes de gain d'XP collective des conversations sont masqués.
+
+Les données collectives restent actives en interne pour la compatibilité et les replis lorsque les données individuelles ne sont pas exploitables.
+
+[h2]Dépendances et ordre de chargement[/h2]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3450332059]Cybranian — Rim Languages[/url]
+[*]Rim Languages — Individual Learning
+[/list]
+Aucune dépendance à GateRim.
+
+[h2]Parties existantes[/h2]
+Peut être ajouté à une partie utilisant déjà Cybranian. Les pions sans registre individuel reçoivent uniquement la langue et le dialecte natifs de leur faction observée ; les autres connaissances de faction ne sont pas importées. L'origine historique des pions recrutés avant l'installation ne peut pas être reconstituée. Conservez une copie de votre sauvegarde avant l'ajout.
+
+Les mods remplaçant les interactions sociales, les naissances ou les soins peuvent nécessiter une adaptation ; leur compatibilité n'est pas garantie.
+
+[h2]Sources et retours[/h2]
+[url=https://github.com/Diablood/RimLanguages-IndividualLearning]Sources, documentation et versions GitHub[/url]
+[url=https://github.com/Diablood/RimLanguages-IndividualLearning/issues]Signaler un problème[/url]
+
+Complément indépendant ; Cybranian — Rim Languages reste nécessaire et conserve ses propres crédits et droits.

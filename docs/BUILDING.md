@@ -14,7 +14,7 @@ Exemple PowerShell, avec chemins à remplacer sur son poste :
 ./deploy.ps1 -RimWorldModsDir '<RimWorld>/Mods'
 ```
 
-Sans paramètre, deploy.ps1 utilise Mods sous le jeu détecté. Il exige un dossier Mods existant et le jeu fermé. Il crée le complément pour une première installation ou vérifie son packageId avant remplacement. Il refuse un dossier existant sans métadonnées valides, vérifie la version et les chemins de destination, sauvegarde les anciens fichiers sous work puis compare les SHA256 des cinq fichiers copiés. Aucun autre mod modifié et aucune publication.
+Sans paramètre, deploy.ps1 utilise Mods sous le jeu détecté. Il exige un dossier Mods existant et le jeu fermé. Il crée le complément pour une première installation ou vérifie son packageId avant remplacement. Il refuse un dossier existant sans métadonnées valides, vérifie la version et les chemins de destination, sauvegarde les anciens fichiers sous work puis compare les SHA256 des neuf fichiers copiés : métadonnées, icône, preview, LoadFolders, DLL du complément, deux traductions, licence et notice. Un éventuel About/PublishedFileId.txt reste conservé. Aucun autre mod modifié et aucune publication.
 
 Sources et documents utilisent des chemins relatifs ou des placeholders ; les chemins réellement détectés ne sont affichés qu'à l'exécution. work et artifacts sont exclus du suivi Git.
 

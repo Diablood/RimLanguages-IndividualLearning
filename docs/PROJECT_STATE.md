@@ -4,9 +4,15 @@
 
 **1.0.0**, DLL **1.0.0.0**, schéma individuel **1**. Première version stable demandée par l'utilisateur, avec tag GitHub v1.0.0. Aucun changement du gameplay depuis la 0.17.0 validée : version et preview uniquement. Reconstruction et 277 assertions hors jeu réussies ; neuf contenus du paquet contrôlés, preuves dans [TESTING.md](TESTING.md). Aucun moteur exécuté par l'agent.
 
-Paquet 1.0.0 : RimLanguages-IndividualLearning-1.0.0-20261011-164334-dbea0a60.zip, 906 137 octets, SHA256 743FB9E27F7B92DA97F15559ECC7003030F0C5D7653872330A72FF801882280E. DLL SHA256 27C9C3F5803D4FBD1A418ECFC4B4E3012F780E35C0FFF56FAECF1E1F051B175D. Aucun déploiement local de la 1.0.0 effectué ; copie de test installée encore en 0.17.0. Notes de release FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md).
+Paquet 1.0.0 : RimLanguages-IndividualLearning-1.0.0-20261011-164334-dbea0a60.zip, 906 137 octets, SHA256 743FB9E27F7B92DA97F15559ECC7003030F0C5D7653872330A72FF801882280E. DLL SHA256 27C9C3F5803D4FBD1A418ECFC4B4E3012F780E35C0FFF56FAECF1E1F051B175D. Notes de release FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md).
+
+Préparation Workshop du 2026-10-11 : 1.0.0 installée dans `<RimWorld>/Mods/RimLanguages-IndividualLearning`, jeu fermé. deploy.ps1 copie désormais les neuf fichiers du paquet (preview, icône, licence et notice comprises), avec backup et vérification SHA256. Dossier installé contrôlé : exactement neuf fichiers, tous identiques aux contenus du ZIP de release. Copie précédente sauvegardée sous work/runtime-before-1.0.0-20261011-165302-225. Aucun nouveau build ni test moteur ; l'utilisateur publiera lui-même depuis le jeu. Description FR/EN et patchnotes dans [WORKSHOP.md](WORKSHOP.md), aucun envoi Steam effectué par l'agent.
 
 Publication GitHub effectuée le 2026-10-11 : [release stable 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0), tag annoté v1.0.0 sur le commit ecf60dd. L'API confirme draft=false et prerelease=false ; asset RimLanguages-IndividualLearning-1.0.0.zip de 906 137 octets, digest identique au paquet local. Téléchargement de contrôle effectué, SHA256 identique. Aucun envoi Workshop ; aucun PublishedFileId créé.
+
+Rattachement Workshop du 2026-10-11 : l'utilisateur fournit le PublishedFileId créé dans sa copie installée, **3817893569**. Identifiant conservé dans About/PublishedFileId.txt du projet, lien ajouté au README et à [WORKSHOP.md](WORKSHOP.md) : [page Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3817893569). L'utilisateur confirme ensuite avoir vérifié manuellement la présence du projet sur le Workshop. L'outil web n'a pas pu accéder à la page ; description et éléments requis non vérifiés séparément par l'agent. Aucun envoi ni changement Steam par l'agent, aucune modification de version, DLL ou release GitHub.
+
+Consolidation des sources demandée le 2026-10-11 : envoi GitHub des textes Workshop, de l'identifiant de publication, du déploiement complet et de leurs documents. Aucun nouveau tag ni modification de la release 1.0.0 ; preuves historiques conservées et DLL inchangée.
 
 Installée jeu fermé le 2026-10-11 : cinq fichiers vérifiés par SHA256, sauvegarde précédente sous work/runtime-before-0.17.0-20261011-161011-896. DLL livrée : 72BCBFEB77F71A0877768CBB2FACC96C2FDEF67FA4AA0F92B22B4CEABB331BCB. Aucun test en jeu exécuté.
 

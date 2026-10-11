@@ -18,7 +18,7 @@ Parcours principaux jusqu'à 0.17.0 validés par l'utilisateur ; portée et vari
 
 ## Prochaine étape
 
-Première version stable 1.0.0 publiée sur GitHub le 2026-10-11, tag v1.0.0 et ZIP installable vérifiés. Preview créée avant le changement de version : About/Preview.png, style RimWorld avec yeux et bandeau 1.6, PNG 640 × 640 de 862 346 octets. Suite : préparation Workshop étape par étape, description et patchnotes restant à réaliser ; aucun envoi Workshop effectué.
+Première version stable 1.0.0 publiée sur GitHub le 2026-10-11, tag v1.0.0 et ZIP installable vérifiés. Preview créée avant le changement de version : About/Preview.png, style RimWorld avec yeux et bandeau 1.6, PNG 640 × 640 de 862 346 octets. Version installée dans Mods pour l'envoi par l'utilisateur depuis le jeu ; descriptions FR/EN et patchnotes prêtes dans [WORKSHOP.md](WORKSHOP.md). Identifiant Workshop fourni ensuite : 3817893569, conservé avec son lien dans le projet. Présence du projet sur le Workshop vérifiée manuellement par l'utilisateur ; contenu non vérifié séparément par l'agent. Suite : maintenance et améliorations futures selon les demandes. Aucun envoi Workshop effectué par l'agent.
 
 Liste des factions sans niveaux collectifs et conversations sans textes d'XP collective : parcours principal acquis, ne pas le redemander. Aucun retrait de la XP globale avant audit des replis ; voir [COLLECTIVE_DISPLAY.md](COLLECTIVE_DISPLAY.md).
 

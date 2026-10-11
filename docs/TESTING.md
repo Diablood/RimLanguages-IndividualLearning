@@ -2,6 +2,12 @@
 
 ## Première version stable
 
+Confirmation Workshop — 2026-10-11 : l'utilisateur indique avoir vérifié manuellement la présence du projet sur le Workshop. Cette confirmation remplace l'attente d'une preuve de présence ; contenu et éléments requis non inspectés séparément par l'agent. Envoi GitHub des dernières sources/documentations demandé, sans nouvelle version ni nouveau test moteur.
+
+Rattachement Workshop — 2026-10-11 : identifiant 3817893569 lu dans le fichier installé fourni par l'utilisateur et copié dans les métadonnées de publication du projet. Format numérique vérifié ; lien ajouté aux documents. Accès web à la page non disponible, visibilité et contenu Steam non vérifiés. DLL, version et paquet GitHub inchangés ; aucun nouveau build, déploiement, test moteur ou envoi distant.
+
+Préparation Workshop locale — 2026-10-11 : jeu fermé, neuf fichiers déployés et vérifiés par SHA256. Dossier installé composé exactement des neuf contenus du ZIP GitHub, identiques. Backup de la copie précédente, syntaxe de deploy.ps1 et diff sans erreur d'espacement vérifiés. DLL inchangée depuis la release ; aucun nouveau build, test en jeu ou envoi Steam. Descriptions FR/EN et notes de première publication fournies à l'utilisateur.
+
 Publication 1.0.0 demandée par l'utilisateur le 2026-10-11. Gameplay identique à la 0.17.0 validée ; schéma 1 et données persistantes inchangés. Preview contrôlée visuellement après restauration des yeux et ajout du bandeau 1.6 : PNG 640 × 640, 862 346 octets, inférieur au plafond prudent de 1 000 000 octets. Aucun nouveau parcours moteur exécuté par l'agent.
 
 package.ps1 exécuté le 2026-10-11 : reconstruction 1.0.0, 277 assertions hors jeu, XML, correspondance FR/EN, versions About/DLL et exclusion des DLL tierces réussis. Neuf fichiers du ZIP vérifiés par SHA256 ; preview incluse et poids contrôlé. Diff Source/Languages vide depuis la 0.17.0 ; aucune modification du comportement ou de l'état persistant. Aucun déploiement local, aucune exécution du moteur.

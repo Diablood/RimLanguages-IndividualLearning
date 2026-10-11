@@ -21,7 +21,7 @@ Dans la liste des factions, seuls les noms de langue et dialecte sont affichés,
 
 RimWorld 1.6, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim.
 
-Télécharger le ZIP installable de la [release 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0), extraire le dossier dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning). La publication Workshop est préparée séparément.
+Page [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3817893569). Pour une installation manuelle, télécharger le ZIP installable de la [release 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0), extraire le dossier dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning).
 
 Pour construire depuis les sources, voir [Compilation et dépendances](docs/BUILDING.md). La DLL du complément doit être compilée ; les DLL du jeu et des dépendances ne sont pas fournies.
 

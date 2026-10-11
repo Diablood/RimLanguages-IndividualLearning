@@ -1,0 +1,46 @@
+[h1]Individual languages for every pawn[/h1]
+Rim Languages — Individual Learning is an addon for Cybranian — Rim Languages, for RimWorld 1.6.
+
+Each pawn has their own language and dialect knowledge. Learning a language improves that pawn's personal proficiency rather than automatically sharing their knowledge with the entire faction.
+
+[h2]Features[/h2]
+[list]
+[*]A Languages tab for each pawn, showing known languages, dialects, proficiency and native identity.
+[*]Individual learning from Cybranian's books and lessons with prisoners.
+[*]Automatic transmission during ordinary conversations. Pawns can teach knowledge mastered at 100%, without manual orders or priority over other social interactions.
+[*]Progress influenced by social abilities. Uses Cybranian's difficulty setting, without a second speed slider.
+[*]Recruitment, resistance, conversion, trade and communications use the acting pawn's knowledge. Social factors account for shared mastered languages and dialects.
+[*]Knowledge persists through saving, recruitment and caravans.
+[*]Developer tools to add a language or dialect to one pawn and precisely adjust proficiency.
+[/list]
+
+[h2]Optional DLC features[/h2]
+[b]Biotech:[/b] supported newborns start their maternal language and dialect at 0%, then learn through feeding and play. Vanilla education, skills, growth and passions remain independent of language progress.
+
+[b]Ideology:[/b] learning events and thoughts follow personal progress when a Cybranian language-learning precept is present.
+
+[b]No DLC is required.[/b]
+
+[h2]What is preserved from Cybranian[/h2]
+Reuses the parent's languages, dialects, books, initial configuration and difficulty setting. Faction rows display language identity without collective proficiency; collective conversation XP messages are hidden.
+
+Collective data remains active internally for compatibility and fallbacks when individual data cannot be used.
+
+[h2]Dependencies and load order[/h2]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3450332059]Cybranian — Rim Languages[/url]
+[*]Rim Languages — Individual Learning
+[/list]
+No GateRim dependency.
+
+[h2]Existing saves[/h2]
+Can be added to an existing Cybranian save. Pawns without individual records receive only their observed faction's native language and dialect; other faction knowledge is not imported. The historical origin of pawns recruited before installation cannot be reconstructed. Keep a backup of your save before adding the addon.
+
+Mods replacing social interactions, births or infant care may require adaptation; compatibility is not guaranteed.
+
+[h2]Sources and feedback[/h2]
+[url=https://github.com/Diablood/RimLanguages-IndividualLearning]GitHub sources, documentation and releases[/url]
+[url=https://github.com/Diablood/RimLanguages-IndividualLearning/issues]Report an issue[/url]
+
+Independent addon. Cybranian — Rim Languages is required and retains its own credits and rights.
