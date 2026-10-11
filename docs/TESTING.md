@@ -17,6 +17,8 @@ Pas de nouvelle migration ni de test jusqu'à 100 % requis pour ce lot. Variante
 
 Actualisation des métadonnées — 2026-10-11 : package.ps1 exécuté à nouveau, compilation et 277 assertions hors jeu réussies, huit fichiers du ZIP vérifiés. DLL identique à celle validée en jeu ; aucun déploiement ni moteur exécuté. Description About et URL GitHub actualisées, version 0.17.0 conservée.
 
+Envoi GitHub 0.17.0 — 2026-10-11 : commit 758c2a9358c8a5e2d9d73371669727c076f15298 envoyé sur main ; git ls-remote confirme la même référence distante. Diff indexé sans erreur d'espacement ; aucun binaire, archive ou référence tierce ajouté. Aucun tag, release ou Workshop.
+
 Préparation locale d'archive — 2026-10-11 : package.ps1 exécuté, reconstruction 0.17.0 et 277 assertions hors jeu réussies. Le ZIP contient exactement huit fichiers sous un seul dossier de mod ; chaque contenu décompressé est identique à sa source par SHA256. Aucune DLL du jeu, Harmony ou Cybranian incluse. DLL du complément identique à celle validée par utilisateur ; aucune exécution du moteur, aucun nouveau déploiement. Aucun résultat d'installation du ZIP dans le moteur revendiqué.
 
 Les tests automatisés sont exécutés hors jeu. Ils couvrent le modèle de connaissances, les calculs et des transformations Harmony sur les instructions des assemblies installées, via Mono.Cecil. Ils ne prouvent pas l'exécution des patchs dans le moteur.

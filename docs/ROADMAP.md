@@ -12,6 +12,7 @@
 - Biotech : naissance, nourrissage et jeux avec bébé, sans bloquer l'éducation vanilla.
 - Consolidation documentaire et préparation locale des fichiers pour GitHub.
 - Paquet installable local et notice FR/EN : reconstruction, tests et vérification SHA256 du ZIP automatisés par package.ps1, sans publication.
+- Métadonnées About actualisées et sources 0.17.0 envoyées sur GitHub le 2026-10-11 ; commit 758c2a9 vérifié sur main, sans release, tag ou Workshop.
 
 Parcours principaux jusqu'à 0.17.0 validés par l'utilisateur ; portée et variantes dans [TESTING.md](TESTING.md). Version de développement actuelle : 0.17.0. Parcours d'affichage individuel confirmé le 2026-10-11 ; aucun moteur exécuté par l'agent.
 

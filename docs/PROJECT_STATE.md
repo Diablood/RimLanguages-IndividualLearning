@@ -8,7 +8,7 @@ Installée jeu fermé le 2026-10-11 : cinq fichiers vérifiés par SHA256, sauve
 
 Le parcours principal 0.16.0 a reçu « Tests OK » utilisateur : gain après jeu, transmission désactivée et sauvegarde/rechargement. Les variantes facultatives ne sont pas confirmées séparément. Aucun moteur exécuté par l'agent.
 
-Le premier envoi GitHub de 0.16.0 est acquis. L'utilisateur a demandé la mise à jour GitHub des sources 0.17.0 et des métadonnées ; aucun tag, release ou Workshop demandé. Aucun moteur exécuté par l'agent.
+Sources 0.17.0, métadonnées et empaquetage envoyés sur GitHub le 2026-10-11 à la demande utilisateur : commit 758c2a9358c8a5e2d9d73371669727c076f15298, référence distante main vérifiée identique par git ls-remote. Aucun tag, release ou Workshop créé. Aucun moteur exécuté par l'agent.
 
 Dernière consolidation du 2026-10-11 : ajout de package.ps1 et d'une notice INSTALLATION.md FR/EN, préparation d'une archive locale installable 0.17.0. Reconstruction et 277 assertions hors jeu réussies ; huit fichiers du ZIP vérifiés par SHA256. DLL inchangée par rapport à l'installation validée. Version 0.17.0 conservée, aucun nouveau déploiement ni test en jeu. Archive et staging sous artifacts/packages, exclus de Git ; aucune release distante.
 
