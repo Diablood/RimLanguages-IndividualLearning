@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Rim Languages — Individual Learning</name>
+  <author>Diablood</author>
+  <modVersion>0.16.0</modVersion>
+  <packageId>Diablood.RimLanguages.IndividualLearning</packageId>
+  <supportedVersions><li>1.6</li></supportedVersions>
+  <description>Persistent individual language records, a Languages pawn tab, and learning through books and conversations. Prisoner interactions, trade and comms use the acting pawn's knowledge. Social factors use languages and dialects mastered by both pawns. Ideology learning events follow personal progress, reusing Cybranian's precepts. Quests and trader visits defer language requirements to individual interactions. Collective XP remains active for compatibility. Ideology is optional.</description>
+  <modDependencies>
+    <li><packageId>brrainz.harmony</packageId><displayName>Harmony</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl></li>
+    <li><packageId>DimonSever000.FactionLanguages</packageId><displayName>Cybranian - Rim Languages</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3450332059</steamWorkshopUrl></li>
+  </modDependencies>
+  <loadAfter><li>brrainz.harmony</li><li>DimonSever000.FactionLanguages</li></loadAfter>
+</ModMetaData>

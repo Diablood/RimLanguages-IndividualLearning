@@ -1,0 +1,45 @@
+name: Signaler un bug
+description: Décrire un problème reproductible du complément.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Retirer les chemins personnels et les informations privées des extraits de journal. Ne pas joindre de DLL du jeu ou des dépendances."
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: RimWorld, Individual Learning, Cybranian et Harmony.
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: DLC et mods actifs
+      description: Indiquer aussi leur ordre de chargement.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      description: Nouvelle partie ou sauvegarde existante, pions concernés et niveaux linguistiques utiles.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Résultat attendu et résultat observé
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Extrait du journal
+      description: Erreur complète et lignes utiles de Player.log, après retrait des informations personnelles.
+      render: text
+  - type: textarea
+    id: persistence
+    attributes:
+      label: Après sauvegarde et rechargement
+      description: Indiquer si le problème persiste, ou si ce contrôle n'a pas été effectué.

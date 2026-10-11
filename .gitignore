@@ -1,0 +1,16 @@
+/1.6/Assemblies/
+/artifacts/
+/work/
+/References/
+/Dependencies/
+*.dll
+*.pdb
+*.log
+*.rws
+*.rws.old
+**/bin/
+**/obj/
+*.zip
+*.7z
+*.rar
+*_MANIFEST.txt

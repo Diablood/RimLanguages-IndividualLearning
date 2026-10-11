@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RLI_Tab>Langues</RLI_Tab>
+  <RLI_Title>Langues de {0}</RLI_Title>
+  <RLI_LearningNotice>Lecture et conversations font progresser chaque pion. Prisonniers et commerce dépendent du pion qui interagit ; les facteurs sociaux dépendent des connaissances communes aux deux pions.</RLI_LearningNotice>
+  <RLI_PrisonerLanguageRequired>Le gardien doit maîtriser la langue maternelle du prisonnier.</RLI_PrisonerLanguageRequired>
+  <RLI_Unassigned>Langue maternelle en attente : aucune langue attribuée à la faction d'origine, ou configuration du monde non terminée.</RLI_Unassigned>
+  <RLI_Language>Langue : {0}</RLI_Language>
+  <RLI_Dialect>Dialecte : {0}</RLI_Dialect>
+  <RLI_Native> (maternelle)</RLI_Native>
+  <RLI_Unavailable>Cette langue n'existe plus dans la configuration actuelle. La connaissance est conservée sans être réattribuée.</RLI_Unavailable>
+  <RLI_DevEditDesc>Régler le niveau de cette langue ou de ce dialecte pour ce pion, avec le panneau de réglage développeur.</RLI_DevEditDesc>
+  <RLI_DevSetTo>Régler à {0} %</RLI_DevSetTo>
+  <RLI_DevEditTitle>{0} — {1}</RLI_DevEditTitle>
+  <RLI_DevLanguageRule>Valider un niveau inférieur à 100 % remet les dialectes de cette langue à 0 %. Les marqueurs maternels sont conservés. Seuls les niveaux de ce pion changent.</RLI_DevLanguageRule>
+  <RLI_DevDialectRule>Valider un dialecte supérieur à 0 % met sa langue à 100 %. Les autres dialectes et les marqueurs maternels sont conservés. Seuls les niveaux de ce pion changent.</RLI_DevDialectRule>
+  <RLI_TradeLanguageRequired>Le négociateur doit maîtriser la langue de cette faction.</RLI_TradeLanguageRequired>
+  <RLI_DevSocialFirst>Cliquer le premier pion</RLI_DevSocialFirst>
+  <RLI_DevSocialSecond>Cliquer le second pion pour comparer avec {0}</RLI_DevSocialSecond>
+  <RLI_DevAddPawn>Cliquer le pion qui recevra cette connaissance</RLI_DevAddPawn>
+  <RLI_DevAddTitle>Ajouter à {0} — maîtrise à 100 % (dialecte : langue parente aussi)</RLI_DevAddTitle>
+  <RLI_DevAddNone>{0} maîtrise déjà toutes les langues et tous les dialectes disponibles.</RLI_DevAddNone>
+  <RLI_DevGenerationTitle>Inspecter les filtres de quêtes et de visites marchandes</RLI_DevGenerationTitle>
+  <RLI_DevGenerationNoPawn>Pas de chef de faction disponible</RLI_DevGenerationNoPawn>
+  <RLI_DevGenerationReport>Faction : {0}\nLangue collective connue : {1}\nFiltre de faction de quête (accepté / refusé au départ) : {2} / {3}\nFiltre de visite marchande (accepté / refusé au départ) : {4} / {5}\nFiltre de pion de quête, chef de faction : {6}\n\nAvec une langue résolue, les trois filtres doivent conserver True / False. Ceci inspecte uniquement les filtres linguistiques : aucune quête ni visite créée, aucun test des autres conditions du jeu. Les échanges restent soumis aux connaissances du pion réel.</RLI_DevGenerationReport>
+  <RLI_TransmissionEnabled>Activer la transmission par conversation</RLI_TransmissionEnabled>
+  <RLI_TransmissionDescription>Après une discussion ou conversation approfondie réussie, les pions peuvent transmettre une langue ou un dialecte maîtrisé à 100 %. Social doit être actif chez les deux pions ; leurs aptitudes influencent la vitesse. Les bébés apprennent aussi pendant le nourrissage et le jeu avec un adulte ; Social est requis seulement chez l'adulte. Réglez la difficulté d'apprentissage dans les options de Cybranian — Rim Languages. Cette case agit uniquement sur la transmission automatique ; elle ne change pas la fréquence des interactions, la lecture ni l'ordre d'apprentissage auprès d'un prisonnier.</RLI_TransmissionDescription>
+</LanguageData>
