@@ -2,7 +2,9 @@
 
 Prérequis : PowerShell, dotnet avec un SDK, RimWorld 1.6, Cybranian et Harmony installés. Les tests nécessitent également Mono.Cecil. Aucun téléchargement ni dépendance propriétaire redistribuée.
 
-`./build.ps1` et `./test.ps1` détectent Steam via le registre Windows ou STEAM_DIR, lisent ses bibliothèques et cherchent le jeu et les deux mods. Le compilateur est celui du SDK le plus récent détecté par dotnet --list-sdks. Mono.Cecil est cherché dans le cache NuGet microsoft.net.illink.tasks ; une autre copie peut être fournie explicitement. La détection ne parcourt pas toutes les unités et ignore les bibliothèques inaccessibles.
+`./build.ps1` et `./test.ps1` détectent Steam via le registre Windows ou STEAM_DIR, lisent ses bibliothèques et cherchent le jeu et les deux mods. Harmony est recherché sous le dossier de la version du jeu lue dans Version.txt, puis Current pour les anciennes installations. Le compilateur est celui du SDK le plus récent détecté par dotnet --list-sdks. Mono.Cecil est cherché dans le cache NuGet microsoft.net.illink.tasks ; une autre copie peut être fournie explicitement. La détection ne parcourt pas toutes les unités et ignore les bibliothèques inaccessibles.
+
+La prise en charge d'exécution de RimWorld 1.7 n'est pas une prise en charge de compilation avec son nouveau runtime. L'installation 1.7.4977 rev1248 expose les assemblies à la racine et un runtime .NET 10/WaylithCLR, au lieu de RimWorldWin64_Data/Managed. Les scripts build/test actuels nécessitent les références Mono de RimWorld 1.6, notamment mscorlib.dll et Assembly-CSharp.dll sous ce dossier. La mise à jour de compatibilité 1.7 conserve donc la DLL 1.0.0 déjà compilée et testée par l'utilisateur ; ne pas annoncer de reconstruction avec la 1.7.
 
 Les chemins explicites ont priorité, puis les variables d'environnement, puis la détection. Variables : RIMWORLD_DIR, CYBRANIAN_DIR, HARMONY_ASSEMBLY, DOTNET_CSC et CECIL_ASSEMBLY. Une dépendance absente produit une erreur nommant le paramètre à fournir.
 
@@ -21,6 +23,8 @@ Sources et documents utilisent des chemins relatifs ou des placeholders ; les ch
 ## Préparer une archive installable
 
 Exécuter ./package.ps1. Les paramètres RimWorldDir, CybranianDir, HarmonyAssembly, Compiler et CecilAssembly sont les mêmes que pour build/test ; détection automatique par défaut.
+
+Pour une mise à jour de métadonnées utilisant une DLL déjà validée et inchangée, sans les références Mono 1.6 disponibles : ./package.ps1 -VerifiedAssemblySha256 '<SHA256 de la DLL validée>' -PackageLabel 'rw1.7'. Ce mode exige l'empreinte explicite, vérifie les versions About/DLL, XML et clés FR/EN, puis les contenus de l'archive. Il ne reconstruit pas et n'exécute pas les tests de connaissances ; consigner les validations antérieures et le test utilisateur. Le mode par défaut continue de reconstruire et tester.
 
 Le script reconstruit systématiquement puis exécute test.ps1. Il copie seulement huit fichiers autorisés, crée un ZIP sous artifacts/packages avec un dossier RimLanguages-IndividualLearning à sa racine, puis vérifie la liste exacte et chaque contenu décompressé par SHA256. Un fichier absent, un échec de compilation/test ou une différence de contenu interrompt la préparation.
 

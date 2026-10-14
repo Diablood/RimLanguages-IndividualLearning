@@ -9,7 +9,7 @@
 
 ## Périmètre
 
-- Cibler RimWorld 1.6.
+- Cibler RimWorld 1.6 et maintenir la compatibilité avec la branche 1.7 instable, sans retirer le support 1.6.
 - Créer un complément autonome à Cybranian — Rim Languages, sans dépendance à GateRim SG-1.
 - Conserver les fonctionnalités du mod de base lorsque possible ; l'intégration effective reste à vérifier dans son code.
 - Stocker les connaissances par pion et assurer leur persistance lors des changements de faction, des caravanes et des sauvegardes.

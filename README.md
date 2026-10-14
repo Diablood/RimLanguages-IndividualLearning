@@ -1,6 +1,6 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6**. Version stable : **1.0.0**.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version **1.0.0**, mise à jour de compatibilité **v1.0.0-rw1.7**. Compatibilité 1.7 ajoutée aux métadonnées et confirmée par l'utilisateur sur la branche instable, susceptible d'évoluer avec ses prochaines builds. Le ZIP 1.0.0 d'origine précède cette mise à jour ; utiliser le paquet portant le suffixe rw1.7.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 
@@ -19,9 +19,9 @@ Dans la liste des factions, seuls les noms de langue et dialecte sont affichés,
 
 ## Installation
 
-RimWorld 1.6, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim.
+RimWorld 1.6 ou 1.7, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim. Les deux versions chargent le dossier d'assembly 1.6 via LoadFolders.xml.
 
-Page [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3817893569). Pour une installation manuelle, télécharger le ZIP installable de la [release 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0), extraire le dossier dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning).
+Page [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3817893569). Pour une installation manuelle, télécharger le ZIP installable de la [release de compatibilité 1.6/1.7](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0-rw1.7), extraire le dossier dans `<RimWorld>/Mods/RimLanguages-IndividualLearning` et redémarrer le jeu après remplacement de sa DLL. Les sources sont hébergées dans le [dépôt public GitHub](https://github.com/Diablood/RimLanguages-IndividualLearning).
 
 Pour construire depuis les sources, voir [Compilation et dépendances](docs/BUILDING.md). La DLL du complément doit être compilée ; les DLL du jeu et des dépendances ne sont pas fournies.
 

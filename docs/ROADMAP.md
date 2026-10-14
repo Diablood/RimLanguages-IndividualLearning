@@ -2,6 +2,9 @@
 
 ## Réalisé
 
+- Déclaration de compatibilité RimWorld 1.7 instable et routage partagé vers 1.6, après confirmation utilisateur le 2026-10-14 ; DLL 1.0.0 inchangée. Workflow de compilation net10.0 encore non adapté, résultats de tests 1.6 historiques distingués.
+- « Test OK » après déploiement, puis finalisation GitHub demandée : tag v1.0.0-rw1.7 et paquet distinct avec la DLL 1.0.0 validée. Aucune mise à jour Workshop envoyée par l'agent.
+
 - Audit de Cybranian installé et socle individuel persistant avec onglet Langues.
 - Livres et apprentissage auprès des prisonniers, puis restrictions individuelles du geôlier.
 - Commerce, communications et facteurs sociaux selon les pions concernés.
@@ -25,6 +28,8 @@ Liste des factions sans niveaux collectifs et conversations sans textes d'XP col
 Le dépôt public [RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning) a été créé par l'utilisateur, sous MIT. Le premier envoi du projet conserve son commit initial de licence. Procédure et exclusions dans [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 ## Vérifications de publication et maintenance
+
+- Incident du 2026-10-11 : boucle de tick identifiée dans Giddy-up, sans appel RLI observé ; essai ciblé non effectué. Un avertissement de faction historique absente dans RLI reste à durcir séparément, sans changement de sauvegarde décidé. Voir [PROJECT_STATE.md](PROJECT_STATE.md).
 
 - Vérifier les variantes utiles encore non confirmées, en ciblant les systèmes qui auront changé ; ne pas refaire systématiquement tous les parcours acquis.
 - Arrivées naturelles de quêtes et marchands et interruption d'un soin ou jeu avec bébé : validées par l'utilisateur le 2026-10-11, ne pas redemander sans changement pertinent.

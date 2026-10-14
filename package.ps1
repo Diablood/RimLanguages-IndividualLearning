@@ -3,19 +3,43 @@ param(
     [string]$CybranianDir,
     [string]$HarmonyAssembly,
     [string]$Compiler,
-    [string]$CecilAssembly
+    [string]$CecilAssembly,
+    [string]$VerifiedAssemblySha256,
+    [string]$PackageLabel
 )
 $ErrorActionPreference = 'Stop'
 
-# Rebuild and run the documented checks; never package an unchecked old DLL.
+# Default: rebuild and test. A previously validated, unchanged DLL requires its explicit hash.
 $buildOptions = @{}
 foreach ($name in @('RimWorldDir', 'CybranianDir', 'HarmonyAssembly', 'Compiler')) {
     if ($PSBoundParameters.ContainsKey($name)) { $buildOptions[$name] = $PSBoundParameters[$name] }
 }
-& (Join-Path $PSScriptRoot 'build.ps1') @buildOptions
-$testOptions = $buildOptions.Clone()
-if ($PSBoundParameters.ContainsKey('CecilAssembly')) { $testOptions.CecilAssembly = $CecilAssembly }
-& (Join-Path $PSScriptRoot 'test.ps1') @testOptions
+if ($VerifiedAssemblySha256) {
+    $assemblyPath = Join-Path $PSScriptRoot '1.6/Assemblies/RimLanguages.IndividualLearning.dll'
+    if ($VerifiedAssemblySha256 -notmatch '^[A-Fa-f0-9]{64}$' -or
+        (Get-FileHash -LiteralPath $assemblyPath -Algorithm SHA256).Hash -ne $VerifiedAssemblySha256) {
+        throw 'Previously validated assembly hash mismatch.'
+    }
+    $about = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'About/About.xml'))
+    $info = [Diagnostics.FileVersionInfo]::GetVersionInfo($assemblyPath)
+    if ($info.FileVersion -ne "$($about.ModMetaData.modVersion).0" -or $info.ProductVersion -ne $about.ModMetaData.modVersion) {
+        throw 'Existing assembly and metadata versions differ.'
+    }
+    foreach ($xmlPath in @('About/About.xml','LoadFolders.xml','Languages/English/Keyed/IndividualLearning.xml','Languages/French/Keyed/IndividualLearning.xml')) {
+        $null = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot $xmlPath))
+    }
+    $en = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'Languages/English/Keyed/IndividualLearning.xml'))
+    $fr = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'Languages/French/Keyed/IndividualLearning.xml'))
+    $enKeys = @($en.LanguageData.ChildNodes | Where-Object NodeType -eq Element | ForEach-Object Name)
+    $frKeys = @($fr.LanguageData.ChildNodes | Where-Object NodeType -eq Element | ForEach-Object Name)
+    if (Compare-Object $enKeys $frKeys) { throw 'Translation keys differ.' }
+    Write-Output 'PASS: previously validated DLL hash, versions, XML and FR/EN; no rebuild or knowledge tests executed.'
+} else {
+    & (Join-Path $PSScriptRoot 'build.ps1') @buildOptions
+    $testOptions = $buildOptions.Clone()
+    if ($PSBoundParameters.ContainsKey('CecilAssembly')) { $testOptions.CecilAssembly = $CecilAssembly }
+    & (Join-Path $PSScriptRoot 'test.ps1') @testOptions
+}
 
 $metadata = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'About/About.xml'))
 $version = [string]$metadata.ModMetaData.modVersion
@@ -41,7 +65,9 @@ $runId = (Get-Date -Format 'yyyyMMdd-HHmmss') + '-' + [Guid]::NewGuid().ToString
 $outputRoot = Join-Path $PSScriptRoot 'artifacts/packages'
 $stagingRoot = Join-Path $outputRoot ('staging-' + $runId)
 $modRoot = Join-Path $stagingRoot $modName
-$archivePath = Join-Path $outputRoot ($modName + '-' + $version + '-' + $runId + '.zip')
+if ($PackageLabel -and $PackageLabel -notmatch '^[a-z0-9.-]+$') { throw 'Invalid package label.' }
+$label = if ($PackageLabel) { '-' + $PackageLabel } else { '' }
+$archivePath = Join-Path $outputRoot ($modName + '-' + $version + $label + '-' + $runId + '.zip')
 
 # A fixed allowlist prevents references, saves, logs and other mods entering the archive.
 $expected = @{}

@@ -1,6 +1,16 @@
 # Vérifications — version 1.0.0
 
+## Compatibilité 1.7 — 2026-10-14
+
+« Test OK » utilisateur reçu après déploiement de la mise à jour. Package de compatibilité préparé avec -VerifiedAssemblySha256 et -PackageLabel rw1.7 : empreinte originale de la DLL, versions, XML, clés FR/EN et neuf contenus du ZIP vérifiés. Mode explicite de réutilisation ; aucun build ni test de connaissances exécuté. Aucun changement de code Source ou de traductions depuis la release 1.0.0.
+
+L'utilisateur confirme le fonctionnement du mod sur la branche instable. Installation observée : 1.7.4977 rev1248. About et LoadFolders analysés en XML : versions 1.6/1.7 présentes, / et dossier 1.6 chargés dans les deux cas. Empreinte de la DLL 1.0.0 inchangée. Aucun nouveau test en jeu par l'agent ; aucun parcours facultatif supplémentaire attribué au retour utilisateur.
+
+Build tenté : d'abord détection Harmony/Current devenue obsolète, corrigée vers le dossier de version du jeu avec repli Current ; deuxième tentative bloquée par l'absence de RimWorldWin64_Data/Managed/mscorlib.dll dans la nouvelle distribution net10.0. Les assemblies 1.7 sont à la racine et ne constituent pas le jeu de références Mono 1.6 requis par les scripts. Aucune reconstruction ni nouveau passage de test.ps1 revendiqué. C# et sauvegardes inchangés ; conservation du binaire déjà validé plutôt qu'une recompilation ciblant exclusivement le nouveau runtime.
+
 ## Première version stable
+
+Audit d'incident — 2026-10-11 : logs de partie en cours lus et copiés sous work. 161 exceptions de tick liées à GiddyUp.CancelRopers/HandleVisitorsMounting, un avertissement RLI de faction absente au chargement également signalée par VEF, 12 erreurs graphiques et deux erreurs de porte/clôture. Piles et patchs RLI consultés ; aucune pile RLI dans les exceptions de tick. DLL Workshop 1.0.0 et DLL Cybranian 1.6 conformes aux empreintes attendues. Aucun profilage, A/B, changement de paramètres, build ou test moteur par l'agent. Détails et limites dans [PROJECT_STATE.md](PROJECT_STATE.md).
 
 Confirmation Workshop — 2026-10-11 : l'utilisateur indique avoir vérifié manuellement la présence du projet sur le Workshop. Cette confirmation remplace l'attente d'une preuve de présence ; contenu et éléments requis non inspectés séparément par l'agent. Envoi GitHub des dernières sources/documentations demandé, sans nouvelle version ni nouveau test moteur.
 

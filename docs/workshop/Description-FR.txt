@@ -1,5 +1,5 @@
 [h1]Des langues propres à chaque pion[/h1]
-Rim Languages — Individual Learning est un complément de Cybranian — Rim Languages pour RimWorld 1.6.
+Rim Languages — Individual Learning est un complément de Cybranian — Rim Languages pour RimWorld 1.6 et 1.7 (branche instable testée).
 
 Chaque pion possède ses propres connaissances en langues et dialectes. Un colon qui apprend une langue progresse individuellement : ses acquis ne sont pas automatiquement partagés avec toute sa faction.
 

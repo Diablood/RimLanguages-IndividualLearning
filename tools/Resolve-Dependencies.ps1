@@ -44,7 +44,14 @@ function Get-RliDependencies {
     $result.CybranianDir = Find-RliPath $CybranianDir $env:CYBRANIAN_DIR @($libraries | ForEach-Object {
         Join-Path $_ 'steamapps/workshop/content/294100/3450332059'
     }) 'CybranianDir'
+    $gameVersion = '1.6'
+    $versionFile = Join-Path $game 'Version.txt'
+    if (Test-Path -LiteralPath $versionFile) {
+        $versionText = Get-Content -Raw -LiteralPath $versionFile
+        if ($versionText -match '^(\d+\.\d+)') { $gameVersion = $Matches[1] }
+    }
     $result.HarmonyAssembly = Find-RliPath $HarmonyAssembly $env:HARMONY_ASSEMBLY @($libraries | ForEach-Object {
+        Join-Path $_ "steamapps/workshop/content/294100/2009463077/$gameVersion/Assemblies/0Harmony.dll"
         Join-Path $_ 'steamapps/workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll'
     }) 'HarmonyAssembly'
     $compilers = @()

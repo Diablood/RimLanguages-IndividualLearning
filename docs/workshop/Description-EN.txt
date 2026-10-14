@@ -1,5 +1,5 @@
 [h1]Individual languages for every pawn[/h1]
-Rim Languages — Individual Learning is an addon for Cybranian — Rim Languages, for RimWorld 1.6.
+Rim Languages — Individual Learning is an addon for Cybranian — Rim Languages, for RimWorld 1.6 and 1.7 (user-tested unstable branch).
 
 Each pawn has their own language and dialect knowledge. Learning a language improves that pawn's personal proficiency rather than automatically sharing their knowledge with the entire faction.
 

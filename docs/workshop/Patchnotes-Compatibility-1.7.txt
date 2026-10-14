@@ -1,0 +1,13 @@
+Compatibilité RimWorld 1.7 — 2026-10-14
+
+- Ajout de RimWorld 1.7 aux versions prises en charge, en conservant 1.6.
+- Chargement explicite de la même assembly pour les deux versions.
+- Fonctionnement confirmé sur la branche instable ; les prochaines builds peuvent nécessiter une adaptation.
+- Aucun changement de gameplay ni de sauvegarde. DLL et version du mod 1.0.0 conservées.
+
+RimWorld 1.7 compatibility — 2026-10-14
+
+- Added RimWorld 1.7 support while retaining 1.6.
+- Explicitly loads the same assembly for both game versions.
+- User-tested on the unstable branch; future builds may require further updates.
+- No gameplay or save changes. Mod DLL and version remain 1.0.0.

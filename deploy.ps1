@@ -11,7 +11,7 @@ $modsRoot = (Resolve-Path -LiteralPath $RimWorldModsDir).Path.TrimEnd('\', '/')
 $targetRoot = [IO.Path]::GetFullPath((Join-Path $modsRoot 'RimLanguages-IndividualLearning'))
 if (-not $targetRoot.StartsWith($modsRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw 'Unsafe mod directory.' }
 $files = @('About\About.xml', 'About\ModIcon.png', 'About\Preview.png', 'LoadFolders.xml', '1.6\Assemblies\RimLanguages.IndividualLearning.dll', 'Languages\French\Keyed\IndividualLearning.xml', 'Languages\English\Keyed\IndividualLearning.xml', 'LICENSE', 'INSTALLATION.md')
-if (Get-Process RimWorldWin64 -ErrorAction SilentlyContinue) { throw 'Close RimWorld before updating the test build.' }
+if (Get-Process -Name RimWorldWin64,RimWorld -ErrorAction SilentlyContinue) { throw 'Close RimWorld before updating the test build.' }
 $installedAbout = Join-Path $targetRoot 'About\About.xml'
 if (Test-Path -LiteralPath $installedAbout) {
     $metadata = [xml](Get-Content -Raw -LiteralPath $installedAbout)

@@ -1,6 +1,16 @@
-# État du projet — 2026-10-11
+# État du projet — 2026-10-14
 
 ## Version actuelle
+
+Compatibilité 1.7 ajoutée le 2026-10-14 à la demande utilisateur : About annonce 1.6 et 1.7, LoadFolders route les deux versions vers / et 1.6. Fonctionnement sur la branche instable confirmé par l'utilisateur ; installation observée 1.7.4977 rev1248. Aucun changement C#, schéma ou DLL. Version 1.0.0 conservée pour cette déclaration ; SHA256 original de la DLL vérifié. Première préparation locale sans publication ; finalisation GitHub ensuite demandée, décrite ci-dessous. Aucun envoi Workshop par l'agent.
+
+Retour du 2026-10-14 : « Test OK » utilisateur pour la copie de compatibilité, puis commit/push/tag et finalisation autorisés. Tag retenu : v1.0.0-rw1.7, distinct du v1.0.0 initial et cohérent avec la DLL 1.0.0 conservée. Notes de publication dans [RELEASE_NOTES_RW1.7.md](RELEASE_NOTES_RW1.7.md). Package préparé en mode explicite de réutilisation de DLL validée : SHA256, versions, XML, FR/EN et neuf contenus du ZIP vérifiés ; aucune reconstruction ou nouvelle assertion de connaissances revendiquée.
+
+Archive de compatibilité : RimLanguages-IndividualLearning-1.0.0-rw1.7-20261014-233036-60c801da.zip, 906 342 octets, SHA256 83CC06182E48C8791846FBAD562CD5D056106706E9C594F6E7099233343686BC. PublishedFileId exclu du ZIP d'installation et conservé dans la copie d'envoi Mods.
+
+Compilation tentée mais bloquée : Harmony a déplacé Current/Assemblies vers 1.6/Assemblies et 1.7/Assemblies ; détection corrigée selon Version.txt. Le jeu 1.7 expose maintenant les assemblies à la racine et un runtime net10.0/WaylithCLR ; le workflow build/test Mono 1.6 ne trouve pas RimWorldWin64_Data/Managed/mscorlib.dll. Aucune reconstruction ni exécution des 277 assertions avec la 1.7 revendiquée. XML, routage de versions et conservation de la DLL contrôlés ; anciens résultats 1.6 conservés comme preuves historiques.
+
+Copie d'envoi recréée dans Mods, jeu fermé : neuf fichiers déployés et comparés par SHA256, DLL originale conservée. PublishedFileId 3817893569 restauré séparément et vérifié pour mettre à jour l'article existant. Aucun envoi Steam effectué. Notes de mise à jour dans docs/workshop/Patchnotes-Compatibility-1.7.txt ; preview 1.6 existante conservée.
 
 **1.0.0**, DLL **1.0.0.0**, schéma individuel **1**. Première version stable demandée par l'utilisateur, avec tag GitHub v1.0.0. Aucun changement du gameplay depuis la 0.17.0 validée : version et preview uniquement. Reconstruction et 277 assertions hors jeu réussies ; neuf contenus du paquet contrôlés, preuves dans [TESTING.md](TESTING.md). Aucun moteur exécuté par l'agent.
 
@@ -52,6 +62,12 @@ La synthèse des confirmations utilisateur et des vérifications hors jeu se tro
 Le 2026-10-11, l'utilisateur a validé les arrivées naturelles de marchands et quêtes ainsi que l'interruption d'un soin ou jeu avec bébé. Cette confirmation ne détaille pas séparément chaque moment d'interruption ni le rechargement au milieu de l'activité. Certains replis et les interactions avec d'autres mods restent distincts. Les capsules de transport ont été explicitement écartées du parcours actuel : non testées et non bloquantes.
 
 ## Décisions et suite
+
+Audit de logs du 2026-10-11 sur une partie modifiée en cours : copie Workshop 1.0.0 et DLL du parent 1.6 identiques aux empreintes vérifiées. Boucle principale : 161 occurrences d'Exception ticking sur un pion, pile GiddyUp.MountUtility.CancelRopers → GoMount → HandleVisitorsMounting, Giddy-Up 2 — Continued 2.2.5. Aucun appel RLI ou Cybranian dans cette pile ; pas de patch RLI sur DetermineNextJob. Source directe de cette exception attribuée à Giddy-up, impact sur les ralentissements probable sans mesure de performance ni comparaison A/B.
+
+Un avertissement RLI au chargement : référence de faction Faction_45 introuvable dans PawnLanguages ; VEF.Storyteller.RaidGroup signale la même faction absente. Une occurrence seulement, sans répétition dans les ticks observés. Origine de faction sérialisée par Scribe_References ; durcissement des références historiques manquantes à envisager séparément sans réinitialiser les connaissances. Onze initialisations non résolues signalées une fois ; cet état ne prouve pas onze corruptions.
+
+Autres erreurs : 12 exceptions Graphic_Multi au chargement, Defs tiers absentes, exceptions Building_Door.Tick/GetThingList pour porte/clôture dont une remontant par ThingOwner d'un pion. Aucune pile RLI observée pour ces exceptions ; auteur exact des données de porte et graphiques non déterminé. Relevés conservés sous work/player-log-audit-20261011-173842.log et work/player-log-audit-latest.log, exclus de Git. Aucun fichier du jeu, mod installé ou sauvegarde modifié. Essai ciblé proposé : désactiver le module Caravans de Giddy-up via ses paramètres, puis redémarrer (exigence indiquée par sa traduction installée) et comparer ; aucun essai exécuté par l'agent.
 
 Demande du 2026-10-11 : version finale 1.0.0 avec tag GitHub, après création de la preview. Visuel dans About/Preview.png : pions stylisés avec yeux, apprentissage autour d'un livre et bandeau 1.6 dans le coin supérieur droit. Génération originale avec l'outil image_gen, sans reprise d'image du parent. Export PNG 640 × 640, 862 346 octets, SHA256 EE119A13E8110018804FE2F58510E0A2343F81AB14512888439842C7E91DA46F ; original conservé sous artifacts/preview, exclu de Git. package.ps1 inclut la preview dans sa liste autorisée de neuf fichiers et contrôle son poids inférieur à 1 000 000 octets. Workshop à préparer étape par étape, sans envoi à cette étape.
 

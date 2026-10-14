@@ -1,5 +1,7 @@
 # Préparation Workshop — 1.0.0
 
+Mise à jour du 2026-10-14 : copie Mods prête avec About déclarant 1.6/1.7 et LoadFolders partagé. DLL 1.0.0 conservée, identifiant de l'article 3817893569 vérifié dans cette copie. Descriptions FR/EN actualisées et [patchnotes de compatibilité 1.7](workshop/Patchnotes-Compatibility-1.7.txt) prêtes. Aucun envoi Workshop effectué pour cette mise à jour ; preview avec bandeau 1.6 inchangée.
+
 Article identifié le 2026-10-11 par le fichier fourni par l'utilisateur : **3817893569**, [page Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3817893569). Copie conservée dans About/PublishedFileId.txt du projet. L'utilisateur confirme avoir vérifié manuellement la présence du projet sur le Workshop. La page n'est pas accessible à l'outil web au moment du contrôle ; son contenu n'est pas vérifié séparément par l'agent.
 
 L'utilisateur publiera depuis RimWorld. Version 1.0.0 prête dans `<RimWorld>/Mods/RimLanguages-IndividualLearning`, sans sources, références de compilation ou fichiers de développement. Les neuf fichiers sont identiques au ZIP de la release GitHub. Preview incluse : PNG 640 × 640, 862 346 octets, yeux et bandeau 1.6.

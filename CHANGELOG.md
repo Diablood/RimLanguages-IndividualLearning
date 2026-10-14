@@ -1,5 +1,15 @@
 # Historique des versions
 
+## Compatibilité RimWorld 1.7 — 2026-10-14
+
+- « Test OK » utilisateur après mise à jour de la copie Mods. Finalisation GitHub demandée avec tag distinct v1.0.0-rw1.7 et paquet de compatibilité ; tag et ZIP 1.0.0 d'origine préservés.
+
+- RimWorld 1.7 ajouté aux versions prises en charge, en conservant 1.6.
+- LoadFolders.xml charge explicitement le dossier 1.6 pour les deux versions du jeu ; aucune copie ou divergence du code.
+- Fonctionnement sur la branche instable confirmé par l'utilisateur. Installation observée : 1.7.4977 rev1248 ; aucune validation en jeu par l'agent.
+- Aucun changement des connaissances, des clés de sauvegarde ou du schéma 1. Publication GitHub/Workshop non effectuée pour ce lot.
+- DLL et version 1.0.0 conservées : compilation bloquée par la nouvelle organisation .NET 10 de la 1.7, hors du workflow de compilation Mono 1.6 actuel. Le build interrompu n'a pas remplacé la DLL existante.
+
 ## 1.0.0 — 2026-10-11 — première version stable
 
 - Passage à la version stable demandé par l'utilisateur, sans changement des comportements de la 0.17.0 ni du schéma de sauvegarde 1.
