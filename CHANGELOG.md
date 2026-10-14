@@ -3,6 +3,7 @@
 ## Compatibilité RimWorld 1.7 — 2026-10-14
 
 - « Test OK » utilisateur après mise à jour de la copie Mods. Finalisation GitHub demandée avec tag distinct v1.0.0-rw1.7 et paquet de compatibilité ; tag et ZIP 1.0.0 d'origine préservés.
+- Commit 3d4aefd, tag et release v1.0.0-rw1.7 publiés ; téléchargement du paquet identique par SHA256 à l'archive locale. Aucun envoi Workshop par l'agent.
 
 - RimWorld 1.7 ajouté aux versions prises en charge, en conservant 1.6.
 - LoadFolders.xml charge explicitement le dossier 1.6 pour les deux versions du jeu ; aucune copie ou divergence du code.

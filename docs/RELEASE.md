@@ -30,6 +30,8 @@ Préparation 0.17.0 exécutée le 2026-10-11 : 277 assertions hors jeu et huit c
 
 Compatibilité 1.7 validée par utilisateur le 2026-10-14 ; commit/push/tag et finalisation demandés. Tag distinct v1.0.0-rw1.7 et asset RimLanguages-IndividualLearning-1.0.0-rw1.7.zip, version About/DLL 1.0.0 conservée. La release v1.0.0 d'origine ne doit pas être remplacée. Notes dans [RELEASE_NOTES_RW1.7.md](RELEASE_NOTES_RW1.7.md) ; mode d'empaquetage avec empreinte de DLL validée documenté dans [BUILDING.md](BUILDING.md).
 
+[Release de compatibilité](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0-rw1.7) publiée : tag sur 3d4aefd, asset de 906 342 octets, digest API et téléchargement de contrôle vérifiés contre le paquet local. Workshop reste une mise à jour distincte depuis la copie Mods ; aucune nouvelle publication Steam par l'agent.
+
 [Release GitHub 1.0.0](https://github.com/Diablood/RimLanguages-IndividualLearning/releases/tag/v1.0.0) publiée le 2026-10-11, tag annoté v1.0.0 sur ecf60dd. ZIP installable téléchargé après publication et comparé par SHA256 au paquet local, identique ; état stable confirmé par API. Identifiant Workshop ensuite fourni par l'utilisateur : 3817893569, conservé dans About/PublishedFileId.txt du projet ; page non vérifiée à distance. Le ZIP GitHub déjà publié reste inchangé et ne contient pas cet identifiant.
 
 La première version stable 1.0.0 est demandée par l'utilisateur. Parcours principaux jusqu'à 0.17.0 confirmés par utilisateur, y compris arrivées naturelles de marchands/quêtes et interruption de soin ou jeu avec bébé ; comportements inchangés en 1.0.0, variantes et limites dans [TESTING.md](TESTING.md). Cette publication n'annonce pas une compatibilité exhaustive avec d'autres mods.

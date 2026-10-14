@@ -4,6 +4,7 @@
 
 - Déclaration de compatibilité RimWorld 1.7 instable et routage partagé vers 1.6, après confirmation utilisateur le 2026-10-14 ; DLL 1.0.0 inchangée. Workflow de compilation net10.0 encore non adapté, résultats de tests 1.6 historiques distingués.
 - « Test OK » après déploiement, puis finalisation GitHub demandée : tag v1.0.0-rw1.7 et paquet distinct avec la DLL 1.0.0 validée. Aucune mise à jour Workshop envoyée par l'agent.
+- GitHub finalisé le 2026-10-14 : commit 3d4aefd, tag v1.0.0-rw1.7, release et téléchargement vérifiés. Suite : envoi Workshop par l'utilisateur, puis maintenance selon les demandes ; adaptation de compilation .NET 10 séparée si nécessaire.
 
 - Audit de Cybranian installé et socle individuel persistant avec onglet Langues.
 - Livres et apprentissage auprès des prisonniers, puis restrictions individuelles du geôlier.
