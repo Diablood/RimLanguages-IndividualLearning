@@ -1,8 +1,10 @@
 # Roadmap — 1.1.0 locale
 
-Lot actuel : écoute passive sans Social et transmission naturelle limitée aux connaissances maternelles dans une même colonie/faction, y compris soins et jeux avec bébé. Compilation et 18 assertions ciblées réussies ; suite complète bloquée hors jeu par les anciennes assemblies Unity absentes du runtime 1.7. Parcours Mendez validé par utilisateur, y compris enseignement par un colon recruté d'une autre origine ; persistance après sauvegarde/rechargement également validée. Refus des connaissances acquises encore en observation manuelle prolongée, filtre couvert hors jeu. Aucune publication 1.1.0. Voir [TESTING.md](TESTING.md).
+Lot actuel : écoute passive sans Social et transmission naturelle limitée aux connaissances maternelles dans une même colonie/faction, y compris soins et jeux avec bébé. Compilation et 18 assertions ciblées réussies ; suite complète bloquée hors jeu par les anciennes assemblies Unity absentes du runtime 1.7. Parcours Mendez validé par utilisateur, y compris enseignement par un colon recruté d'une autre origine ; persistance après sauvegarde/rechargement également validée. Refus des connaissances acquises encore en observation manuelle prolongée, filtre couvert hors jeu. Aucune release 1.1.0 avec paquet téléchargeable. Voir [TESTING.md](TESTING.md).
 
 Paquet local et textes de publication 1.1.0 préparés après accord pour poursuivre. Commit/push des sources et tag v1.1.0 demandés ensuite par l'utilisateur le 2026-10-19 ; release GitHub avec paquet et mise à jour Workshop restent distinctes. Aucun test acquis à redemander ; surveillance des anomalies linguistiques au fil des parties.
+
+Sources envoyées : commit 7204f23, tag v1.1.0 vérifié à distance. Aucune nouvelle release avec ZIP ni mise à jour Workshop effectuée pendant cet envoi.
 
 ## Réalisé
 

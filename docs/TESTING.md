@@ -2,6 +2,8 @@
 
 ## Lot écoute passive et connaissances maternelles — 2026-10-19
 
+Envoi des sources vérifié : commit 7204f23 et tag annoté v1.1.0 poussés, référence de tag résolue vers le même commit par git ls-remote. Diff indexé sans erreur d'espacement ; empreinte de la DLL testée inchangée avant envoi, binaires et fichiers locaux exclus. Aucun nouveau build, test moteur ou asset de release publié lors du push.
+
 Consolidation locale après accord pour poursuivre : package.ps1 exécuté avec l'empreinte de la DLL 1.1.0 déjà compilée et testée ; versions, XML et correspondance FR/EN contrôlés, neuf contenus du ZIP comparés par SHA256. Aucun nouveau build ou test de connaissances/moteur dans cette étape. Descriptions et patchnotes FR/EN préparées ; absence de transmission non maternelle suivie pendant les parties, sans nouvelle session dédiée imposée.
 
 Retour utilisateur : « Test avec Mendez OK ». Mendez apprend la langue maternelle d'un colon croisé, dont l'origine et la langue diffèrent de celles des fondateurs. Réception passive et transmission depuis l'identité maternelle individuelle confirmées en jeu par l'utilisateur. L'utilisateur confirme ensuite la persistance après sauvegarde/rechargement du nouveau lot. Le refus d'une langue acquise reste en observation manuelle prolongée ; dialectes et bébés non confirmés séparément. Le filtre des connaissances acquises est couvert par les tests ciblés hors jeu. Ne pas redemander ce parcours Mendez sans anomalie ou changement pertinent ; aucun moteur exécuté par l'agent.

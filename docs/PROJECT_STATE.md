@@ -10,6 +10,8 @@ Compilation réussie grâce aux références locales krafs.rimworld.ref 1.6.4871
 
 Dernière release avec paquet public inchangée : v1.0.0-rw1.7. L'utilisateur demande ensuite le commit/push et le tag v1.1.0 le 2026-10-19. Cette demande concerne les sources ; aucune nouvelle release GitHub ou mise à jour Workshop incluse dans cette étape. La politique ne modifie ni les tâches, ni leur fréquence, ni le schéma, ni les niveaux existants ; les connaissances étrangères déjà commencées restent disponibles pour lecture et autres voies.
 
+Envoi effectué le 2026-10-19 : commit 7204f23 sur main, tag annoté [v1.1.0](https://github.com/Diablood/RimLanguages-IndividualLearning/tree/v1.1.0), références distantes vérifiées par git ls-remote. DLL, ZIP, journaux et sauvegardes exclus du commit. Aucune release GitHub avec asset ni mise à jour Workshop créée ; le paquet 1.1.0 reste disponible localement.
+
 Consolidation locale du 2026-10-19 après accord pour poursuivre : paquet installable 1.1.0 préparé avec la DLL testée, neuf contenus contrôlés par SHA256, XML/FR/EN/versions vérifiés. Descriptions Workshop FR/EN, patchnotes et [notes de release 1.1.0](RELEASE_NOTES_1.1.0.md) préparées. Refus des langues non maternelles laissé en observation pendant les parties, sans redemander une longue session dédiée ; parcours Mendez et persistance acquis. Aucun nouveau build, test moteur ou envoi distant pendant cette consolidation.
 
 Archive locale 1.1.0 : RimLanguages-IndividualLearning-1.1.0-20261019-233722-20bab5cc.zip, 906 549 octets, SHA256 37C3531BA98A7C238C89AA6DF08008EAA6326DC3FE2077D2183290334FC62C0B. Archive et staging exclus de Git. Aucune DLL tierce, sauvegarde ou PublishedFileId inclus dans le ZIP.
