@@ -106,7 +106,8 @@ namespace RimLanguages.IndividualLearning
             Rand.PushState(unchecked(Find.TickManager.TicksGame ^ baby.thingIDNumber ^ (adult.thingIDNumber * 397)));
             try
             {
-                var lesson = TransmissionRules.Select(student.Data, teacher.Data, lessons, Rand.Value);
+                var lesson = TransmissionRules.Select(student.Data, teacher.Data, lessons, Rand.Value,
+                    AutomaticTransmission.SameColony(adult, baby));
                 if (lesson == null) return;
                 // Babies do not have a usable Social skill. Use the same level-zero baseline,
                 // without querying their disabled language stat or changing their skills.

@@ -1,13 +1,13 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version **1.0.0**, mise à jour de compatibilité **v1.0.0-rw1.7**. Compatibilité 1.7 ajoutée aux métadonnées et confirmée par l'utilisateur sur la branche instable, susceptible d'évoluer avec ses prochaines builds. Le ZIP 1.0.0 d'origine précède cette mise à jour ; utiliser le paquet portant le suffixe rw1.7.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version des sources : **1.1.0**, tag **v1.1.0** ; parcours Mendez et persistance validés en jeu par l'utilisateur, autres contrôles dans [TESTING.md](docs/TESTING.md). Dernière release avec paquet téléchargeable : **v1.0.0-rw1.7**. La branche 1.7 instable peut nécessiter de nouvelles adaptations.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 
 ## Fonctionnalités
 
 - Lecture des livres de Cybranian et apprentissage auprès des prisonniers selon les niveaux du pion.
-- Transmission pendant les discussions ordinaires : une connaissance maîtrisée à 100 % peut être enseignée automatiquement, sans nouvel ordre ni priorité sociale.
+- Transmission pendant les discussions ordinaires, sans nouvel ordre ni priorité sociale : au sein d'une même colonie, seules les langues et dialectes maternels de l'enseignant maîtrisés à 100 % sont transmis. Les connaissances acquises s'apprennent par livres ou autres méthodes explicites. Social actif reste requis pour enseigner ; un pion dont Social est désactivé peut apprendre par écoute à vitesse réduite.
 - Recrutement, résistance, conversion, commerce et communications selon le pion qui agit. Les facteurs sociaux tiennent compte des connaissances communes.
 - Avec Biotech, langue et dialecte maternels à 0 % pour les nouveaux bébés issus du chemin de naissance pris en charge, puis apprentissage pendant le nourrissage et les jeux. L'éducation, les compétences, la croissance et les passions vanilla restent indépendantes.
 - Avec Ideology et un précepte linguistique de Cybranian, événements et pensées associés à la progression personnelle.

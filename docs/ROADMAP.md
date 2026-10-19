@@ -1,4 +1,8 @@
-# Roadmap — 1.0.0
+# Roadmap — 1.1.0 locale
+
+Lot actuel : écoute passive sans Social et transmission naturelle limitée aux connaissances maternelles dans une même colonie/faction, y compris soins et jeux avec bébé. Compilation et 18 assertions ciblées réussies ; suite complète bloquée hors jeu par les anciennes assemblies Unity absentes du runtime 1.7. Parcours Mendez validé par utilisateur, y compris enseignement par un colon recruté d'une autre origine ; persistance après sauvegarde/rechargement également validée. Refus des connaissances acquises encore en observation manuelle prolongée, filtre couvert hors jeu. Aucune publication 1.1.0. Voir [TESTING.md](TESTING.md).
+
+Paquet local et textes de publication 1.1.0 préparés après accord pour poursuivre. Commit/push des sources et tag v1.1.0 demandés ensuite par l'utilisateur le 2026-10-19 ; release GitHub avec paquet et mise à jour Workshop restent distinctes. Aucun test acquis à redemander ; surveillance des anomalies linguistiques au fil des parties.
 
 ## Réalisé
 
@@ -29,6 +33,8 @@ Liste des factions sans niveaux collectifs et conversations sans textes d'XP col
 Le dépôt public [RimLanguages-IndividualLearning](https://github.com/Diablood/RimLanguages-IndividualLearning) a été créé par l'utilisateur, sous MIT. Le premier envoi du projet conserve son commit initial de licence. Procédure et exclusions dans [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 ## Vérifications de publication et maintenance
+
+- Signalement du 2026-10-19 résolu pour Mendez : enfance Childhood Backstories désactivant Social, donc transmission refusée selon la règle actuelle. Registre d'origine intact et conversations présentes. Autoriser une réception passive malgré Social indisponible serait une évolution à décider séparément ; aucun nouveau mécanisme ni malus général implémenté.
 
 - Incident du 2026-10-11 : boucle de tick identifiée dans Giddy-up, sans appel RLI observé ; essai ciblé non effectué. Un avertissement de faction historique absente dans RLI reste à durcir séparément, sans changement de sauvegarde décidé. Voir [PROJECT_STATE.md](PROJECT_STATE.md).
 

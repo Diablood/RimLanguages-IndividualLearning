@@ -7,7 +7,8 @@ Chaque pion possède ses propres connaissances en langues et dialectes. Un colon
 [list]
 [*]Un onglet Langues par pion : langues connues, dialectes, niveaux et origine maternelle.
 [*]Apprentissage individuel grâce aux livres de Cybranian et aux leçons auprès des prisonniers.
-[*]Transmission automatique pendant les conversations ordinaires. Un pion peut transmettre une connaissance maîtrisée à 100 %, sans ordre manuel ni priorité sur les autres interactions sociales.
+[*]Transmission automatique pendant les conversations ordinaires, sans ordre manuel ni priorité sociale. Entre membres d'une même colonie, seules les langues et dialectes maternels de l'enseignant maîtrisés à 100 % se transmettent naturellement, quelle que soit son origine. Les connaissances acquises restent accessibles par les livres et les autres méthodes explicites.
+[*]Social actif est requis pour enseigner. Un pion dont Social est désactivé peut apprendre par écoute à vitesse réduite.
 [*]Progression influencée par les aptitudes sociales. Le réglage de difficulté de Cybranian est conservé, sans second curseur.
 [*]Recrutement, résistance, conversion, commerce et communications selon les connaissances du pion qui agit. Les facteurs sociaux tiennent compte des langues et dialectes maîtrisés en commun.
 [*]Connaissances conservées après sauvegarde, recrutement et déplacement en caravane.

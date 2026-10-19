@@ -2,10 +2,10 @@
 <ModMetaData>
   <name>Rim Languages — Individual Learning</name>
   <author>Diablood</author>
-  <modVersion>1.0.0</modVersion>
+  <modVersion>1.1.0</modVersion>
   <packageId>Diablood.RimLanguages.IndividualLearning</packageId>
   <supportedVersions><li>1.6</li><li>1.7</li></supportedVersions>
-  <description>Individual language and dialect knowledge for each pawn, with persistent progress and a compact Languages tab. Learn through Cybranian's books, prisoner lessons and ordinary social conversations. Pawns can transmit knowledge mastered at 100%, without changing social interaction priorities. Prisoner interactions, trade and communications use the acting pawn's knowledge; social factors use shared mastered languages and dialects.
+  <description>Individual language and dialect knowledge for each pawn, with persistent progress and a compact Languages tab. Learn through Cybranian's books, prisoner lessons and ordinary social conversations. Natural transmission within a colony is limited to the teacher's native languages and dialects mastered at 100%. Enabled Social is required to teach; listeners with disabled Social can learn at reduced speed. Social interaction priorities remain unchanged. Prisoner interactions, trade and communications use the acting pawn's knowledge; social factors use shared mastered languages and dialects.
 
 With Biotech, supported newborns begin learning their maternal language and dialect through feeding and play. Vanilla education, skills, growth and passions remain independent. With Ideology and Cybranian's language-learning precepts, learning events follow personal progress.
 
@@ -13,7 +13,7 @@ Keeps Cybranian's languages, dialects, books, initial configuration and difficul
 
 Can be added to an existing Cybranian save: pawns without individual records receive only their observed faction's native language and dialect, without copying all faction knowledge. Includes per-pawn developer controls.
 
-Supports RimWorld 1.6 and 1.7 (unstable branch, tested by the author). Requires Harmony and Cybranian - Rim Languages, loaded before this addon. No DLC is required; Biotech and Ideology features are optional. No GateRim dependency.</description>
+Supports RimWorld 1.6 and 1.7 (unstable branch). Requires Harmony and Cybranian - Rim Languages, loaded before this addon. No DLC is required; Biotech and Ideology features are optional. No GateRim dependency.</description>
   <url>https://github.com/Diablood/RimLanguages-IndividualLearning</url>
   <modDependencies>
     <li><packageId>brrainz.harmony</packageId><displayName>Harmony</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl></li>

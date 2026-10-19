@@ -1,0 +1,15 @@
+1.1.0 — Écoute passive et transmission maternelle
+
+- Les pions dont Social est désactivé peuvent apprendre en écoutant, à vitesse réduite. Social actif reste nécessaire pour enseigner.
+- Au sein d'une même colonie, seules les langues et dialectes maternels de l'enseignant, maîtrisés à 100 %, se transmettent naturellement. Cela inclut les connaissances maternelles des colons recrutés ailleurs.
+- Cette restriction s'applique aussi au nourrissage et aux jeux avec bébé. Les langues acquises continuent de s'apprendre par les livres et autres méthodes explicites.
+- Aucun changement des fréquences sociales, des tâches vanilla, des niveaux déjà acquis ou du schéma de sauvegarde.
+- RimWorld 1.6 et 1.7 pris en charge ; la branche 1.7 reste instable.
+
+1.1.0 — Passive listening and native transmission
+
+- Pawns with disabled Social can learn by listening at reduced speed. Teaching still requires enabled Social.
+- Within the same colony, only the teacher's native languages and dialects mastered at 100% spread naturally, including native knowledge from colonists recruited elsewhere.
+- The same restriction applies to infant feeding and play. Learned knowledge remains accessible through books and other explicit methods.
+- No changes to social interaction frequency, vanilla tasks, existing proficiency or the save schema.
+- Supports RimWorld 1.6 and 1.7; the 1.7 branch remains unstable.

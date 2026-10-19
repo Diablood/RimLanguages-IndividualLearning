@@ -50,22 +50,24 @@ namespace RimLanguages.IndividualLearning
             if (!Finite(before) || !Finite(after)) return 0f;
             return Math.Max(0f, ProgressMath.Clamp(after) - ProgressMath.Clamp(before)) * 100f;
         }
-        public static bool Eligible(PawnLanguages student, PawnLanguages teacher, TransmissionLesson lesson)
+        public static bool Eligible(PawnLanguages student, PawnLanguages teacher, TransmissionLesson lesson, bool nativeOnly = false)
         {
             if (student == null || teacher == null || lesson == null || string.IsNullOrEmpty(lesson.key) ||
                 !ProgressMath.PositiveFinite(lesson.xpMax) || teacher.Progress(lesson.key) < 1f ||
                 student.Progress(lesson.key) >= 1f) return false;
             var entry = teacher.Find(lesson.key);
+            if (nativeOnly && (!entry.native || (lesson.dialect && teacher.Find(lesson.parentKey)?.native != true)))
+                return false;
             return entry.isDialect == lesson.dialect && (!lesson.dialect ||
                 (!string.IsNullOrEmpty(lesson.parentKey) && teacher.Progress(lesson.parentKey) >= 1f &&
                  student.Progress(lesson.parentKey) >= 1f));
         }
 
         public static TransmissionLesson Select(PawnLanguages student, PawnLanguages teacher,
-            IEnumerable<TransmissionLesson> lessons, float choice)
+            IEnumerable<TransmissionLesson> lessons, float choice, bool nativeOnly = false)
         {
             if (lessons == null || !Finite(choice)) return null;
-            var eligible = lessons.Where(l => Eligible(student, teacher, l)).ToList();
+            var eligible = lessons.Where(l => Eligible(student, teacher, l, nativeOnly)).ToList();
             if (eligible.Count == 0) return null;
             Func<TransmissionLesson, int> rank = l => student.Progress(l.key) > 0f ? 2 :
                 teacher.Find(l.key).native ? 1 : 0;
@@ -77,11 +79,13 @@ namespace RimLanguages.IndividualLearning
         public static float Xp(TransmissionLesson lesson, float learningAbility, int teacherSocial,
             bool studentDisabled, bool teacherDisabled, bool enabled, float difficulty, float variation)
         {
-            if (lesson == null || studentDisabled || teacherDisabled || !Finite(learningAbility) ||
-                learningAbility < 0f || !enabled) return 0f;
+            if (lesson == null || teacherDisabled || !enabled ||
+                (!studentDisabled && (!Finite(learningAbility) || learningAbility < 0f))) return 0f;
             // The parent's ability already includes learner Social. A small baseline permits level 0.
             float teacherFactor = 0.5f + 0.065f * Math.Max(0, Math.Min(20, teacherSocial));
-            float xp = ProgressMath.ConversationXp(lesson.baseCost, 0.5f + learningAbility, teacherFactor,
+            // Passive listeners use half the level-zero baseline; disabled Social never teaches.
+            float learnerFactor = studentDisabled ? 0.25f : 0.5f + learningAbility;
+            float xp = ProgressMath.ConversationXp(lesson.baseCost, learnerFactor, teacherFactor,
                 difficulty, lesson.languageDifficulty, lesson.dialectDifficulty, variation);
             return ProgressMath.PositiveFinite(xp) ? xp : 0f;
         }
@@ -90,6 +94,9 @@ namespace RimLanguages.IndividualLearning
 
     public static class AutomaticTransmission
     {
+        internal static bool SameColony(Pawn first, Pawn second) =>
+            first?.Faction != null && first.Faction == second?.Faction;
+
         public static bool Exchange(Pawn first, Pawn second)
         {
             if (first == second) return false;
@@ -98,7 +105,7 @@ namespace RimLanguages.IndividualLearning
             if (a == null || b == null) return false;
             var sa = first.skills?.GetSkill(SkillDefOf.Social);
             var sb = second.skills?.GetSkill(SkillDefOf.Social);
-            if (sa == null || sb == null || sa.TotallyDisabled || sb.TotallyDisabled) return false;
+            if (sa == null || sb == null || (sa.TotallyDisabled && sb.TotallyDisabled)) return false;
             if (!(IndividualLearningMod.Settings?.enabled ?? true)) return false;
             var lessons = AvailableLessons();
             int seed = unchecked(Find.TickManager.TicksGame ^ (first.thingIDNumber * 397) ^ (second.thingIDNumber * 7919));
@@ -106,10 +113,11 @@ namespace RimLanguages.IndividualLearning
             try
             {
                 // Decide both ways before either learner reaches a new mastery threshold.
-                var forA = TransmissionRules.Select(a.Data, b.Data, lessons, Rand.Value);
-                var forB = TransmissionRules.Select(b.Data, a.Data, lessons, Rand.Value);
-                bool firstLearned = Grant(first, a.Data, forA, sb.Level, Rand.Range(0.5f, 1.5f));
-                bool secondLearned = Grant(second, b.Data, forB, sa.Level, Rand.Range(0.5f, 1.5f));
+                bool nativeOnly = SameColony(first, second);
+                var forA = sb.TotallyDisabled ? null : TransmissionRules.Select(a.Data, b.Data, lessons, Rand.Value, nativeOnly);
+                var forB = sa.TotallyDisabled ? null : TransmissionRules.Select(b.Data, a.Data, lessons, Rand.Value, nativeOnly);
+                bool firstLearned = Grant(first, a.Data, forA, sb.Level, Rand.Range(0.5f, 1.5f), sa.TotallyDisabled);
+                bool secondLearned = Grant(second, b.Data, forB, sa.Level, Rand.Range(0.5f, 1.5f), sb.TotallyDisabled);
                 return firstLearned || secondLearned;
             }
             finally { Rand.PopState(); }
@@ -137,11 +145,12 @@ namespace RimLanguages.IndividualLearning
         }
 
         private static bool Grant(Pawn pawn, PawnLanguages data, TransmissionLesson lesson,
-            int teacherSocial, float variation)
+            int teacherSocial, float variation, bool studentDisabled)
         {
-            if (lesson == null || StatDefOfLocal.LanguageLearningAbility.Worker.IsDisabledFor(pawn)) return false;
-            float xp = TransmissionRules.Xp(lesson, pawn.GetStatValue(StatDefOfLocal.LanguageLearningAbility),
-                teacherSocial, false, false, true, LanguageUtility.Settings.languageLearnDifficulty, variation);
+            if (lesson == null || (!studentDisabled && StatDefOfLocal.LanguageLearningAbility.Worker.IsDisabledFor(pawn))) return false;
+            float ability = studentDisabled ? 0f : pawn.GetStatValue(StatDefOfLocal.LanguageLearningAbility);
+            float xp = TransmissionRules.Xp(lesson, ability,
+                teacherSocial, studentDisabled, false, true, LanguageUtility.Settings.languageLearnDifficulty, variation);
             float gain = xp / lesson.xpMax;
             if (!ProgressMath.PositiveFinite(gain)) return false;
             float before = data.Progress(lesson.key);

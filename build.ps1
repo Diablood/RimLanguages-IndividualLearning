@@ -2,7 +2,8 @@ param(
     [string]$RimWorldDir,
     [string]$CybranianDir,
     [string]$HarmonyAssembly,
-    [string]$Compiler
+    [string]$Compiler,
+    [string]$ManagedReferencesDir
 )
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'tools/Resolve-Dependencies.ps1')
@@ -11,7 +12,9 @@ $RimWorldDir = $dependencies.RimWorldDir
 $CybranianDir = $dependencies.CybranianDir
 $HarmonyAssembly = $dependencies.HarmonyAssembly
 $Compiler = $dependencies.Compiler
-$managed = Join-Path $RimWorldDir 'RimWorldWin64_Data\Managed'
+$managed = if ($ManagedReferencesDir) { (Resolve-Path -LiteralPath $ManagedReferencesDir).Path } else {
+    Join-Path $RimWorldDir 'RimWorldWin64_Data\Managed'
+}
 $references = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','UnityEngine.CoreModule.dll','UnityEngine.IMGUIModule.dll','UnityEngine.TextRenderingModule.dll') | ForEach-Object { Join-Path $managed $_ }
 $references += Join-Path $CybranianDir '1.6\Assemblies\FactionLanguages.dll'
 $references += $HarmonyAssembly

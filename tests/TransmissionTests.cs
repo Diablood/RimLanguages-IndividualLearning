@@ -67,9 +67,9 @@ internal static class TransmissionTests
             "Parent difficulty alone scales automatic transmission XP.");
         check(TransmissionRules.Xp(language, 1f, 10, false, false, false, 1f, 1f) == 0f,
             "The toggle stops automatic gains without a second speed multiplier.");
-        check(TransmissionRules.Xp(language, 1f, 10, true, false, true, 1f, 1f) == 0f &&
+        check(TransmissionRules.Xp(language, 1f, 10, true, false, true, 1f, 1f) > 0f &&
             TransmissionRules.Xp(language, 1f, 10, false, true, true, 1f, 1f) == 0f,
-            "Disabled Social on either side prevents automatic transmission.");
+            "Disabled Social allows passive listening but prevents teaching.");
         check(xp(float.NaN, 10, 1f) == 0f && xp(1f, 10, float.PositiveInfinity) == 0f &&
             TransmissionRules.Xp(language, 1f, 10, false, false, true, 0f, 1f) == 0f,
             "Reject nonfinite or invalid transmission factors.");

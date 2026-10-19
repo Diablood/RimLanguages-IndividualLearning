@@ -13,7 +13,13 @@ internal static class KnowledgeTests
         root = args[0]; managed = args[1];
         dependencyDirs = new[] { Path.Combine(root, "1.6", "Assemblies"), managed, args[2], args[3], args[4] };
         AppDomain.CurrentDomain.AssemblyResolve += Resolve;
-        try { Run(); Console.WriteLine("PASS: " + checks + " knowledge assertions (outside RimWorld)."); return 0; }
+        try
+        {
+            if (args.Length > 5 && args[5] == "policy") TransmissionPolicyTests.Run(Check);
+            else Run();
+            Console.WriteLine("PASS: " + checks + (args.Length > 5 ? " transmission-policy" : " knowledge") + " assertions (outside RimWorld).");
+            return 0;
+        }
         catch (Exception e) { Console.Error.WriteLine(e); return 1; }
     }
     private static Assembly Resolve(object sender, ResolveEventArgs args)
@@ -60,6 +66,7 @@ internal static class KnowledgeTests
         GenerationPatchTests.Run(Check);
         MigrationTests.Run(Check);
         TransmissionTests.Run(Check);
+        TransmissionPolicyTests.Run(Check);
         ChildLearningTests.Run(Check);
         CollectivePresentationTests.Run(Check);
     }

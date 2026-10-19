@@ -8,7 +8,9 @@ Les autres interactions, notamment insultes, bagarres, RecruitAttempt, BuildRapp
 
 ## Connaissance choisie par le pion
 
-Le locuteur doit maîtriser la cible à 100 %, maternelle ou apprise, et celle-ci doit être incomplète chez l'apprenant. Une langue peut être enseignée sans dialecte. Un dialecte exige sa langue parente à 100 % chez les deux pions et le dialecte complet chez le locuteur.
+Le locuteur doit maîtriser la cible à 100 % et celle-ci doit être incomplète chez l'apprenant. Depuis 1.1.0, lorsque les deux pions ont la même faction non nulle, seules les connaissances marquées maternelles chez l'enseignant sont admissibles. Un dialecte exige aussi que sa langue parente soit maternelle chez lui. La restriction vaut pour les conversations, le nourrissage et les jeux avec bébé ; pas pour la lecture ou les leçons prisonniers. Les échanges entre factions différentes conservent leur sélection antérieure. Les acquis déjà présents ne sont jamais effacés.
+
+Une langue peut être enseignée sans dialecte. Un dialecte exige sa langue parente à 100 % chez les deux pions et le dialecte complet chez le locuteur. Une connaissance maternelle inférieure à 100 % ne peut pas être enseignée.
 
 Le choix privilégie une connaissance commencée, puis une connaissance maternelle du locuteur, puis une autre connaissance maîtrisée. Aléa entre cibles de même priorité. Cela choisit le contenu après l'interaction ; aucune priorité sur les interactions vanilla.
 
@@ -16,7 +18,7 @@ Une seule entrée progresse par sens, sans débordement au dialecte. Les deux ci
 
 ## Social et vitesse
 
-Social doit être présent et actif chez les deux adultes. Niveau 0 admissible avec une base lente ; TotallyDisabled interdit le gain. Une sous-tâche Diplomatie désactivée ne suffit pas à déduire que Social entier l'est. Aucun facteur Intellectuel supplémentaire.
+Social doit être présent chez les deux adultes, mais actif seulement chez l'enseignant. Niveau 0 actif admissible avec la base lente existante. Depuis 1.1.0, TotallyDisabled autorise une réception passive, sans enseignement dans l'autre sens : facteur d'apprenant fixe 0,25, soit la moitié de la base 0,5 d'un apprenant actif d'aptitude nulle, avant facteurs du locuteur, difficulté et variation. Le calcul n'interroge pas l'aptitude linguistique désactivée de l'apprenant. Deux pions Social désactivé ne transmettent rien. Une sous-tâche Diplomatie désactivée ne suffit pas à déduire que Social entier l'est. Aucun facteur Intellectuel supplémentaire.
 
 LanguageLearningAbility du parent inclut déjà Social de l'apprenant et ses modificateurs. Le calcul évite de le compter deux fois :
 

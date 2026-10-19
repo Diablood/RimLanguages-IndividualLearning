@@ -1,4 +1,26 @@
-# Vérifications — version 1.0.0
+# Vérifications — version locale 1.1.0
+
+## Lot écoute passive et connaissances maternelles — 2026-10-19
+
+Consolidation locale après accord pour poursuivre : package.ps1 exécuté avec l'empreinte de la DLL 1.1.0 déjà compilée et testée ; versions, XML et correspondance FR/EN contrôlés, neuf contenus du ZIP comparés par SHA256. Aucun nouveau build ou test de connaissances/moteur dans cette étape. Descriptions et patchnotes FR/EN préparées ; absence de transmission non maternelle suivie pendant les parties, sans nouvelle session dédiée imposée.
+
+Retour utilisateur : « Test avec Mendez OK ». Mendez apprend la langue maternelle d'un colon croisé, dont l'origine et la langue diffèrent de celles des fondateurs. Réception passive et transmission depuis l'identité maternelle individuelle confirmées en jeu par l'utilisateur. L'utilisateur confirme ensuite la persistance après sauvegarde/rechargement du nouveau lot. Le refus d'une langue acquise reste en observation manuelle prolongée ; dialectes et bébés non confirmés séparément. Le filtre des connaissances acquises est couvert par les tests ciblés hors jeu. Ne pas redemander ce parcours Mendez sans anomalie ou changement pertinent ; aucun moteur exécuté par l'agent.
+
+Blocage de lancement RimSort séparé : lecture de NoVersionWarning 1.7 vide provoquant une exception Python avant analyse des mods. Cache vide mis de côté avec sauvegarde, présence du backup et absence du chemin actif vérifiées. Aucun redémarrage de RimSort ni nouveau test du mod exécuté par l'agent ; l'utilisateur doit relancer le gestionnaire avant le parcours ci-dessous.
+
+Compilation 1.1.0 réussie avec les références 1.6.4871 du cache NuGet et Harmony 1.6. 18 assertions de TransmissionPolicyTests exécutées hors jeu sur la DLL produite : filtre maternel, connaissances acquises exclues dans la colonie, distinction inter-factions, prérequis du dialecte, maîtrise, préservation des acquis, réception passive et impossibilité d'enseigner sans Social, difficulté et case existantes. XML, correspondance FR/EN, versions About/DLL et exclusion des DLL tierces vérifiés.
+
+Suite complète tentée : échec de chargement UnityEngine.CoreModule dans TradePatchTests avec le runtime 1.7, avant la fin de la suite. Le mode PolicyOnly est explicite et ne constitue pas une validation des autres systèmes ni du moteur. Aucun nouveau test en jeu exécuté par l'agent, aucune migration de sauvegarde.
+
+Déploiement local 1.1.0 effectué jeu fermé, neuf fichiers comparés par SHA256 ; identifiant Workshop existant conservé. Dernière description About incluse, version installée relue. DLL livrée : 54B53BD1DD3200774B1B397410AD07C5D644AE70D65C3B7595B1202259450331. Aucun envoi Steam ou GitHub.
+
+Parcours court de référence (première étape validée) :
+
+1. Utiliser la copie locale 1.1.0 dans RimSort et redémarrer le jeu. Charger une copie de la partie avec Mendez. Transmission activée, lui faire avoir des conversations ordinaires avec un colon Social actif maîtrisant une langue maternelle que Mendez ne connaît pas. Vérifier le début de progression dans Langues ; il ne doit pas transmettre ses propres connaissances tant que Social est désactivé.
+2. Un colon connaissant une langue étrangère à 100 % sans marque maternelle ne doit pas la transmettre naturellement à un autre colon de la même faction, même si ce dernier l'a déjà commencée. La progression antérieure reste conservée et la lecture reste disponible.
+3. Sauvegarder/recharger pour conserver les nouveaux niveaux. Aucun besoin d'attendre 100 % ni de répéter les parcours historiques déjà acquis.
+
+Variantes facultatives : dialecte maternel après langue parente complète ; bébé pendant soin/jeu ; case décochée ; échanges entre factions différentes. Les interactions naturelles ne gagnent aucune fréquence ou priorité supplémentaire.
 
 ## Compatibilité 1.7 — 2026-10-14
 

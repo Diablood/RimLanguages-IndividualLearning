@@ -1,5 +1,16 @@
 # Historique des versions
 
+## 1.1.0 — 2026-10-19 — écoute passive et transmission maternelle
+
+- Paquet installable local contrôlé et textes de mise à jour FR/EN préparés après accord pour poursuivre. Aucun nouveau build ou test moteur lors de la consolidation ; aucune publication distante.
+
+- Parcours Mendez validé par l'utilisateur : écoute d'une langue maternelle enseignée par un colon recruté d'origine différente des fondateurs. Persistance après sauvegarde/rechargement ensuite validée ; refus des langues acquises encore en observation manuelle prolongée ; aucun moteur exécuté par l'agent.
+
+- Les pions dont Social est désactivé peuvent apprendre en écoutant, à la moitié de la base de vitesse d'un apprenant actif d'aptitude nulle. Ils ne peuvent toujours pas enseigner.
+- Dans une même colonie/faction, seules les langues et dialectes maternels de l'enseignant, maîtrisés à 100 %, se transmettent naturellement. Restriction également appliquée aux soins et jeux avec bébé.
+- Livres, leçons prisonniers et échanges entre factions différentes conservés. Aucune modification des fréquences sociales, tâches vanilla, acquis ou du schéma 1.
+- Compilation avec les références 1.6 locales réussie ; 18 assertions ciblées et contrôles XML/FR/EN/versions réussis. Suite complète bloquée hors jeu par UnityEngine.CoreModule absent dans la distribution 1.7 ; aucun résultat en jeu revendiqué.
+
 ## Compatibilité RimWorld 1.7 — 2026-10-14
 
 - « Test OK » utilisateur après mise à jour de la copie Mods. Finalisation GitHub demandée avec tag distinct v1.0.0-rw1.7 et paquet de compatibilité ; tag et ZIP 1.0.0 d'origine préservés.

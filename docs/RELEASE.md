@@ -2,9 +2,9 @@
 
 ## Versionnement
 
-Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.0.0**. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.0.0.0**, AssemblyInformationalVersion **1.0.0**. test.ps1 refuse une divergence.
+Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.1.0** locale. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.1.0.0**, AssemblyInformationalVersion **1.1.0**. test.ps1 refuse une divergence. Dernière release publique : v1.0.0-rw1.7 ; 1.1.0 avec parcours Mendez et persistance validés par utilisateur, refus des connaissances acquises encore en observation manuelle prolongée, et non publiée.
 
-Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.0.1), mineur pour une fonctionnalité (prochain 1.1.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
+Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.1.1), mineur pour une fonctionnalité (prochain 1.2.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
 
 RimSort affiche la version d'About ; sa détection automatique a été confirmée par utilisateur. Un numéro local ne constitue ni un tag ni une publication.
 
@@ -20,6 +20,8 @@ Voir [BUILDING.md](BUILDING.md). Build et tests ne déploient pas ; le déploiem
 
 ## Paquet local préparé
 
+Paquet 1.1.0 préparé le 2026-10-19 avec l'empreinte de la DLL déjà compilée, testée sur 18 assertions ciblées et validée par utilisateur sur le parcours Mendez et la persistance. Neuf fichiers vérifiés par SHA256, contrôles XML/FR/EN/versions réussis. Aucun nouveau build ni passage de la suite complète revendiqué. [Notes de release 1.1.0](RELEASE_NOTES_1.1.0.md) et [textes Workshop](WORKSHOP.md) prêts ; aucune publication distante.
+
 Paquet 1.0.0 reconstruit le 2026-10-11 : 277 assertions hors jeu et neuf fichiers d'archive vérifiés, preview incluse et sous 1 000 000 octets. Code et traductions inchangés depuis la 0.17.0, version DLL 1.0.0.0. Notes FR/EN dans [RELEASE_NOTES_1.0.0.md](RELEASE_NOTES_1.0.0.md). Version ensuite déployée dans Mods à la demande utilisateur pour son envoi Workshop depuis le jeu ; neuf fichiers identiques au ZIP GitHub. Textes dans [WORKSHOP.md](WORKSHOP.md).
 
 ./package.ps1 reconstruit, exécute les tests et crée une archive installable contrôlée sous artifacts/packages. Contenu autorisé : About/About.xml, About/ModIcon.png, About/Preview.png, LoadFolders.xml, la DLL propre du complément, les deux traductions, LICENSE et INSTALLATION.md. Chaque fichier du ZIP est comparé par SHA256 à sa source ; aucun MANIFEST ajouté. Les archives précédant l'ajout de la preview contenaient huit fichiers ; les nouveaux paquets en contiennent neuf.
@@ -27,6 +29,8 @@ Paquet 1.0.0 reconstruit le 2026-10-11 : 277 assertions hors jeu et neuf fichier
 Préparation 0.17.0 exécutée le 2026-10-11 : 277 assertions hors jeu et huit contenus d'archive vérifiés. DLL identique à la copie installée et validée par utilisateur. Pas de nouveau test en jeu requis pour cet empaquetage, aucun nouveau déploiement. Une archive locale ne constitue pas une release publiée.
 
 ## Publication externe
+
+Sources 1.1.0 : commit/push et tag annoté v1.1.0 demandés le 2026-10-19 après validation Mendez et persistance, paquet local préparé et contrôlé. Le tag identifie les sources ; aucun asset de release 1.1.0 ou envoi Workshop n'est inclus dans cette demande. Les limitations de tests complètes restent explicites dans [TESTING.md](TESTING.md).
 
 Compatibilité 1.7 validée par utilisateur le 2026-10-14 ; commit/push/tag et finalisation demandés. Tag distinct v1.0.0-rw1.7 et asset RimLanguages-IndividualLearning-1.0.0-rw1.7.zip, version About/DLL 1.0.0 conservée. La release v1.0.0 d'origine ne doit pas être remplacée. Notes dans [RELEASE_NOTES_RW1.7.md](RELEASE_NOTES_RW1.7.md) ; mode d'empaquetage avec empreinte de DLL validée documenté dans [BUILDING.md](BUILDING.md).
 
