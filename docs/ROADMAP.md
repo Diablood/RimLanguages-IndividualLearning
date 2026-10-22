@@ -1,6 +1,18 @@
-# Roadmap — 1.1.0 locale
+# Roadmap — 1.1.2 locale
 
-Lot actuel : écoute passive sans Social et transmission naturelle limitée aux connaissances maternelles dans une même colonie/faction, y compris soins et jeux avec bébé. Compilation et 18 assertions ciblées réussies ; suite complète bloquée hors jeu par les anciennes assemblies Unity absentes du runtime 1.7. Parcours Mendez validé par utilisateur, y compris enseignement par un colon recruté d'une autre origine ; persistance après sauvegarde/rechargement également validée. Refus des connaissances acquises encore en observation manuelle prolongée, filtre couvert hors jeu. Aucune release 1.1.0 avec paquet téléchargeable. Voir [TESTING.md](TESTING.md).
+Lot actuel : repli individuel général pour les humanoïdes sans origine linguistique exploitable. Priorité à la faction, sinon paire existante de la race ; exception humaine Anomaly conservée, races sans langue compatible en attente. Protection des identités existantes, des naissances à 0 % et de la faction temporairement absente pendant génération. Compilation et 25 assertions d'origine sur chacun des parents 1.6/1.7, plus 18 de transmission, réussies. Nouveaux arrivants sans faction validés en jeu par utilisateur ; sauvegarde/rechargement non détaillé séparément ; aucun envoi distant.
+
+## Historique récent
+
+Finalisation 1.1.2 autorisée : commit, push et tag v1.1.2. Patchnotes et descriptions Workshop FR/EN actualisées ; envoi Steam par l'utilisateur après finalisation GitHub. Aucune release avec asset demandée à cette étape.
+
+Copie auteur Workshop : déployer avec -IncludePublishedFileId pour restaurer l'identifiant de l'article existant s'il manque. Restauration locale 3817893569 effectuée ; aucun envoi Steam et aucune modification du paquet joueur.
+
+Correctif actuel : origine linguistique des arrivants mystérieux Anomaly sans langue de faction. Choix utilisateur : langue humaine et dialecte existants tirés au sort puis persistés. Compilation et 12 assertions ciblées réussies ; parcours Eduard Quill validé en jeu par utilisateur le 2026-10-22, persistance non détaillée séparément dans ce retour. Aucun nouveau tag, release ou Workshop.
+
+Généralisation ensuite autorisée et réalisée en 1.1.2, décrite ci-dessus. Les races sans langue compatible restent en attente.
+
+Lot précédent 1.1.0 : écoute passive sans Social et transmission naturelle limitée aux connaissances maternelles dans une même colonie/faction, y compris soins et jeux avec bébé. Compilation et 18 assertions ciblées réussies ; suite complète bloquée hors jeu par les anciennes assemblies Unity absentes du runtime 1.7. Parcours Mendez validé par utilisateur, y compris enseignement par un colon recruté d'une autre origine ; persistance après sauvegarde/rechargement également validée. Refus des connaissances acquises encore en observation manuelle prolongée, filtre couvert hors jeu. Aucune release 1.1.0 avec paquet téléchargeable. Voir [TESTING.md](TESTING.md).
 
 Paquet local et textes de publication 1.1.0 préparés après accord pour poursuivre. Commit/push des sources et tag v1.1.0 demandés ensuite par l'utilisateur le 2026-10-19 ; release GitHub avec paquet et mise à jour Workshop restent distinctes. Aucun test acquis à redemander ; surveillance des anomalies linguistiques au fil des parties.
 

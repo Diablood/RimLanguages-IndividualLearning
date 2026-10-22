@@ -6,6 +6,7 @@ Each pawn has their own language and dialect knowledge. Learning a language impr
 [h2]Features[/h2]
 [list]
 [*]A Languages tab for each pawn, showing known languages, dialects, proficiency and native identity.
+[*]Arrivals without a usable linguistic faction of origin receive a native language and dialect from their race's existing languages. Mysterious Anomaly arrivals use human languages. A modded race without a compatible language remains pending; existing knowledge is preserved.
 [*]Individual learning from Cybranian's books and lessons with prisoners.
 [*]Automatic transmission during ordinary conversations, without manual orders or increased social priority. Within the same colony, only the teacher's native languages and dialects mastered at 100% spread naturally, regardless of their original faction. Learned knowledge remains available through books and other explicit methods.
 [*]Enabled Social is required to teach. Pawns with disabled Social can learn by listening at reduced speed.

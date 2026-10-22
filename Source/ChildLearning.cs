@@ -45,8 +45,13 @@ namespace RimLanguages.IndividualLearning
             var db = CompIndividualLanguages.Database;
             if (identity == null && (db == null || !db.TryGetLanguage(baby.Faction, out identity)))
             {
-                // Retain the normal initialization fallback if no identity can be resolved.
-                comp.EnsureInitialized();
+                // The new generic fallback must not grant adult mastery during a supported birth.
+                if (db != null && NativeOriginLanguages.TryInitialize(comp.Data, baby.def?.defName,
+                    db.RaceLanguages, baby.thingIDNumber, newborn: true))
+                {
+                    comp.Data.originFaction = geneticMother?.GetComp<CompIndividualLanguages>()?.Data.originFaction ?? baby.Faction;
+                    comp.Data.originCaptured = comp.Data.originFaction != null;
+                }
                 return baby;
             }
             if (IndividualLearning.Valid(identity) && comp.Data.InitializeNewborn(

@@ -2,9 +2,9 @@
 
 ## Versionnement
 
-Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.1.0** locale. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.1.0.0**, AssemblyInformationalVersion **1.1.0**. test.ps1 refuse une divergence. Dernière release publique : v1.0.0-rw1.7 ; 1.1.0 avec parcours Mendez et persistance validés par utilisateur, refus des connaissances acquises encore en observation manuelle prolongée, et non publiée.
+Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.1.2** locale. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.1.2.0**, AssemblyInformationalVersion **1.1.2**. Repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction, cas Eduard 1.1.1 acquis ; dernier tag des sources v1.1.0 conservé, aucun nouveau tag ou envoi distant. test.ps1 refuse une divergence. Dernière release publique : v1.0.0-rw1.7 ; 1.1.0 avec parcours Mendez et persistance validés par utilisateur, refus des connaissances acquises encore en observation manuelle prolongée, et non publiée.
 
-Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.1.1), mineur pour une fonctionnalité (prochain 1.2.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
+Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.1.3), mineur pour une fonctionnalité (prochain 1.2.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
 
 RimSort affiche la version d'About ; sa détection automatique a été confirmée par utilisateur. Un numéro local ne constitue ni un tag ni une publication.
 
@@ -13,7 +13,7 @@ RimSort affiche la version d'About ; sa détection automatique a été confirmé
 1. Relire l'état, les consignes et les vérifications du sous-système modifié.
 2. Mettre à jour la version pour le lot testable et le changelog ; préserver les clés de sauvegarde ou documenter la migration.
 3. Exécuter build.ps1 puis test.ps1 ; vérifier XML, traductions et versions.
-4. Fermer RimWorld, puis exécuter deploy.ps1 : sauvegarde des neuf fichiers précédents lorsqu'ils existent sous work, contrôle d'identité, copie et comparaison SHA256. Conserver l'éventuel PublishedFileId.txt.
+4. Fermer RimWorld, puis exécuter deploy.ps1 : sauvegarde des neuf fichiers précédents lorsqu'ils existent sous work, contrôle d'identité, copie et comparaison SHA256. Pour la copie auteur Workshop, ajouter -IncludePublishedFileId afin de restaurer l'identifiant du projet s'il manque ; un identifiant existant différent est refusé, sans cette option il reste simplement conservé. Les ZIP n'incluent jamais cet identifiant.
 5. Redémarrer le jeu ; vérifier le parcours modifié et la persistance, puis consigner précisément les résultats.
 
 Voir [BUILDING.md](BUILDING.md). Build et tests ne déploient pas ; le déploiement local ne publie rien. Les anciens scripts sous work sont historiques.

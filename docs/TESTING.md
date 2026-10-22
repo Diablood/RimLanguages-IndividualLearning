@@ -1,4 +1,41 @@
-# Vérifications — version locale 1.1.0
+# Vérifications — version locale 1.1.2
+
+## Repli individuel général — 2026-10-22
+
+Contrôles de finalisation : reconstruction forcée réussie, DLL déterministe identique à la copie testée ; 25 assertions NativeOriginTests réexécutées avec chacun des parents 1.6/1.7 et 18 assertions de transmission réussies. Versions, XML, clés FR/EN et exclusion des DLL tierces vérifiés. Pas de nouvelle exécution du moteur, pas de succès revendiqué de la suite complète bloquée par Unity 1.7. Commit/push/tag demandés après validation utilisateur des arrivants sans faction ; aucun envoi Workshop par l'agent.
+
+Retour utilisateur : « test OK avec de nouvelle arrivé de gens sans faction ». Parcours principal des nouveaux arrivants sans faction validé en jeu par l'utilisateur en 1.1.2. Sauvegarde/rechargement et variantes de races modées non détaillés séparément dans ce retour ; aucun moteur exécuté par l'agent. Ne pas redemander ce parcours acquis sans changement pertinent.
+
+Correctif d'outillage ultérieur : syntaxe PowerShell de deploy.ps1 validée, puis exécution -IncludePublishedFileId dans Mods réussie. Dix fichiers comparés par SHA256, identifiant 3817893569 restauré et DLL 1.1.2 inchangée. Backup sous work/runtime-before-1.1.2-20261022-222800-807. Aucun nouveau test de gameplay ou moteur ni envoi Workshop. Le mode auteur refuse de remplacer un identifiant différent ; ce chemin de refus n'a pas été exécuté sur la copie réelle.
+
+Copie locale 1.1.2 installée jeu fermé, neuf fichiers vérifiés par SHA256 et ancien runtime sauvegardé sous work/runtime-before-1.1.2-20261022-222413-794. Aucun test moteur ou envoi distant ; sélectionner la copie locale 1.1.2 si le Workshop fournit également ce packageId.
+
+Compilation compatible 1.6 réussie. 25 assertions NativeOriginTests réussies avec chacun des parents installés 1.6 et 1.7 (25 scénarios, pas 50 différents), plus 18 TransmissionPolicyTests. XML, clés FR/EN, versions et exclusion de DLL tierces vérifiés. Les contrôles couvrent humains ordinaires, race modée avec langue propre, absence de langue compatible puis résolution différée, cohérence de la paire, conservation des acquis et bébés à 0 %, génération imbriquée et restauration après échec. Inspection Cecil de la DLL produite : recherche de faction et garde de génération avant repli, garde de naissance et humanoïde conservés. Aucun pion généré par l'agent, aucun test moteur. Suite complète non réexécutée (blocage Unity 1.7 connu).
+
+DLL 1.1.2 SHA256 DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847. Parent installé réinspecté, signature GeneratePawn(PawnGenerationRequest) conservée. Aucune sauvegarde modifiée directement.
+
+Parcours de référence fourni : à l'apparition d'un humain sans faction d'origine exploitable, vérifier une paire maternelle dans Langues puis les mêmes noms et niveaux après sauvegarde/rechargement. Première partie validée par le retour ci-dessus ; rechargement non détaillé séparément. Pas besoin d'attendre 100 % ni de refaire Eduard ou Mendez. Ne pas confondre absence de faction avec absence de langue : un pion qui possède déjà un registre doit le conserver.
+
+Variantes facultatives selon les mods présents : race ayant sa propre langue (pas de langue humaine forcée), race sans langue compatible (registre en attente), naissance sans langue parentale/factionnelle (identité à 0 %). Ces variantes ne sont pas validées en jeu par les assertions hors jeu.
+
+## Correctif Anomaly / Eduard Quill — 2026-10-22
+
+Retour utilisateur : « test OK pour Eduard ». Parcours principal validé en jeu par l'utilisateur ; sauvegarde/rechargement non détaillé séparément dans ce retour. Aucun moteur exécuté par l'agent. Ne pas redemander le parcours acquis sans modification pertinente. Le repli général pour les autres races/pions sans faction reste proposé, non implémenté et non testé.
+
+Les mêmes 12 assertions ciblées ont également réussi dans un processus séparé résolvant l'assembly Cybranian 1.7 réellement installée. Il s'agit de 12 scénarios exécutés avec chacune des deux assemblies du parent, pas de 24 scénarios distincts ni d'un test moteur. DLL 1.1.1 SHA256 : 9E23E2782CFB434A4A4328D8702FF6A3909A8B96AAF69C75A90269AD29E51CAB.
+
+Déploiement local effectué jeu fermé : neuf fichiers vérifiés par SHA256. Le dossier local était absent, donc première installation sans ancien contenu à sauvegarder ; aucune sauvegarde de jeu modifiée. Sélectionner la copie locale 1.1.1 si une copie Workshop du même packageId est également présente. Aucun commit, tag ou envoi distant.
+
+Compilation avec références 1.6.4871 et Harmony 1.6 réussie. Mode NativeOriginOnly : 12 assertions hors jeu réussies sur la DLL construite, avec objets du parent préparés sans moteur. Réparation d'un registre en attente, paire humaine cohérente, exclusion des langues non humaines et sans dialecte, conservation de l'identité et des acquis, absence de nouveau tirage après initialisation, ordre d'énumération indépendant, diversité des origines et absence d'XP collective vérifiés. XML, FR/EN, versions et exclusion des DLL tierces réussis. Suite complète non réexécutée (blocage Unity 1.7 historique) ; aucun test moteur effectué.
+
+Sauvegarde inspectée en lecture seule : Eduard Quill / CreepJoiner114506 / Blindhealer, origine Entities sans association linguistique parent, registre vide non initialisé. Parent 1.7 et LoadFolders réellement installés inspectés ; aucun point Harmony ajouté.
+
+Parcours de référence fourni pour cette validation :
+
+1. Redémarrer avec la copie locale 1.1.1, charger puis ouvrir Langues d'Eduard : une langue et son dialecte, maternels à 100 %, doivent apparaître. Le tirage peut correspondre à la colonie par hasard.
+2. Sauvegarder sous un autre nom et recharger : vérifier les mêmes noms et niveaux. Pas besoin d'attendre un apprentissage ni de refaire Mendez.
+
+Facultatif : un pion ordinaire déjà initialisé garde ses niveaux ; d'autres nouveaux arrivants Anomaly peuvent recevoir une origine différente. Schéma, clés Scribe et gains naturels inchangés.
 
 ## Lot écoute passive et connaissances maternelles — 2026-10-19
 

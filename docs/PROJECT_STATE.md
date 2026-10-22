@@ -1,6 +1,36 @@
-# État du projet — 2026-10-19
+# État du projet — 2026-10-22
 
 ## Version actuelle
+
+Finalisation demandée le 2026-10-22 : commit/push de toutes les modifications de ce lot et tag v1.1.2 ; mise à jour Workshop réservée à l'utilisateur. Descriptions et patchnotes 1.1.2 préparées. Reconstruction forcée réussie, DLL identique à celle testée (DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847), 25 assertions d'origine réexécutées avec chacun des parents 1.6/1.7 et 18 assertions de transmission réussies ; suite complète toujours non réexécutée, limites inchangées. Aucune release GitHub avec asset incluse dans cette demande.
+
+Correction du déploiement auteur après signalement du fichier Workshop absent : deploy.ps1 accepte -IncludePublishedFileId, qui restaure l'identifiant du projet s'il manque, préserve un identifiant identique et refuse un identifiant différent. Exécution locale réussie : dix fichiers vérifiés par SHA256, PublishedFileId 3817893569 restauré, DLL 1.1.2 inchangée. Backup sous work/runtime-before-1.1.2-20261022-222800-807. Aucun envoi Steam. Sans option, conservation seule ; ZIP toujours sans identifiant pour joueurs/forks. Aucun changement de version requis pour ce correctif d'outillage.
+
+Déploiement 1.1.2 effectué jeu fermé : neuf fichiers comparés par SHA256, copie précédente conservée sous work/runtime-before-1.1.2-20261022-222413-794. Copie Workshop et sauvegardes non modifiées ; aucun envoi distant.
+
+**1.1.2 locale testable**, DLL **1.1.2.0**, schéma **1**. Généralisation demandée par l'utilisateur après validation d'Eduard : tout pion humanoïde sans association linguistique d'origine exploitable peut recevoir une langue existante de sa race et un dialecte cohérent, tirés au sort par pion. Priorité à l'origine observée/capturée ; le repli ne modifie aucune association collective. CreepJoiner utilise toujours Human. Sans langue compatible, registre en attente ; aucune langue humaine attribuée d'office à une race inconnue.
+
+NativeOriginLanguages remplace l'utilitaire statique non sérialisé CreepJoinerLanguages. Registres déjà initialisés, marqueurs maternels, niveaux abaissés et autres apprentissages conservés. La génération diffère seulement le repli jusqu'à son terme via le patch GeneratePawn déjà existant : Prefix/Postfix/Finalizer restaurent un contexte transitoire imbriqué, y compris sur exception. Pas de tick ajouté. Le chemin de naissance conserve une identité à 0 % ; si mère et faction sont sans identité exploitable, le nouveau repli choisit aussi à 0 %.
+
+Parent installé 1.7 réinspecté : même SHA256 7D2C485D230900BF5E39F8D57B6C885578B206FE3A76F18E8C77EE7826151E3B ; MainRace et TryGetLanguage vérifiés. Assemblies 1.6 et 1.7 présentes ; compilation ciblée 1.6 maintenue. 25 assertions NativeOriginTests réussies avec chacun des parents, plus 18 TransmissionPolicyTests ; XML/FR/EN/versions/DLL tierces vérifiés. Aucun succès de suite complète ni test moteur revendiqué. DLL SHA256 DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847.
+
+Retour utilisateur : test OK avec de nouveaux arrivants sans faction ; parcours principal du lot général validé en jeu. Sauvegarde/rechargement et variantes de races modées non détaillés séparément dans ce retour ; Eduard 1.1.1 reste acquis, sans lui redemander le même test. Aucun commit, tag, release ou Workshop effectué pour ce lot. Procédure et limites dans TESTING.md et SAVE_MIGRATION.md.
+
+## Lot précédent : 1.1.1
+
+Copie locale 1.1.1 déployée jeu fermé : neuf fichiers vérifiés par SHA256. Dossier cible absent avant déploiement, donc aucun ancien runtime à sauvegarder ; copie Workshop séparée non modifiée. DLL SHA256 9E23E2782CFB434A4A4328D8702FF6A3909A8B96AAF69C75A90269AD29E51CAB. Les mêmes 12 assertions NativeOriginTests ont aussi réussi avec l'assembly Cybranian 1.7 installée dans un processus séparé ; aucune exécution du moteur. Sélectionner la copie locale 1.1.1 pour le test.
+
+**1.1.1 locale testable**, DLL **1.1.1.0**, schéma **1**. Correctif Anomaly autorisé le 2026-10-22 : langue humaine et dialecte existants tirés au sort par pion, maternels à 100 %. Repli strict CreepJoiner sans langue de faction exploitable, registre non initialisé et sans identité maternelle existante. Chargement et accès habituels réutilisés, pas de nouveau patch Harmony ni de modification directe de sauvegarde. Autres registres et acquis préservés.
+
+Diagnostic de la sauvegarde actuelle en lecture seule : Eduard Quill, CreepJoiner114506, forme Blindhealer, prisonnier, faction et origine Faction_10 (Entities), entries vide, initialized absent donc faux. Cette faction est absente de factionDialects du parent : initialisation en attente, pas de suppression démontrée à la capture. L'absence d'yeux n'est pas un critère d'initialisation.
+
+Installation réinspectée : RimWorld 1.7.4985 rev1269 ; Cybranian possède désormais dossier et routage 1.7. Parent 1.7 SHA256 7D2C485D230900BF5E39F8D57B6C885578B206FE3A76F18E8C77EE7826151E3B ; 1.6 inchangé. TryGetLanguage reste une recherche dans le dictionnaire des factions, sans repli individuel ; la famille Human réserve Human_Horax à HoraxCult, pas Entities. Aucun motif pour attribuer Horaxien à tous ces arrivants. IL et extraits locaux sous work, exclus de Git.
+
+Compilation compatible 1.6 réussie ; 12 assertions NativeOriginTests réussies avec runtime 1.7 et dépendance Cybranian 1.6 du runner. XML, clés FR/EN, version et exclusion de DLL tierces vérifiés. Suite complète non réexécutée (blocage Unity historique connu), aucun moteur exécuté par l'agent. Retour utilisateur du 2026-10-22 : « test OK pour Eduard », validation du parcours principal ; sauvegarde/rechargement non détaillé séparément dans ce retour. Aucun commit, tag, release ou Workshop effectué pour ce correctif.
+
+Périmètre rappelé après question utilisateur : le repli reste strictement limité aux CreepJoiner. Sa généralisation aux pions vanilla ou moddés sans faction linguistique a été proposée, avec priorité à l'origine et recherche d'une langue compatible avec la race, mais n'est pas implémentée. Le cas d'une race sans aucune langue compatible reste à définir.
+
+## Lot précédent : 1.1.0
 
 **1.1.0 locale**, DLL **1.1.0.0**, schéma **1**, nouveau lot du 2026-10-19. Parcours Mendez validé par l'utilisateur : apprentissage par écoute d'une langue maternelle de l'enseignant, lui-même recruté et d'origine différente des colons fondateurs. La règle vise bien l'identité maternelle de chaque enseignant, pas la langue de fondation de la colonie. Persistance après sauvegarde/rechargement ensuite validée par l'utilisateur. Refus de transmission d'une langue acquise encore en observation manuelle prolongée ; filtre déjà couvert par les assertions ciblées.
 

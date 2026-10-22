@@ -4,7 +4,8 @@ param(
     [Parameter(Mandatory = $true)][string]$CybranianDir,
     [Parameter(Mandatory = $true)][string]$HarmonyAssembly,
     [Parameter(Mandatory = $true)][string]$CecilAssembly,
-    [switch]$PolicyOnly
+    [switch]$PolicyOnly,
+    [switch]$NativeOriginOnly
 )
 $ErrorActionPreference = 'Stop'
 try {
@@ -14,6 +15,7 @@ try {
     $entry = $assembly.GetType('KnowledgeTests').GetMethod('Main', [Reflection.BindingFlags]'Public,Static')
     [string[]]$testArguments = @($ProjectRoot, $ManagedDir, (Join-Path $CybranianDir '1.6\Assemblies'), (Split-Path -Parent $HarmonyAssembly), (Split-Path -Parent $CecilAssembly))
     if ($PolicyOnly) { $testArguments += 'policy' }
+    if ($NativeOriginOnly) { $testArguments += 'native-origin' }
     $invokeArguments = New-Object 'System.Object[]' 1
     $invokeArguments[0] = $testArguments
     $result = $entry.Invoke($null, $invokeArguments)

@@ -15,9 +15,10 @@ internal static class KnowledgeTests
         AppDomain.CurrentDomain.AssemblyResolve += Resolve;
         try
         {
-            if (args.Length > 5 && args[5] == "policy") TransmissionPolicyTests.Run(Check);
+            if (args.Length > 5 && args[5] == "native-origin") NativeOriginTests.Run(Check);
+            else if (args.Length > 5 && args[5] == "policy") TransmissionPolicyTests.Run(Check);
             else Run();
-            Console.WriteLine("PASS: " + checks + (args.Length > 5 ? " transmission-policy" : " knowledge") + " assertions (outside RimWorld).");
+            Console.WriteLine("PASS: " + checks + (args.Length > 5 ? " " + args[5] : " knowledge") + " assertions (outside RimWorld).");
             return 0;
         }
         catch (Exception e) { Console.Error.WriteLine(e); return 1; }
@@ -65,6 +66,7 @@ internal static class KnowledgeTests
         LearningHistoryTests.Run(Check);
         GenerationPatchTests.Run(Check);
         MigrationTests.Run(Check);
+        NativeOriginTests.Run(Check);
         TransmissionTests.Run(Check);
         TransmissionPolicyTests.Run(Check);
         ChildLearningTests.Run(Check);

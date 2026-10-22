@@ -6,6 +6,7 @@ Chaque pion possède ses propres connaissances en langues et dialectes. Un colon
 [h2]Fonctionnalités[/h2]
 [list]
 [*]Un onglet Langues par pion : langues connues, dialectes, niveaux et origine maternelle.
+[*]Les arrivants sans faction linguistique exploitable reçoivent une langue et un dialecte maternels parmi les langues existantes de leur race. Les arrivants mystérieux d'Anomaly utilisent les langues humaines. Une race modée sans langue compatible reste en attente ; les connaissances existantes sont conservées.
 [*]Apprentissage individuel grâce aux livres de Cybranian et aux leçons auprès des prisonniers.
 [*]Transmission automatique pendant les conversations ordinaires, sans ordre manuel ni priorité sociale. Entre membres d'une même colonie, seules les langues et dialectes maternels de l'enseignant maîtrisés à 100 % se transmettent naturellement, quelle que soit son origine. Les connaissances acquises restent accessibles par les livres et les autres méthodes explicites.
 [*]Social actif est requis pour enseigner. Un pion dont Social est désactivé peut apprendre par écoute à vitesse réduite.

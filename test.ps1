@@ -6,9 +6,11 @@ param(
     [string]$CecilAssembly,
     [string]$ManagedReferencesDir,
     [string]$RuntimeManagedDir,
-    [switch]$PolicyOnly
+    [switch]$PolicyOnly,
+    [switch]$NativeOriginOnly
 )
 $ErrorActionPreference = 'Stop'
+if ($PolicyOnly -and $NativeOriginOnly) { throw 'Select only one focused test mode.' }
 . (Join-Path $PSScriptRoot 'tools/Resolve-Dependencies.ps1')
 $dependencies = Get-RliDependencies -RimWorldDir $RimWorldDir -CybranianDir $CybranianDir -HarmonyAssembly $HarmonyAssembly -Compiler $Compiler -CecilAssembly $CecilAssembly -IncludeCecil
 $RimWorldDir = $dependencies.RimWorldDir
@@ -42,6 +44,7 @@ $arguments += Join-Path $PSScriptRoot 'tests\GenerationPatchTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\MigrationTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\TransmissionTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\TransmissionPolicyTests.cs'
+$arguments += Join-Path $PSScriptRoot 'tests\NativeOriginTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\ChildLearningTests.cs'
 $arguments += Join-Path $PSScriptRoot 'tests\CollectivePresentationTests.cs'
 $arguments += "/reference:$managed\UnityEngine.CoreModule.dll"
@@ -52,6 +55,7 @@ $testProcessArgs = @('-NoProfile','-NonInteractive','-File',(Join-Path $PSScript
     '-ProjectRoot',$PSScriptRoot,'-ManagedDir',$runtimeManaged,'-CybranianDir',$CybranianDir,
     '-HarmonyAssembly',$HarmonyAssembly,'-CecilAssembly',$CecilAssembly)
 if ($PolicyOnly) { $testProcessArgs += '-PolicyOnly' }
+if ($NativeOriginOnly) { $testProcessArgs += '-NativeOriginOnly' }
 & (Join-Path $PSHOME $shellName) @testProcessArgs
 if ($LASTEXITCODE -ne 0) { throw 'Knowledge tests failed.' }
 $english = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'Languages\English\Keyed\IndividualLearning.xml'))

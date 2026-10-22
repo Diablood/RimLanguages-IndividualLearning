@@ -1,4 +1,4 @@
-param([string]$RimWorldDir, [string]$RimWorldModsDir)
+param([string]$RimWorldDir, [string]$RimWorldModsDir, [switch]$IncludePublishedFileId)
 $ErrorActionPreference = 'Stop'
 $sourceRoot = $PSScriptRoot
 . (Join-Path $PSScriptRoot 'tools/Resolve-Dependencies.ps1')
@@ -21,6 +21,22 @@ $sourceMetadata = [xml](Get-Content -Raw -LiteralPath (Join-Path $sourceRoot 'Ab
 $version = [string]$sourceMetadata.ModMetaData.modVersion
 $versionInfo = [Diagnostics.FileVersionInfo]::GetVersionInfo((Join-Path $sourceRoot '1.6/Assemblies/RimLanguages.IndividualLearning.dll'))
 if ($sourceMetadata.ModMetaData.packageId -ne 'Diablood.RimLanguages.IndividualLearning' -or $version -notmatch '^\d+\.\d+\.\d+$' -or $versionInfo.ProductVersion -ne $version -or $versionInfo.FileVersion -ne "$version.0") { throw 'Source identity/version mismatch. Build and test before deploying.' }
+# Explicit author-copy mode; normal installs and forks must not inherit a Workshop ID.
+$publishedRelative = 'About\PublishedFileId.txt'
+$publishedDestination = Join-Path $targetRoot $publishedRelative
+if ($IncludePublishedFileId) {
+    $publishedSource = Join-Path $sourceRoot $publishedRelative
+    if (-not (Test-Path -LiteralPath $publishedSource -PathType Leaf)) { throw 'Source PublishedFileId.txt missing.' }
+    $publishedId = [IO.File]::ReadAllText($publishedSource).Trim()
+    if ($publishedId -notmatch '^[1-9][0-9]*$') { throw 'Source Workshop ID is invalid.' }
+    if (Test-Path -LiteralPath $publishedDestination) {
+        if ([IO.File]::ReadAllText($publishedDestination).Trim() -ne $publishedId) {
+            throw 'Destination Workshop ID differs: refusing to replace its publication identity.'
+        }
+    } else {
+        $files += $publishedRelative
+    }
+}
 $backupRoot = Join-Path $sourceRoot (('work\runtime-before-' + $version + '-') + (Get-Date -Format 'yyyyMMdd-HHmmss-fff'))
 foreach ($relative in $files) {
     $destination = [IO.Path]::GetFullPath((Join-Path $targetRoot $relative))
@@ -39,6 +55,7 @@ foreach ($relative in $files) {
     if ((Get-FileHash -LiteralPath $destination).Hash -ne (Get-FileHash -LiteralPath (Join-Path $sourceRoot $relative)).Hash) { throw "Hash mismatch: $relative" }
 }
 Write-Output "Version $version deployed: $($files.Count) files verified by SHA256."
+if ($IncludePublishedFileId) { Write-Output "Workshop author copy linked to existing item $publishedId; no upload performed." }
 if (Test-Path -LiteralPath $backupRoot) { Write-Output "Previous runtime backup: $backupRoot" }
 else { Write-Output 'First installation: no previous runtime to back up.' }
 Get-FileHash -LiteralPath (Join-Path $targetRoot '1.6\Assemblies\RimLanguages.IndividualLearning.dll') | Format-List Hash

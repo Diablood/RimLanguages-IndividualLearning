@@ -22,7 +22,11 @@ Sans paramètre, deploy.ps1 utilise Mods sous le jeu détecté. Il exige un doss
 
 Sources et documents utilisent des chemins relatifs ou des placeholders ; les chemins réellement détectés ne sont affichés qu'à l'exécution. work et artifacts sont exclus du suivi Git.
 
+Depuis 1.1.1, test.ps1 accepte aussi -NativeOriginOnly avec les mêmes paramètres de références et runtime que -PolicyOnly. Il exécute seulement les régressions de l'origine individuelle (Anomaly et repli général depuis 1.1.2), sans moteur et sans remplacer la suite complète. Les deux modes ciblés sont mutuellement exclusifs. Aucun exécutable de test généré.
+
 ## Préparer une archive installable
+
+Pour la copie de l'auteur destinée aux mises à jour Workshop, utiliser ./deploy.ps1 -IncludePublishedFileId. Cette option restaure About/PublishedFileId.txt depuis le projet s'il manque ; elle valide son format et refuse une destination liée à un autre article. Sans cette option, un identifiant existant reste conservé et aucun identifiant n'est ajouté. L'option ne publie rien ; les ZIP installables restent sans identifiant. Un fork ne doit pas utiliser l'identifiant de l'article original.
 
 Exécuter ./package.ps1. Les paramètres RimWorldDir, CybranianDir, HarmonyAssembly, Compiler et CecilAssembly sont les mêmes que pour build/test ; détection automatique par défaut.
 

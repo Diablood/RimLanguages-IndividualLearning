@@ -1,5 +1,19 @@
 # Historique des versions
 
+## 1.1.2 — 2026-10-22 — pions sans origine linguistique exploitable
+
+- Repli individuel étendu aux pions humanoïdes vanilla et moddés : faction d'origine prioritaire, sinon langue existante de la même race et l'un de ses dialectes, à 100 % comme maternels. Exception humaine CreepJoiner conservée ; sans paire compatible, initialisation en attente.
+- Tirage différé pendant GeneratePawn pour éviter l'attribution avant affectation de la véritable faction ; contexte transitoire restauré même en génération imbriquée ou en cas d'exception.
+- Registres initialisés et acquis conservés. Lors d'une naissance prise en charge sans identité maternelle ou de faction résolue, le repli attribue une identité à 0 %, sans maîtrise adulte. Aucun changement du schéma 1.
+- Compilation 1.6 et contrôles XML/FR/EN/versions réussis ; 25 assertions d'origine avec chacun des parents 1.6 et 1.7, 18 assertions de transmission. Suite complète non réexécutée (blocage Unity 1.7 historique). Aucun test moteur par l'agent ; nouveaux arrivants sans faction validés en jeu par utilisateur, sauvegarde/rechargement non détaillé séparément. Eduard 1.1.1 déjà validé par utilisateur.
+
+## 1.1.1 — 2026-10-22 — origine des arrivants mystérieux d'Anomaly
+
+- Cas Eduard Quill : registre vide non initialisé, origine Entités occultes sans langue dans Cybranian ; aucune perte démontrée à la capture.
+- Repli strict CreepJoiner si la langue de faction n'est pas exploitable : une langue humaine existante puis un de ses dialectes sont tirés au sort par pion, maternels à 100 % et persistants.
+- Réparation des pions existants non initialisés au chargement ; acquis et registres initialisés conservés. Aucune langue inventée ou attribuée globalement aux entités, schéma 1 inchangé.
+- Compilation 1.6 réussie, 12 assertions ciblées hors jeu et contrôles XML/FR/EN/versions réussis. Parcours Eduard validé en jeu par utilisateur (« test OK pour Eduard ») ; sauvegarde/rechargement non détaillé séparément dans ce retour. Aucune publication.
+
 ## 1.1.0 — 2026-10-19 — écoute passive et transmission maternelle
 
 - Paquet installable local contrôlé et textes de mise à jour FR/EN préparés après accord pour poursuivre. Aucun nouveau build ou test moteur lors de la consolidation ; aucune publication distante.

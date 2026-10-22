@@ -1,4 +1,6 @@
-# Préparation Workshop — 1.1.0 locale
+# Préparation Workshop — copie auteur locale
+
+Copie auteur actuelle : 1.1.2, identifiant 3817893569 restauré via deploy.ps1 -IncludePublishedFileId. Nouveaux arrivants sans faction validés en jeu par utilisateur. Finalisation commit/push/tag demandée ; l'utilisateur effectuera la mise à jour Steam. Descriptions FR/EN actualisées, [patchnotes 1.1.2](workshop/Patchnotes-1.1.2.txt) prêtes. Aucun envoi Steam par l'agent.
 
 Lot 1.1.0 préparé le 2026-10-19 : écoute passive, transmission maternelle, test Mendez et sauvegarde/rechargement validés par utilisateur. La restriction des connaissances acquises est couverte par les tests ciblés et suivie pendant les parties ; aucune session prolongée dédiée demandée. Copie Mods déjà installée, DLL inchangée depuis le test. Descriptions FR/EN actualisées et [patchnotes 1.1.0](workshop/Patchnotes-1.1.0.txt) prêtes. Aucun envoi Steam pour ce lot par l'agent.
 
@@ -10,11 +12,14 @@ L'utilisateur publiera depuis RimWorld. Copie actuelle : version 1.1.0 dans `<Ri
 
 ## Textes à copier
 
+Préparation de la copie auteur : ./deploy.ps1 -IncludePublishedFileId. Le fichier exact est About/PublishedFileId.txt ; il relie la copie locale à l'article existant 3817893569. L'option le restaure s'il manque, préserve un identifiant identique et refuse un identifiant différent. Aucun envoi automatique. Les installations de joueurs et forks restent sans copie automatique de cet identifiant ; package.ps1 l'exclut toujours des ZIP.
+
 - Titre : **Rim Languages — Individual Learning**.
 - [Description française](workshop/Description-FR.txt).
 - [Description anglaise](workshop/Description-EN.txt).
 - [Notes de première publication 1.0.0, FR/EN](workshop/Patchnotes-1.0.0.txt).
 - [Notes de mise à jour 1.1.0, FR/EN](workshop/Patchnotes-1.1.0.txt).
+- [Notes de mise à jour 1.1.2, FR/EN](workshop/Patchnotes-1.1.2.txt).
 
 Les descriptions utilisent le BBCode Steam. Copier le contenu du fichier, sans ajouter de bloc de code Markdown. Pour une page internationale, utiliser l'anglais puis ajouter la version française en dessous, ou proposer les traductions séparément si l'interface le permet. Les drafts restent dans le projet, hors du dossier à envoyer.
 

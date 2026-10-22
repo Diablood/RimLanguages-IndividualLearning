@@ -57,7 +57,7 @@ namespace RimLanguages.IndividualLearning
             // Never initialize while Scribe is resolving references or from a preview game.
             if (Scribe.mode != LoadSaveMode.Inactive || Current.ProgramState != ProgramState.Playing) return false;
             var pawn = Pawn;
-            if (pawn == null) return false;
+            if (pawn?.RaceProps?.Humanlike != true) return false;
             if (!data.originCaptured && pawn.Faction != null)
             {
                 data.originFaction = pawn.Faction;
@@ -65,8 +65,13 @@ namespace RimLanguages.IndividualLearning
             }
             var db = Database;
             Dialect dialect;
-            if (db == null || data.originFaction == null || !db.TryGetLanguage(data.originFaction, out dialect) || dialect?.Parent == null)
-                return false;
+            if (db == null) return false;
+            if (data.originFaction == null || !db.TryGetLanguage(data.originFaction, out dialect) || dialect?.Parent == null)
+            {
+                // SetFaction and other consumers can run before generation assigns the real faction.
+                if (GeneratedPawnPatch.Generating) return false;
+                return NativeOriginLanguages.TryInitialize(data, pawn.def?.defName, db.RaceLanguages, pawn.thingIDNumber);
+            }
             return data.InitializeNative(dialect.Parent.GetUniqueLoadID(), dialect.Parent.Name,
                 dialect.GetUniqueLoadID(), dialect.Name);
         }
@@ -125,6 +130,19 @@ namespace RimLanguages.IndividualLearning
     [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) })]
     public static class GeneratedPawnPatch
     {
-        public static void Postfix(Pawn __result) => __result?.GetComp<CompIndividualLanguages>()?.EnsureInitialized();
+        [ThreadStatic] private static int depth;
+        public static bool Generating => depth > 0;
+        public static void Prefix(out int __state)
+        {
+            __state = depth;
+            depth++;
+        }
+        public static void Postfix(Pawn __result, int __state)
+        {
+            depth = __state;
+            __result?.GetComp<CompIndividualLanguages>()?.EnsureInitialized();
+        }
+        // Restore the outer scope on exceptions too, including an exception in the Postfix.
+        public static void Finalizer(int __state) => depth = __state;
     }
 }

@@ -1,0 +1,17 @@
+1.1.2 — Langues des arrivants sans faction
+
+- Les pions sans faction d'origine linguistique exploitable reçoivent désormais une langue et un dialecte maternels parmi les langues existantes de leur race.
+- Correction des arrivants mystérieux d'Anomaly, dont le guérisseur aveugle : leur origine linguistique est choisie individuellement parmi les langues humaines.
+- Les connaissances existantes sont conservées, y compris les niveaux des pions déjà présents et les identités des nouveau-nés à 0 %.
+- Le choix attend la fin de la création du pion pour préserver la priorité de sa véritable faction d'origine.
+- Pour les races modées, une langue compatible doit déjà exister dans Cybranian ; aucune langue humaine n'est imposée à une autre race.
+- Compatible avec les sauvegardes existantes, sans changement de schéma. RimWorld 1.6 et 1.7 pris en charge ; la branche 1.7 reste instable.
+
+1.1.2 — Languages for factionless arrivals
+
+- Pawns without a usable linguistic faction of origin now receive a native language and dialect from their race's existing languages.
+- Fixed mysterious Anomaly arrivals, including the blind healer: each receives an individual native identity drawn from existing human languages.
+- Existing knowledge is preserved, including current proficiency and newborn native identities at 0%.
+- Selection waits until pawn generation finishes so a temporary lack of faction cannot override the real faction of origin.
+- Modded races require a compatible language already present in Cybranian; human languages are not imposed on other races.
+- Supports existing saves without a schema change. RimWorld 1.6 and 1.7 supported; the 1.7 branch remains unstable.

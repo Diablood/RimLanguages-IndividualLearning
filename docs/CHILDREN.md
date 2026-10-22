@@ -12,7 +12,7 @@ Le seul appel GeneratePawn(PawnGenerationRequest) de PregnancyUtility.ApplyBirth
 
 Le bébé humain nouvellement créé, avec registre vide, reçoit langue et dialecte maternels à **0 %**. Le marqueur maternel indique l'origine, pas la maîtrise. Aucun savoir collectif importé ou événement Ideology à la naissance.
 
-La faction actuelle de la mère ne remplace pas son identité enregistrée après recrutement. Si cette identité manque, l'association de faction du bébé est utilisée à 0 % lorsqu'elle est résolue. Sans aucune identité valide, repli normal éventuellement différé : les niveaux à 0 % et l'identité maternelle ne sont alors pas garantis. Une association partiellement valide ne crée pas d'entrées.
+La faction actuelle de la mère ne remplace pas son identité enregistrée après recrutement. Si cette identité manque, l'association de faction du bébé est utilisée à 0 % lorsqu'elle est résolue. Depuis 1.1.2, sans identité maternelle ou de faction valide, une paire existante compatible avec la race peut être tirée au sort à 0 %. Sans paire compatible, l'initialisation reste éventuellement différée et l'identité à 0 % n'est pas garantie. Une association partiellement valide ne crée pas d'entrées.
 
 Ce chemin ne couvre pas les bébés de scénario, événement ou debug. Ceux-ci gardent leur initialisation habituelle. Aucun registre existant réinitialisé ; naissances en cuve ou remplacées par d'autres mods non confirmées séparément.
 
@@ -20,7 +20,7 @@ Le correctif 0.15.1 applique Harmony depuis Bootstrap [StaticConstructorOnStartu
 
 ## Règles communes de transmission
 
-Biotech, bébé admissible et adulte Social actif maîtrisant une cible à 100 %. Toute connaissance maternelle ou apprise admissible peut être transmise ; une entrée par soin, langue parente avant dialecte.
+Biotech, bébé admissible et adulte Social actif maîtrisant une cible à 100 %. Depuis 1.1.0, dans une même faction, seules les connaissances maternelles de l'enseignant sont admissibles ; entre factions différentes, les connaissances apprises restent admissibles. Une entrée par soin, langue parente avant dialecte.
 
 Exception bébé : son Social n'est pas exigé et sa statistique désactivée n'est pas évaluée. Aptitude de référence 0, donc base 0,5 du calcul existant. Social adulte, variation, difficultés du parent et case d'activation conservés.
 

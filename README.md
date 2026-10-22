@@ -1,6 +1,6 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version des sources : **1.1.0**, tag **v1.1.0** ; parcours Mendez et persistance validés en jeu par l'utilisateur, autres contrôles dans [TESTING.md](docs/TESTING.md). Dernière release avec paquet téléchargeable : **v1.0.0-rw1.7**. La branche 1.7 instable peut nécessiter de nouvelles adaptations.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version locale testable : **1.1.2**, repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction ; dernier tag des sources **v1.1.0** ; parcours Mendez et persistance validés en jeu par l'utilisateur, autres contrôles dans [TESTING.md](docs/TESTING.md). Dernière release avec paquet téléchargeable : **v1.0.0-rw1.7**. La branche 1.7 instable peut nécessiter de nouvelles adaptations.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 
@@ -17,6 +17,8 @@ Les livres, langues, dialectes, configuration initiale, facteurs et préceptes d
 
 Dans la liste des factions, seuls les noms de langue et dialecte sont affichés, sans niveau collectif. Les textes d'XP collective des conversations sont masqués ; les niveaux restent consultables dans Langues du pion. Voir [Affichage individuel](docs/COLLECTIVE_DISPLAY.md).
 
+Les pions humanoïdes sans langue de faction d'origine exploitable reçoivent une langue existante de leur race et son dialecte, tirés au sort individuellement et conservés comme maternels. Les arrivants mystérieux Anomaly utilisent les langues humaines. Sans langue compatible, le registre reste en attente. Les connaissances déjà initialisées, dont les identités des bébés à 0 %, restent inchangées. Voir [Migration](docs/SAVE_MIGRATION.md).
+
 ## Installation
 
 RimWorld 1.6 ou 1.7, Harmony et Cybranian sont nécessaires. Ordre relatif : **Harmony → Cybranian → Individual Learning**. Aucun DLC obligatoire ; les soins des bébés nécessitent Biotech, les pensées linguistiques nécessitent Ideology et le précepte approprié. Aucune dépendance à GateRim. Les deux versions chargent le dossier d'assembly 1.6 via LoadFolders.xml.
@@ -31,7 +33,7 @@ Une archive locale installable se prépare avec ./package.ps1 : reconstruction, 
 
 La **difficulté de Cybranian** est le seul réglage du rythme. La case **Activer la transmission par conversation** contrôle les gains automatiques du complément, y compris pendant les soins et jeux avec bébé. Elle ne désactive pas la lecture, l'ordre d'apprentissage prisonnier ou les gains collectifs du parent. Voir [Transmission](docs/TRANSMISSION.md) pour les facteurs et différences de calcul.
 
-L'ajout à une partie ayant déjà Cybranian est pris en charge. Pour un pion sans registre, seules la langue et le dialecte de sa faction observée sont attribués à 100 % ; aucun autre savoir collectif n'est importé. L'origine historique d'un colon recruté avant l'installation ne peut pas être reconstituée. Faire l'essai sur une copie : [Migration des sauvegardes](docs/SAVE_MIGRATION.md).
+L'ajout à une partie ayant déjà Cybranian est pris en charge. Pour un pion sans registre, la langue et le dialecte de sa faction observée sont prioritaires, avec un repli individuel par race si cette origine est inexploitable ; aucun autre savoir collectif n'est importé. L'origine historique d'un colon recruté avant l'installation ne peut pas être reconstituée. Faire l'essai sur une copie : [Migration des sauvegardes](docs/SAVE_MIGRATION.md).
 
 ## État et limites
 
