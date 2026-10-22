@@ -2,6 +2,12 @@
 
 ## Version actuelle
 
+L'utilisateur confirme ensuite la mise à jour du Workshop et autorise le push de la preview 1.7 et de ses documents. Publication Steam effectuée par l'utilisateur ; contenu distant non inspecté par l'agent. Version/DLL 1.1.2 et tag v1.1.2 conservés : cette consolidation est uniquement visuelle et documentaire, sans nouvelle release avec asset ni test moteur.
+
+Preview avec bandeau 1.7 validée par l'utilisateur (« L'image me va »). Copie projet et copie Mods déjà identiques ; aucune nouvelle modification d'image, compilation ou publication à cette validation.
+
+Retouche visuelle demandée après finalisation des sources : preview avec bandeau 1.7 générée depuis la preview existante avec imagegen, puis ramenée à 640 × 640. About/Preview.png : 866 745 octets, SHA256 54C8F9E78E2694D3F717D25157CD5364C00F5D1DEEFE1F1E21BF7A2BC87D7B01. Visuel inspecté, yeux et textes présents ; original 1.6 et génération haute résolution conservés sous artifacts/preview, exclus de Git. Copie Mods remplacée avec backup et comparaison SHA256. Aucun changement de DLL, version 1.1.2 ou support 1.6/1.7 ; aucun commit, tag ou envoi Workshop pour cette retouche.
+
 Sources 1.1.2 envoyées le 2026-10-22 : commit 8dd28e3af86d42ec8d2abc33383397063231e809 et tag annoté [v1.1.2](https://github.com/Diablood/RimLanguages-IndividualLearning/tree/v1.1.2). Références main et tag résolu vérifiées identiques par git ls-remote. Les fichiers de test locaux, binaires et sauvegardes sont exclus de Git. Copie Mods et identifiant 3817893569 vérifiés ; l'utilisateur peut mettre à jour l'article existant. Aucune release avec asset ni mise à jour Steam effectuée par l'agent.
 
 Finalisation demandée le 2026-10-22 : commit/push de toutes les modifications de ce lot et tag v1.1.2 ; mise à jour Workshop réservée à l'utilisateur. Descriptions et patchnotes 1.1.2 préparées. Reconstruction forcée réussie, DLL identique à celle testée (DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847), 25 assertions d'origine réexécutées avec chacun des parents 1.6/1.7 et 18 assertions de transmission réussies ; suite complète toujours non réexécutée, limites inchangées. Aucune release GitHub avec asset incluse dans cette demande.

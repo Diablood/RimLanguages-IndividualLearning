@@ -4,6 +4,8 @@ Lot actuel : repli individuel général pour les humanoïdes sans origine lingui
 
 ## Historique récent
 
+Workshop mis à jour par l'utilisateur après validation de la preview 1.7. Push de l'image et des documents autorisé ensuite ; version 1.1.2 et tag v1.1.2 conservés. Suite : maintenance selon les retours, sans nouveau parcours acquis à refaire.
+
 Finalisation des sources 1.1.2 effectuée : commit 8dd28e3 et tag v1.1.2 envoyés et vérifiés sur GitHub. Suite : mise à jour de l'article Workshop existant par l'utilisateur ; copie Mods et patchnotes 1.1.2 prêtes, aucun envoi Steam par l'agent.
 
 Finalisation 1.1.2 autorisée : commit, push et tag v1.1.2. Patchnotes et descriptions Workshop FR/EN actualisées ; envoi Steam par l'utilisateur après finalisation GitHub. Aucune release avec asset demandée à cette étape.

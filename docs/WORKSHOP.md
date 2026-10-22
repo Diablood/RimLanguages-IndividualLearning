@@ -1,5 +1,11 @@
 # Préparation Workshop — copie auteur locale
 
+Mise à jour de l'article Workshop confirmée par l'utilisateur après validation de la preview 1.7. Aucun envoi Steam par l'agent et aucun contrôle séparé du contenu distant. Le push demandé ensuite concerne l'image approuvée et les documents ; version 1.1.2 et tag existant conservés.
+
+Preview 1.7 approuvée par l'utilisateur ; la copie déjà présente dans Mods est prête pour son envoi manuel.
+
+Preview actuelle : bandeau 1.7, PNG 640 × 640, 866 745 octets, déjà copiée dans Mods et vérifiée par SHA256. Retouche visuelle seulement ; version 1.1.2 et support RimWorld 1.6/1.7 conservés. Aucun envoi Steam par l'agent. Les mentions du bandeau 1.6 plus bas décrivent les anciennes étapes.
+
 Copie auteur actuelle : 1.1.2, identifiant 3817893569 restauré via deploy.ps1 -IncludePublishedFileId. Nouveaux arrivants sans faction validés en jeu par utilisateur. Sources finalisées : commit 8dd28e3 et tag v1.1.2 envoyés et vérifiés ; l'utilisateur effectuera la mise à jour Steam. Descriptions FR/EN actualisées, [patchnotes 1.1.2](workshop/Patchnotes-1.1.2.txt) prêtes. Aucun envoi Steam par l'agent.
 
 Lot 1.1.0 préparé le 2026-10-19 : écoute passive, transmission maternelle, test Mendez et sauvegarde/rechargement validés par utilisateur. La restriction des connaissances acquises est couverte par les tests ciblés et suivie pendant les parties ; aucune session prolongée dédiée demandée. Copie Mods déjà installée, DLL inchangée depuis le test. Descriptions FR/EN actualisées et [patchnotes 1.1.0](workshop/Patchnotes-1.1.0.txt) prêtes. Aucun envoi Steam pour ce lot par l'agent.

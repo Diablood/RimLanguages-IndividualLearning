@@ -1,5 +1,13 @@
 # Vérifications — version locale 1.1.2
 
+## Preview 1.7
+
+L'utilisateur confirme la mise à jour Workshop puis demande le push. Cette confirmation est la preuve de son envoi manuel, pas d'une inspection distante par l'agent. Contrôles de cette consolidation limités au visuel, poids, SHA256, documents et diff ; aucune reconstruction ou nouvelle validation de gameplay nécessaire.
+
+Validation visuelle utilisateur reçue : « L'image me va ». Aucun nouveau test moteur ou envoi distant ; l'image approuvée est celle déjà copiée dans Mods.
+
+Retouche via imagegen depuis la preview précédente ; export PNG 640 × 640 inspecté visuellement : bandeau 1.7, yeux et titres conservés. 866 745 octets, sous le plafond du projet de 1 000 000 octets. SHA256 54C8F9E78E2694D3F717D25157CD5364C00F5D1DEEFE1F1E21BF7A2BC87D7B01. Copie Mods identique par SHA256 ; images antérieures sauvegardées sous artifacts/preview. Pas de reconstruction, test de gameplay ou publication pour une retouche de visuel. Le résultat génératif n'est pas une garantie d'identité pixel par pixel hors texte.
+
 ## Repli individuel général — 2026-10-22
 
 Envoi GitHub vérifié : commit 8dd28e3 et tag v1.1.2 poussés, tag annoté résolu vers le même commit par git ls-remote. Diff indexé sans erreur d'espacement, textes UTF-8 valides, aucun artefact local ou binaire tiers indexé. Dix fichiers de la copie auteur Mods comparés aux sources par SHA256, dont PublishedFileId 3817893569. Aucun envoi Steam et aucune release avec asset.
