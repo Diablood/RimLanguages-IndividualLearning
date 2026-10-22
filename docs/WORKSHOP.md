@@ -1,6 +1,6 @@
 # Préparation Workshop — copie auteur locale
 
-Copie auteur actuelle : 1.1.2, identifiant 3817893569 restauré via deploy.ps1 -IncludePublishedFileId. Nouveaux arrivants sans faction validés en jeu par utilisateur. Finalisation commit/push/tag demandée ; l'utilisateur effectuera la mise à jour Steam. Descriptions FR/EN actualisées, [patchnotes 1.1.2](workshop/Patchnotes-1.1.2.txt) prêtes. Aucun envoi Steam par l'agent.
+Copie auteur actuelle : 1.1.2, identifiant 3817893569 restauré via deploy.ps1 -IncludePublishedFileId. Nouveaux arrivants sans faction validés en jeu par utilisateur. Sources finalisées : commit 8dd28e3 et tag v1.1.2 envoyés et vérifiés ; l'utilisateur effectuera la mise à jour Steam. Descriptions FR/EN actualisées, [patchnotes 1.1.2](workshop/Patchnotes-1.1.2.txt) prêtes. Aucun envoi Steam par l'agent.
 
 Lot 1.1.0 préparé le 2026-10-19 : écoute passive, transmission maternelle, test Mendez et sauvegarde/rechargement validés par utilisateur. La restriction des connaissances acquises est couverte par les tests ciblés et suivie pendant les parties ; aucune session prolongée dédiée demandée. Copie Mods déjà installée, DLL inchangée depuis le test. Descriptions FR/EN actualisées et [patchnotes 1.1.0](workshop/Patchnotes-1.1.0.txt) prêtes. Aucun envoi Steam pour ce lot par l'agent.
 

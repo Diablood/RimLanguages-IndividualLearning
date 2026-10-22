@@ -4,6 +4,8 @@ Lot actuel : repli individuel général pour les humanoïdes sans origine lingui
 
 ## Historique récent
 
+Finalisation des sources 1.1.2 effectuée : commit 8dd28e3 et tag v1.1.2 envoyés et vérifiés sur GitHub. Suite : mise à jour de l'article Workshop existant par l'utilisateur ; copie Mods et patchnotes 1.1.2 prêtes, aucun envoi Steam par l'agent.
+
 Finalisation 1.1.2 autorisée : commit, push et tag v1.1.2. Patchnotes et descriptions Workshop FR/EN actualisées ; envoi Steam par l'utilisateur après finalisation GitHub. Aucune release avec asset demandée à cette étape.
 
 Copie auteur Workshop : déployer avec -IncludePublishedFileId pour restaurer l'identifiant de l'article existant s'il manque. Restauration locale 3817893569 effectuée ; aucun envoi Steam et aucune modification du paquet joueur.

@@ -1,6 +1,6 @@
 # Rim Languages — Individual Learning
 
-Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version locale testable : **1.1.2**, repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction ; dernier tag des sources **v1.1.0** ; parcours Mendez et persistance validés en jeu par l'utilisateur, autres contrôles dans [TESTING.md](docs/TESTING.md). Dernière release avec paquet téléchargeable : **v1.0.0-rw1.7**. La branche 1.7 instable peut nécessiter de nouvelles adaptations.
+Complément de **Cybranian — Rim Languages** pour **RimWorld 1.6 et 1.7**. Version locale testable : **1.1.2**, repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction ; dernier tag des sources **v1.1.2** ; parcours Mendez et persistance validés en jeu par l'utilisateur, autres contrôles dans [TESTING.md](docs/TESTING.md). Dernière release avec paquet téléchargeable : **v1.0.0-rw1.7**. La branche 1.7 instable peut nécessiter de nouvelles adaptations.
 
 Chaque pion possède ses propres connaissances linguistiques, conservées après sauvegarde, recrutement et déplacement en caravane. L'onglet **Langues** affiche ses langues et dialectes, leur origine maternelle et leurs niveaux.
 

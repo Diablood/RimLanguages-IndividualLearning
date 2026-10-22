@@ -2,6 +2,8 @@
 
 ## Version actuelle
 
+Sources 1.1.2 envoyées le 2026-10-22 : commit 8dd28e3af86d42ec8d2abc33383397063231e809 et tag annoté [v1.1.2](https://github.com/Diablood/RimLanguages-IndividualLearning/tree/v1.1.2). Références main et tag résolu vérifiées identiques par git ls-remote. Les fichiers de test locaux, binaires et sauvegardes sont exclus de Git. Copie Mods et identifiant 3817893569 vérifiés ; l'utilisateur peut mettre à jour l'article existant. Aucune release avec asset ni mise à jour Steam effectuée par l'agent.
+
 Finalisation demandée le 2026-10-22 : commit/push de toutes les modifications de ce lot et tag v1.1.2 ; mise à jour Workshop réservée à l'utilisateur. Descriptions et patchnotes 1.1.2 préparées. Reconstruction forcée réussie, DLL identique à celle testée (DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847), 25 assertions d'origine réexécutées avec chacun des parents 1.6/1.7 et 18 assertions de transmission réussies ; suite complète toujours non réexécutée, limites inchangées. Aucune release GitHub avec asset incluse dans cette demande.
 
 Correction du déploiement auteur après signalement du fichier Workshop absent : deploy.ps1 accepte -IncludePublishedFileId, qui restaure l'identifiant du projet s'il manque, préserve un identifiant identique et refuse un identifiant différent. Exécution locale réussie : dix fichiers vérifiés par SHA256, PublishedFileId 3817893569 restauré, DLL 1.1.2 inchangée. Backup sous work/runtime-before-1.1.2-20261022-222800-807. Aucun envoi Steam. Sans option, conservation seule ; ZIP toujours sans identifiant pour joueurs/forks. Aucun changement de version requis pour ce correctif d'outillage.
@@ -14,7 +16,7 @@ NativeOriginLanguages remplace l'utilitaire statique non sérialisé CreepJoiner
 
 Parent installé 1.7 réinspecté : même SHA256 7D2C485D230900BF5E39F8D57B6C885578B206FE3A76F18E8C77EE7826151E3B ; MainRace et TryGetLanguage vérifiés. Assemblies 1.6 et 1.7 présentes ; compilation ciblée 1.6 maintenue. 25 assertions NativeOriginTests réussies avec chacun des parents, plus 18 TransmissionPolicyTests ; XML/FR/EN/versions/DLL tierces vérifiés. Aucun succès de suite complète ni test moteur revendiqué. DLL SHA256 DD2B1F59A45CBE7BEB3D1FB1679BD9B2EF5FE55CD79E07A5142EF71D44C93847.
 
-Retour utilisateur : test OK avec de nouveaux arrivants sans faction ; parcours principal du lot général validé en jeu. Sauvegarde/rechargement et variantes de races modées non détaillés séparément dans ce retour ; Eduard 1.1.1 reste acquis, sans lui redemander le même test. Aucun commit, tag, release ou Workshop effectué pour ce lot. Procédure et limites dans TESTING.md et SAVE_MIGRATION.md.
+Retour utilisateur : test OK avec de nouveaux arrivants sans faction ; parcours principal du lot général validé en jeu. Sauvegarde/rechargement et variantes de races modées non détaillés séparément dans ce retour ; Eduard 1.1.1 reste acquis, sans lui redemander le même test. Commit et tag v1.1.2 envoyés comme indiqué ci-dessus ; aucune release avec asset ou mise à jour Workshop effectuée. Procédure et limites dans TESTING.md et SAVE_MIGRATION.md.
 
 ## Lot précédent : 1.1.1
 

@@ -2,6 +2,8 @@
 
 ## Repli individuel général — 2026-10-22
 
+Envoi GitHub vérifié : commit 8dd28e3 et tag v1.1.2 poussés, tag annoté résolu vers le même commit par git ls-remote. Diff indexé sans erreur d'espacement, textes UTF-8 valides, aucun artefact local ou binaire tiers indexé. Dix fichiers de la copie auteur Mods comparés aux sources par SHA256, dont PublishedFileId 3817893569. Aucun envoi Steam et aucune release avec asset.
+
 Contrôles de finalisation : reconstruction forcée réussie, DLL déterministe identique à la copie testée ; 25 assertions NativeOriginTests réexécutées avec chacun des parents 1.6/1.7 et 18 assertions de transmission réussies. Versions, XML, clés FR/EN et exclusion des DLL tierces vérifiés. Pas de nouvelle exécution du moteur, pas de succès revendiqué de la suite complète bloquée par Unity 1.7. Commit/push/tag demandés après validation utilisateur des arrivants sans faction ; aucun envoi Workshop par l'agent.
 
 Retour utilisateur : « test OK avec de nouvelle arrivé de gens sans faction ». Parcours principal des nouveaux arrivants sans faction validé en jeu par l'utilisateur en 1.1.2. Sauvegarde/rechargement et variantes de races modées non détaillés séparément dans ce retour ; aucun moteur exécuté par l'agent. Ne pas redemander ce parcours acquis sans changement pertinent.
