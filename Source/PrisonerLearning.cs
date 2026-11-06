@@ -15,6 +15,14 @@ namespace RimLanguages.IndividualLearning
 {
     public static class PrisonerLearning
     {
+        public static bool HasLearningSource(Pawn prisoner)
+        {
+            if (prisoner == null) return false;
+            if (prisoner.Faction != null) return true;
+            var teacher = IndividualLearning.Ready(prisoner);
+            return teacher != null && IndividualLearning.Valid(IndividualLearning.NativeDialect(teacher.Data));
+        }
+
         // No warden has been selected in the prisoner menu. Keep the order available;
         // the existing work giver will select only a warden who still needs this lesson.
         public static bool MenuLanguageComplete(Faction faction, Pawn prisoner)
@@ -45,8 +53,26 @@ namespace RimLanguages.IndividualLearning
                 new[] { typeof(Faction) });
             if (code.Count(i => i.Calls(original)) != 1)
                 throw new InvalidOperationException("RLI: expected exactly one Cybranian prisoner language check.");
-            foreach (var instruction in code)
+            // The parent rejects factionless prisoners before reaching the XP check.
+            // Replace only that first truth test, leaving the later real faction argument intact.
+            var factionGetter = AccessTools.PropertyGetter(typeof(Thing), nameof(Thing.Faction));
+            int checkAt = code.FindIndex(i => i.Calls(original));
+            var guards = Enumerable.Range(0, checkAt).Where(i => code[i].Calls(factionGetter) &&
+                (code[i + 1].opcode == OpCodes.Brfalse || code[i + 1].opcode == OpCodes.Brfalse_S)).ToList();
+            if (guards.Count != 1)
+                throw new InvalidOperationException("RLI: unsupported Cybranian prisoner faction guard.");
+            for (int index = 0; index < code.Count; index++)
             {
+                var instruction = code[index];
+                if (index == guards[0])
+                {
+                    var sourceCheck = new CodeInstruction(OpCodes.Call,
+                        AccessTools.Method(typeof(PrisonerLearning), nameof(HasLearningSource)));
+                    sourceCheck.labels.AddRange(instruction.labels);
+                    sourceCheck.blocks.AddRange(instruction.blocks);
+                    yield return sourceCheck;
+                    continue;
+                }
                 if (!instruction.Calls(original)) { yield return instruction; continue; }
                 var load = new CodeInstruction(menu ? OpCodes.Ldarg_2 : OpCodes.Ldarg_1);
                 load.labels.AddRange(instruction.labels);

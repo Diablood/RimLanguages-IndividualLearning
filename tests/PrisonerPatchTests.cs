@@ -128,9 +128,17 @@ internal static class PrisonerPatchTests
         check(changed[at].opcode == (menu ? OpCodes.Ldarg_2 : OpCodes.Ldarg_1) &&
             changed[at + 1].opcode == (menu ? OpCodes.Ldind_Ref : OpCodes.Ldarg_2),
             "Pass the actual prisoner/warden with the verified stack signature: " + name);
-        check(original.Take(at).SequenceEqual(changed.Take(at)) &&
+        var sourceCheck = AccessTools.Method(typeof(PrisonerLearning), nameof(PrisonerLearning.HasLearningSource));
+        int guardAt = changed.FindIndex(i => i.Calls(sourceCheck));
+        check(guardAt >= 0 && guardAt < at && changed.Count(i => i.Calls(sourceCheck)) == 1 &&
+            (changed[guardAt + 1].opcode == OpCodes.Brfalse || changed[guardAt + 1].opcode == OpCodes.Brfalse_S),
+            "Factionless prisoners with personal native knowledge reach the individual check: " + name);
+        check(original.Take(at).Where((i, index) => index != guardAt).SequenceEqual(
+                changed.Take(at).Where((i, index) => index != guardAt)) &&
             original.Skip(at + 1).SequenceEqual(changed.Skip(at + 3)),
-            "Preserve every other instruction, including rejection and physical checks: " + name);
+            "Preserve every non-language instruction, including rejection and physical checks: " + name);
+        check(original[guardAt].labels.SequenceEqual(changed[guardAt].labels) &&
+            original[guardAt].blocks.SequenceEqual(changed[guardAt].blocks), "Preserve faction guard branch metadata: " + name);
         check(original[at].labels.SequenceEqual(changed[at].labels) &&
             original[at].blocks.SequenceEqual(changed[at].blocks), "Preserve branch labels: " + name);
         bool refused = false;

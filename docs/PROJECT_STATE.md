@@ -1,6 +1,18 @@
-# État du projet — 2026-10-22
+# État du projet — 2026-11-06
 
 ## Version actuelle
+
+Après « Tests OK », l'utilisateur autorise le commit/push du correctif 1.1.3 et demande confirmation avant sa mise à jour Workshop. Reconstruction forcée et 36 assertions ciblées réexécutées avec chacun des parents 1.6/1.7 avec succès ; DLL identique à celle testée. Dix fichiers de la copie Mods comparés aux sources par SHA256, dont identifiant 3817893569 et preview 1.7. Patchnotes FR/EN 1.1.3 préparées ; aucun nouvel envoi Steam, tag ou asset de release inclus dans cette demande.
+
+Copie locale 1.1.3 installée jeu fermé : dix fichiers vérifiés par SHA256, identifiant Workshop 3817893569 inclus. Dossier cible auparavant absent, donc aucun ancien runtime local à sauvegarder ; copie Workshop séparée non modifiée. Sélectionner la copie locale 1.1.3 pour le test. Aucun envoi Steam/GitHub.
+
+**1.1.3 locale testable**, DLL **1.1.3.0**, schéma **1**. Signalement Andrew : sélection de « Apprendre la langue » refusée comme langue déjà connue, alors que les deux colons ne la connaissent pas. Diagnostic en lecture seule : Andrew Gwynn / Human87650, prisonnier sans faction actuelle, origine nulle, registre initialisé Celtique RaceLanguage_1 / Impérial Dialect_1, maternels à 100 %. Scottie et Nails possèdent seulement Terran RaceLanguage_5 / Morais Dialect_13. Aucun problème d'attribution ou d'effacement démontré.
+
+Parent installé 1.7 inspecté, SHA256 7D2C485D230900BF5E39F8D57B6C885578B206FE3A76F18E8C77EE7826151E3B inchangé, jeu 1.7.5000 rev1275. Son menu considère directement une faction nulle comme langue connue ; JobOnThing rejette aussi la faction nulle avant le contrôle individuel existant. Les deux chemins contournaient nos helpers. HasLearningSource remplace uniquement ces tests préalables, avec conservation du vrai argument de faction et des conditions de mode, délais, réveil, parole et réservation. Données/schéma inchangés, aucune sauvegarde modifiée directement. IL et extraits privés sous work, exclus de Git.
+
+Compilation compatible 1.6 réussie ; 36 assertions PrisonerPatchTests exécutées avec chacun des parents 1.6 et 1.7, dont composition des transpilers recrutement/apprentissage et conservation des autres instructions/métadonnées. XML, clés FR/EN, versions et exclusion des DLL tierces vérifiés. Suite complète non réexécutée (ancien blocage Unity 1.7), aucun test moteur par l'agent. DLL SHA256 0B565A4018A0F393C807913346478149DDD2698F92E6A72ED35404C4EB49EB85. Retour utilisateur : Tests OK pour le parcours Andrew proposé (sélection, progression et sauvegarde/rechargement). Aucun nouveau test moteur exécuté par notre agent. Commit/push ensuite autorisé pour ce correctif ; aucun nouveau tag, asset de release ou envoi Steam inclus.
+
+## Lot précédent : 1.1.2
 
 L'utilisateur confirme ensuite la mise à jour du Workshop et autorise le push de la preview 1.7 et de ses documents. Publication Steam effectuée par l'utilisateur ; contenu distant non inspecté par l'agent. Version/DLL 1.1.2 et tag v1.1.2 conservés : cette consolidation est uniquement visuelle et documentaire, sans nouvelle release avec asset ni test moteur.
 

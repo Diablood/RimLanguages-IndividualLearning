@@ -7,10 +7,11 @@ param(
     [string]$ManagedReferencesDir,
     [string]$RuntimeManagedDir,
     [switch]$PolicyOnly,
-    [switch]$NativeOriginOnly
+    [switch]$NativeOriginOnly,
+    [switch]$PrisonerOnly
 )
 $ErrorActionPreference = 'Stop'
-if ($PolicyOnly -and $NativeOriginOnly) { throw 'Select only one focused test mode.' }
+if ((@($PolicyOnly, $NativeOriginOnly, $PrisonerOnly) | Where-Object { $_ }).Count -gt 1) { throw 'Select only one focused test mode.' }
 . (Join-Path $PSScriptRoot 'tools/Resolve-Dependencies.ps1')
 $dependencies = Get-RliDependencies -RimWorldDir $RimWorldDir -CybranianDir $CybranianDir -HarmonyAssembly $HarmonyAssembly -Compiler $Compiler -CecilAssembly $CecilAssembly -IncludeCecil
 $RimWorldDir = $dependencies.RimWorldDir
@@ -56,6 +57,7 @@ $testProcessArgs = @('-NoProfile','-NonInteractive','-File',(Join-Path $PSScript
     '-HarmonyAssembly',$HarmonyAssembly,'-CecilAssembly',$CecilAssembly)
 if ($PolicyOnly) { $testProcessArgs += '-PolicyOnly' }
 if ($NativeOriginOnly) { $testProcessArgs += '-NativeOriginOnly' }
+if ($PrisonerOnly) { $testProcessArgs += '-PrisonerOnly' }
 & (Join-Path $PSHOME $shellName) @testProcessArgs
 if ($LASTEXITCODE -ne 0) { throw 'Knowledge tests failed.' }
 $english = [xml](Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot 'Languages\English\Keyed\IndividualLearning.xml'))

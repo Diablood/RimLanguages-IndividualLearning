@@ -1,5 +1,11 @@
 # Historique des versions
 
+## 1.1.3 — 2026-11-06 — apprentissage auprès des prisonniers sans faction
+
+- Correction du refus « langue déjà connue » pour un prisonnier sans faction dont les connaissances maternelles individuelles sont pourtant exploitables.
+- Le garde-fou de faction du menu et du travail du geôlier accepte désormais une source maternelle individuelle valide ; l'éligibilité reste propre au gardien réel. Conditions physiques, réservation, mode et délais conservés.
+- Aucune modification des langues, niveaux, clés de sauvegarde ou schéma 1. Compilation compatible 1.6 et 36 assertions ciblées sur chacun des parents 1.6/1.7 réussies. Parcours Andrew validé en jeu par utilisateur (Tests OK).
+
 ## 1.1.2 — 2026-10-22 — pions sans origine linguistique exploitable
 
 - Repli individuel étendu aux pions humanoïdes vanilla et moddés : faction d'origine prioritaire, sinon langue existante de la même race et l'un de ses dialectes, à 100 % comme maternels. Exception humaine CreepJoiner conservée ; sans paire compatible, initialisation en attente.

@@ -1,4 +1,22 @@
-# Vérifications — version locale 1.1.2
+# Vérifications — version locale 1.1.3
+
+## Prisonnier sans faction / Andrew — 2026-11-06
+
+Finalisation après validation utilisateur : reconstruction forcée réussie, DLL inchangée ; 36 assertions ciblées réexécutées avec chacun des parents 1.6/1.7. XML, FR/EN, versions et absence de DLL tierces vérifiés ; dix fichiers de la copie auteur Mods identiques aux sources par SHA256. Patchnotes 1.1.3 prêtes, identifiant Workshop 3817893569 conservé. Aucun nouveau test moteur ou succès de suite complète revendiqué.
+
+Retour utilisateur : « Tests OK ». Parcours Andrew proposé (sélection de l'apprentissage, progression et sauvegarde/rechargement) validé globalement par l'utilisateur. Aucun nouveau test moteur par l'agent ; variantes facultatives non détaillées séparément. Ne pas redemander ce parcours acquis sans changement pertinent.
+
+Déploiement local effectué jeu fermé : dix fichiers comparés par SHA256, PublishedFileId 3817893569 restauré. Première installation car dossier cible absent ; aucune ancienne copie locale à sauvegarder, copie Workshop séparée non modifiée. Cette installation n'est pas une validation en jeu.
+
+Sauvegarde inspectée en lecture seule : Andrew Gwynn sans faction, Celtique / Impérial maternels à 100 %, Scottie et Nails avec seulement Terran / Morais. Parent 1.7 installé inspecté : branches nulles court-circuitant le contrôle individuel dans SetExclusiveInteraction.Postfix et JobOnThing. HasJobOnThing et driver de leçon consultés ; aucun autre test de faction dans le parcours du driver inspecté. Aucun test moteur exécuté.
+
+Compilation 1.1.3 compatible 1.6 réussie ; 36 assertions PrisonerPatchTests avec chacun des parents installés 1.6/1.7 (36 scénarios, pas 72 distincts). Vérification des deux gardes, des signatures de pile, du maintien des autres instructions/branches, de la composition avec le recrutement, du refus d'une forme IL non prise en charge et de l'éligibilité personnelle. XML, FR/EN, versions et absence de DLL tierces vérifiés. Suite complète non réexécutée, ancien blocage Unity 1.7 ; aucune exécution de KnowledgeTests.exe.
+
+DLL SHA256 0B565A4018A0F393C807913346478149DDD2698F92E6A72ED35404C4EB49EB85. Aucun changement de schéma ou de niveaux et aucune écriture directe de sauvegarde.
+
+Parcours de référence proposé puis validé globalement par utilisateur (Tests OK) : utiliser la copie locale 1.1.3, redémarrer, sélectionner « Apprendre la langue » sur Andrew puis vérifier qu'un colon admissible progresse en Celtique dans son onglet Langues. Sauvegarder/recharger pour conserver le mode et le niveau atteint ; aucun besoin d'attendre 100 % ni de refaire les parcours acquis. Délais et disponibilités habituels du geôlier restent applicables.
+
+Variantes facultatives : gardien ayant déjà langue et dialecte à 100 % sans nouveau travail de leçon ; prisonnier avec faction inchangé ; absence de registre personnel exploitable conserve le repli du parent.
 
 ## Preview 1.7
 

@@ -15,7 +15,8 @@ internal static class KnowledgeTests
         AppDomain.CurrentDomain.AssemblyResolve += Resolve;
         try
         {
-            if (args.Length > 5 && args[5] == "native-origin") NativeOriginTests.Run(Check);
+            if (args.Length > 5 && args[5] == "prisoner") PrisonerPatchTests.Run(Check);
+            else if (args.Length > 5 && args[5] == "native-origin") NativeOriginTests.Run(Check);
             else if (args.Length > 5 && args[5] == "policy") TransmissionPolicyTests.Run(Check);
             else Run();
             Console.WriteLine("PASS: " + checks + (args.Length > 5 ? " " + args[5] : " knowledge") + " assertions (outside RimWorld).");

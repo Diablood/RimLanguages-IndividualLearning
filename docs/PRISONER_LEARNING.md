@@ -1,5 +1,7 @@
 # Apprentissage auprès des prisonniers
 
+Correctif 1.1.3 validé en jeu par l'utilisateur sur Andrew, prisonnier sans faction : retour « Tests OK » après le parcours de sélection, progression et sauvegarde/rechargement proposé. Aucun nouveau test moteur par l'agent.
+
 ## Comportement
 
 L'ordre original « Apprendre la langue » reste sélectionnable si une langue maternelle du prisonnier est résolue. Le menu ne choisit pas de geôlier ; le mode peut rester sélectionné lorsque tous les gardiens ont terminé.
@@ -14,6 +16,7 @@ Signatures vérifiées dans la DLL installée de Cybranian ; voir [AUDIT_CYBRANI
 
 - Transpiler du Postfix Pawn_GuestTracker_SetExclusiveInteraction_FactionLanguagesPatch : remplace son unique appel FactionDialectIsLearned par le contrôle personnel adapté au menu.
 - Transpiler de WorkGiver_Warden_LearnLanguage.JobOnThing(Pawn pawn, Thing t, bool forced) : remplace l'unique appel FactionDialectIsLearned par le besoin du gardien réel.
+- Depuis 1.1.3, ces deux transpilers remplacent aussi leur unique test préalable de faction par HasLearningSource ; le vrai argument de faction du contrôle suivant reste inchangé. Une source maternelle individuelle permet donc le chemin sans faction, sans inventer de faction fictive.
 - Aucun patch du JobDriver_LearnPrisonerLanguage ni duplication de Def ou de job. Les échanges réussis donnent les gains ; ni la sélection du mode ni la création du job.
 
 Les autres instructions et étiquettes sont conservées ; une forme IL inattendue produit une erreur de compatibilité. Les critères vanilla restent appliqués : prisonnier sécurisé, mode, délai, éveil, déplacement, parole, réservation et prise en charge.
@@ -30,7 +33,7 @@ Facteurs d'aptitude, négociation, difficultés et coûts conservés ; une aptit
 
 ## Replis et sauvegardes
 
-Sans registre ou langue maternelle exploitable, contrôle collectif original. Les gardes de faction non nulle restent présentes. Un dialecte maternel abaissé sous 100 % par édition développeur cesse d'être une source personnelle de ce chemin jusqu'à restauration ; le repli collectif peut alors intervenir.
+Sans registre ou langue maternelle exploitable, contrôle collectif original. Depuis 1.1.3, les gardes préalables du menu et du travail acceptent aussi un prisonnier sans faction dont la langue maternelle individuelle est valide. Sans faction ni source personnelle exploitable, le comportement du parent reste conservé. Un dialecte maternel abaissé sous 100 % par édition développeur cesse d'être une source personnelle de ce chemin jusqu'à restauration ; le repli collectif peut alors intervenir.
 
 Aucun champ de job ajouté. Mode prisonnier sauvegardé par le jeu/parent ; niveaux dans le schéma individuel 1. Collectif original conservé.
 

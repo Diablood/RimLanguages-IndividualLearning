@@ -1,0 +1,13 @@
+1.1.3 — Apprentissage auprès des prisonniers sans faction
+
+- Correction du message « langue déjà connue » empêchant de sélectionner « Apprendre la langue » sur un prisonnier sans faction.
+- Les geôliers peuvent désormais apprendre la langue et le dialecte maternels de ce prisonnier à partir de ses connaissances individuelles.
+- Les conditions habituelles de travail et les niveaux propres à chaque geôlier restent pris en compte.
+- Aucune modification des connaissances existantes ni du format de sauvegarde. Pas de nouvelle partie nécessaire.
+
+1.1.3 — Learning from factionless prisoners
+
+- Fixed the incorrect "language already learned" rejection when selecting "Learn language" on a factionless prisoner.
+- Wardens can now learn that prisoner's native language and dialect using the prisoner's individual knowledge.
+- Normal job conditions and each warden's personal proficiency still apply.
+- Existing knowledge and the save format are unchanged. No new game required.

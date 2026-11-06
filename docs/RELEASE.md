@@ -2,9 +2,9 @@
 
 ## Versionnement
 
-Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.1.2** locale. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.1.2.0**, AssemblyInformationalVersion **1.1.2**. Repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction, cas Eduard 1.1.1 acquis ; sources envoyées au commit 8dd28e3 avec tag v1.1.2 vérifié, sans nouvelle release avec asset ni envoi Workshop. test.ps1 refuse une divergence. Dernière release publique : v1.0.0-rw1.7 ; 1.1.0 avec parcours Mendez et persistance validés par utilisateur, refus des connaissances acquises encore en observation manuelle prolongée, et non publiée.
+Source unique : modVersion dans [About/About.xml](../About/About.xml), actuellement **1.1.3** locale. build.ps1 génère AssemblyVersion et AssemblyFileVersion **1.1.3.0**, AssemblyInformationalVersion **1.1.3**. Correctif prisonnier sans faction validé en jeu par utilisateur sur Andrew ; dernier tag des sources v1.1.2 inchangé. Repli général validé en jeu par utilisateur sur de nouveaux arrivants sans faction, cas Eduard 1.1.1 acquis ; sources envoyées au commit 8dd28e3 avec tag v1.1.2 vérifié, sans nouvelle release avec asset ni envoi Workshop. test.ps1 refuse une divergence. Dernière release publique : v1.0.0-rw1.7 ; 1.1.0 avec parcours Mendez et persistance validés par utilisateur, refus des connaissances acquises encore en observation manuelle prolongée, et non publiée.
 
-Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.1.3), mineur pour une fonctionnalité (prochain 1.2.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
+Selon la demande utilisateur, chaque lot testable modifiant le contenu reçoit un numéro distinct : correctif pour une correction (prochain 1.1.4), mineur pour une fonctionnalité (prochain 1.2.0). Une modification documentaire seule ou la copie d'un contenu identique ne change pas la version. Le schéma de sauvegarde est distinct : **1**.
 
 RimSort affiche la version d'About ; sa détection automatique a été confirmée par utilisateur. Un numéro local ne constitue ni un tag ni une publication.
 

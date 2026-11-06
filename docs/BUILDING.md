@@ -22,7 +22,7 @@ Sans paramètre, deploy.ps1 utilise Mods sous le jeu détecté. Il exige un doss
 
 Sources et documents utilisent des chemins relatifs ou des placeholders ; les chemins réellement détectés ne sont affichés qu'à l'exécution. work et artifacts sont exclus du suivi Git.
 
-Depuis 1.1.1, test.ps1 accepte aussi -NativeOriginOnly avec les mêmes paramètres de références et runtime que -PolicyOnly. Il exécute seulement les régressions de l'origine individuelle (Anomaly et repli général depuis 1.1.2), sans moteur et sans remplacer la suite complète. Les deux modes ciblés sont mutuellement exclusifs. Aucun exécutable de test généré.
+Depuis 1.1.1, test.ps1 accepte aussi -NativeOriginOnly avec les mêmes paramètres de références et runtime que -PolicyOnly. Il exécute seulement les régressions de l'origine individuelle (Anomaly et repli général depuis 1.1.2), sans moteur et sans remplacer la suite complète. Les modes ciblés sont mutuellement exclusifs. Depuis 1.1.3, -PrisonerOnly exécute PrisonerPatchTests avec les mêmes paramètres de références et runtime ; ce mode ne remplace pas la suite complète. Aucun exécutable de test généré.
 
 ## Préparer une archive installable
 

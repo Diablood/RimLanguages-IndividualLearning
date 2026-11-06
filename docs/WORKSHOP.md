@@ -1,5 +1,11 @@
 # Préparation Workshop — copie auteur locale
 
+## Mise à jour 1.1.3 prête
+
+Copie Mods 1.1.3 testée par l'utilisateur sur Andrew, avec PublishedFileId 3817893569 et preview 1.7. Dix fichiers comparés aux sources par SHA256 lors de la finalisation. Le correctif permet de sélectionner et réaliser l'apprentissage auprès d'un prisonnier sans faction ayant des connaissances maternelles individuelles valides. [Patchnotes 1.1.3 FR/EN](workshop/Patchnotes-1.1.3.txt) prêtes à copier ; descriptions générales inchangées. L'utilisateur effectuera l'envoi depuis RimWorld vers le même article, sans en créer un autre. Aucun envoi Steam par l'agent.
+
+## Historique des mises à jour précédentes
+
 Mise à jour de l'article Workshop confirmée par l'utilisateur après validation de la preview 1.7. Aucun envoi Steam par l'agent et aucun contrôle séparé du contenu distant. Le push demandé ensuite concerne l'image approuvée et les documents ; version 1.1.2 et tag existant conservés.
 
 Preview 1.7 approuvée par l'utilisateur ; la copie déjà présente dans Mods est prête pour son envoi manuel.

@@ -5,7 +5,8 @@ param(
     [Parameter(Mandatory = $true)][string]$HarmonyAssembly,
     [Parameter(Mandatory = $true)][string]$CecilAssembly,
     [switch]$PolicyOnly,
-    [switch]$NativeOriginOnly
+    [switch]$NativeOriginOnly,
+    [switch]$PrisonerOnly
 )
 $ErrorActionPreference = 'Stop'
 try {
@@ -16,6 +17,7 @@ try {
     [string[]]$testArguments = @($ProjectRoot, $ManagedDir, (Join-Path $CybranianDir '1.6\Assemblies'), (Split-Path -Parent $HarmonyAssembly), (Split-Path -Parent $CecilAssembly))
     if ($PolicyOnly) { $testArguments += 'policy' }
     if ($NativeOriginOnly) { $testArguments += 'native-origin' }
+    if ($PrisonerOnly) { $testArguments += 'prisoner' }
     $invokeArguments = New-Object 'System.Object[]' 1
     $invokeArguments[0] = $testArguments
     $result = $entry.Invoke($null, $invokeArguments)

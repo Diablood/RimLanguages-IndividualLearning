@@ -1,4 +1,10 @@
-# Roadmap — 1.1.2 locale
+# Roadmap — 1.1.3 locale
+
+Lot actuel : correction de l'apprentissage auprès d'un prisonnier sans faction (Andrew), dont le registre personnel est valide. Menu et travail gardent les conditions non linguistiques ; leurs tests de faction permettent désormais la source individuelle. Compilation et 36 assertions ciblées sur chacun des parents 1.6/1.7 réussies ; parcours Andrew validé en jeu par utilisateur (Tests OK). Aucun envoi distant.
+
+## Historique 1.1.2
+
+Finalisation 1.1.3 : push autorisé après validation Andrew, copie Mods et patchnotes contrôlées pour la mise à jour manuelle du Workshop. Aucun nouveau tag demandé.
 
 Lot actuel : repli individuel général pour les humanoïdes sans origine linguistique exploitable. Priorité à la faction, sinon paire existante de la race ; exception humaine Anomaly conservée, races sans langue compatible en attente. Protection des identités existantes, des naissances à 0 % et de la faction temporairement absente pendant génération. Compilation et 25 assertions d'origine sur chacun des parents 1.6/1.7, plus 18 de transmission, réussies. Nouveaux arrivants sans faction validés en jeu par utilisateur ; sauvegarde/rechargement non détaillé séparément ; aucun envoi distant.
 
